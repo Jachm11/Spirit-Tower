@@ -42,3 +42,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: breakable
+    uniqueID: 834832903
+    locked: 0
+  - name: player
+    uniqueID: 3301283785
+    locked: 0
