@@ -18,6 +18,8 @@ public class client : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(transform.gameObject);
+
         if (instance == null)
         {
             instance = this;
@@ -26,6 +28,7 @@ public class client : MonoBehaviour
         {
             Destroy(this);
         }
+
     }
 
     private void Start()

@@ -35,7 +35,7 @@ public class UI : MonoBehaviour
 
     public void sendMessage()
     {
-        string res = client.instance.send("1");
+        string res = client.instance.send("algo");
         UnityEngine.Debug.Log(res);
     }
 
