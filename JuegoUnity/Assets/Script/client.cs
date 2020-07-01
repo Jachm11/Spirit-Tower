@@ -34,6 +34,7 @@ public class client : MonoBehaviour
     private void Start()
     {
         tcp = new TCP();
+        this.ConnectToServer(); //TEMPORALLL PARA EASYCLIENT
     }
 
     public void ConnectToServer()
@@ -96,7 +97,7 @@ public class client : MonoBehaviour
             {
                 int bytesIn = stream.EndRead(result);
                 msg = Encoding.ASCII.GetString(buffer, 0, bytesIn);
-                //UnityEngine.Debug.Log(msg);
+                UnityEngine.Debug.Log(msg);
             }
         }
 
