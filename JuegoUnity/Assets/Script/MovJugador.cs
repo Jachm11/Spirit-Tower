@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum estadoJugador{
+    camina,
+    atacando
+}
+
 public class MovJugador : MonoBehaviour
 {
+    public estadoJugador currentState;
     public float Vel;
     private Rigidbody2D rigidbody;
     private Vector3 cambio;
@@ -11,6 +17,7 @@ public class MovJugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentState = estadoJugador.camina;
         animador = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
         
@@ -23,8 +30,21 @@ public class MovJugador : MonoBehaviour
         cambio = Vector3.zero;
         cambio.x = Input.GetAxisRaw("Horizontal");
         cambio.y = Input.GetAxisRaw("Vertical");
-        animMov();
+        if(Input.GetButtonDown("ataque")&& currentState != estadoJugador.atacando){
+            StartCoroutine(ataqueCo());
+        }
+        else if(currentState == estadoJugador.camina){
+            animMov();
+        }
         
+    }
+    private IEnumerator ataqueCo(){
+            animador.SetBool("atacando",true);
+            currentState = estadoJugador.atacando;
+            yield return null;
+            animador.SetBool("atacando",false);
+            yield return new WaitForSeconds(.3f);
+            currentState = estadoJugador.camina;
     }
     void animMov(){
         if(cambio != Vector3.zero){
