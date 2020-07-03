@@ -40,6 +40,21 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         //res = funcionX();
         res = "Asi no funca";
     }
+    else if (msg == "PI") {
+       //persona.funcionX(); Indicar que el personaje es invisible
+        res = "El personaje ahora es invisible!";
+    }
+    else if (msg == "PV") {
+        //persona.funcionX(); Indicar que el personaje es visible
+        res = "El personaje ahora es visible!";
+    }
+    else if (msg == "OPD") {
+        res = "Un jarron ha sido destruido!";
+    }
+
+    else if (msg == "OCO") {
+        res = "Un cofre ha sido abierto!";
+    }
     else {
         res = msg;
     }

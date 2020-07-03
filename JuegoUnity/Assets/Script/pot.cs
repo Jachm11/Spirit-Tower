@@ -16,13 +16,17 @@ public class pot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Smash();
+        }
     }
 
     public void Smash()
     {
         anim.SetBool("smash", true);
         StartCoroutine(breakCo());
+        client.instance.send("OPD"); // Object Pot Destroyed
     }
 
     IEnumerator breakCo()
