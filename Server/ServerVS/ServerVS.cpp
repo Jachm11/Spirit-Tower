@@ -57,9 +57,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     }
     else {
         j.setPos(msg);
-        float* pos = j.getPos();
-        res = pos[0];
-        cout << pos[0] << endl;
+       
     }
     cout << "Respondiendo: " << res << endl;
     listener->Send(client, res);

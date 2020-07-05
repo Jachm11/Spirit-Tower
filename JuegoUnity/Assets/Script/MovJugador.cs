@@ -45,8 +45,6 @@ public class MovJugador : MonoBehaviour
         }
         if(Input.GetButtonDown("ataque")&& currentState != estadoJugador.atacando){
             StartCoroutine(ataqueCo());
-            client.instance.send("atack simp");
-            Debug.Log(client.instance.send("atack simp"));
         }
         else if(currentState == estadoJugador.camina){
             animMov();

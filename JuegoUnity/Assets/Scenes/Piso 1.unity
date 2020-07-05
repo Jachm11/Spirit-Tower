@@ -9119,6 +9119,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017501434331029329, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1498563147770108896, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742823791283418633, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5686531040629807824, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
         type: 3}
       propertyPath: m_Constraints
@@ -9203,6 +9218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8369344456815913074, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0fc3072c1106d45b08d5d6786af8ba, type: 3}
