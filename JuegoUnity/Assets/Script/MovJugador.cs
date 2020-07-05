@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 
 public enum estadoJugador{
@@ -9,6 +10,7 @@ public enum estadoJugador{
 
 public class MovJugador : MonoBehaviour
 {
+    private int ciclos = 0;
     public estadoJugador currentState;
     public float Vel;
     private Rigidbody2D rigidbody;
@@ -20,6 +22,8 @@ public class MovJugador : MonoBehaviour
         currentState = estadoJugador.camina;
         animador = GetComponent<Animator>();
         rigidbody = GetComponent<Rigidbody2D>();
+        animador.SetFloat("moverX", 0);
+        animador.SetFloat("moverY", -1);
         
 
     }
@@ -30,13 +34,31 @@ public class MovJugador : MonoBehaviour
         cambio = Vector3.zero;
         cambio.x = Input.GetAxisRaw("Horizontal");
         cambio.y = Input.GetAxisRaw("Vertical");
+        if(ciclos == 250)
+        {
+            client.instance.send(get_Pos());
+            ciclos = 0;
+        }
+        else
+        {
+            ciclos++;
+        }
         if(Input.GetButtonDown("ataque")&& currentState != estadoJugador.atacando){
             StartCoroutine(ataqueCo());
+            client.instance.send("atack simp");
+            Debug.Log(client.instance.send("atack simp"));
         }
         else if(currentState == estadoJugador.camina){
             animMov();
         }
         
+        
+    }
+    private string get_Pos()
+    {
+        string pos = string.Format("{0:N2}", rigidbody.position.x);
+        pos = pos + ";" + string.Format("{0:N2}", rigidbody.position.y);
+        return pos;
     }
     private IEnumerator ataqueCo(){
             animador.SetBool("atacando",true);
@@ -58,6 +80,7 @@ public class MovJugador : MonoBehaviour
     }
 
     void Movimiento(){
+        cambio.Normalize();
         rigidbody.MovePosition(
             transform.position + cambio * Vel * Time.deltaTime
         );

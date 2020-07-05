@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Jugador.cpp" />
     <ClCompile Include="ServerVS.cpp" />
     <ClCompile Include="TCPListener.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Jugador.h" />
     <ClInclude Include="TCPListener.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
