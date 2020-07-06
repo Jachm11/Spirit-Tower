@@ -1,4 +1,1 @@
-﻿  ServerVS.cpp
-C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\ServerVS.cpp(25,24): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  LINK : no se encontró C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
-  ServerVS.vcxproj -> C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+﻿  ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe

@@ -8,7 +8,7 @@ public class chest : Interactivo
 {
     public int pts;
     public bool isOpen;
-    public Signal raiseItem;
+    //public Signal raiseItem;
     //public Text dialogText;
     private Animator anim;
 
@@ -41,7 +41,7 @@ public class chest : Interactivo
         // avisar a Harold que puntos fueron ganados
         client.instance.send("OCO"); //Object Chest opened
 
-        raiseItem.Raise();
+        //raiseItem.Raise();
 
         isOpen = true;
 
@@ -49,8 +49,23 @@ public class chest : Interactivo
 
         anim.SetBool("opened", true);
 
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
+        {
+            context.Raise();
+            playerInRange = true;
+        }
+    }
 
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
+        {
+            context.Raise();
+            playerInRange = false;
+        }
     }
 }
