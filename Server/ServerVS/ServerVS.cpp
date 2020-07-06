@@ -9,6 +9,7 @@
 using namespace std;
 
 void Listener_MessageReceived(TCPListener* listener, int client, string msg);
+Jugador j(5.2, 5.2);
 
 int main()
 {
@@ -22,7 +23,6 @@ int main()
 //Esta funcion se va a encargar de manejar las respuestas del servidor.
 void Listener_MessageReceived(TCPListener* listener, int client, string msg)
 {
-    Jugador j(5.2, 5.2);
     int key = atoi(msg.c_str());
 
     string res;
@@ -36,7 +36,6 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         res = "Ualete!";
     }
     else if (msg == "atack simp") {
-        //res = funcionX();
         res = to_string(j.ataqueSimple());
         
     }
@@ -55,6 +54,11 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (msg == "OCO") {
         res = "Un cofre ha sido abierto!";
     }
+    else if (msg == "P+1") {
+        int vida = j.aumentarCorazon();
+        res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
+    }
+
     else {
         j.setPos(msg);
        
@@ -63,6 +67,13 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     listener->Send(client, res);
 
 }
+
+
+
+
+
+
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
