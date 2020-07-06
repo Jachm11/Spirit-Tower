@@ -290,6 +290,7 @@ Transform:
   - {fileID: 2682219335744508981}
   - {fileID: 3555063080820672263}
   - {fileID: 1304620189717008000}
+  - {fileID: 5583152198475013039}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f90427daec1bbd41a6b6adedb623db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: 699b0ff96db454541ac11f27958eb6dc, type: 2}
+  signal: {fileID: 0}
   signalEvent:
     m_PersistentCalls:
       m_Calls:
@@ -555,6 +556,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c4ea65830583f4493ca992e48ad9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7654548414509188023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5583152198475013039}
+  - component: {fileID: 4922888006532299657}
+  m_Layer: 0
+  m_Name: Point Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5583152198475013039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654548414509188023}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0059829773, w: 0.9999821}
+  m_LocalPosition: {x: 0.013, y: -0.228, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5686531040629807830}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4922888006532299657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7654548414509188023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.924
+  m_Color: {r: 0.98039216, g: 0.7490196, b: 0.5647059, a: 1}
+  m_Intensity: 0.4
+  m_LightVolumeOpacity: 0.003
+  m_ApplyToSortingLayers: 00000000078ac231
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0.43802693
+  m_PointLightOuterRadius: 1.3701345
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.24170905, y: -0.27958533, z: 0}
+  - {x: -0.08785872, y: -0.30605283, z: 0}
+  - {x: 0.017932056, y: -0.225246, z: 0}
+  - {x: 0.054366603, y: -0.33142722, z: 0}
+  - {x: 0.21939914, y: -0.34301573, z: 0}
+  - {x: 0.21363813, y: -0.27677542, z: 0}
+  - {x: 0.24964446, y: -0.16959648, z: 0}
+  - {x: 0.3414589, y: -0.17802465, z: 0}
+  - {x: 0.40619034, y: -0.0942538, z: 0}
+  - {x: 0.4064172, y: 0.0044869557, z: 0}
+  - {x: 0.44316489, y: 0.11903966, z: 0}
+  - {x: 0.3778814, y: 0.22167666, z: 0}
+  - {x: 0.37254632, y: 0.32369372, z: 0}
+  - {x: 0.451909, y: 0.38208017, z: 0}
+  - {x: 0.44386768, y: 0.48180383, z: 0}
+  - {x: 0.5174526, y: 0.49803331, z: 0}
+  - {x: 0.5096994, y: 0.61287904, z: 0}
+  - {x: 0.3782594, y: 0.68318677, z: 0}
+  - {x: 0.43928766, y: 0.80797553, z: 0}
+  - {x: 0.33668512, y: 0.86919886, z: 0}
+  - {x: 0.1945768, y: 0.8812615, z: 0}
+  - {x: 0.17192233, y: 0.93431306, z: 0}
+  - {x: 0.056931913, y: 0.9413459, z: 0}
+  - {x: 0.026040515, y: 0.87090397, z: 0}
+  - {x: -0.20021877, y: 0.8644762, z: 0}
+  - {x: -0.23065488, y: 0.7932075, z: 0}
+  - {x: -0.32831287, y: 0.79678607, z: 0}
+  - {x: -0.34247413, y: 0.7318911, z: 0}
+  - {x: -0.39428574, y: 0.7296422, z: 0}
+  - {x: -0.40218443, y: 0.61863357, z: 0}
+  - {x: -0.4768408, y: 0.5925199, z: 0}
+  - {x: -0.48512563, y: 0.46258926, z: 0}
+  - {x: -0.4844231, y: 0.38271925, z: 0}
+  - {x: -0.41774768, y: 0.369993, z: 0}
+  - {x: -0.3860235, y: 0.29483345, z: 0}
+  - {x: -0.38508686, y: 0.18834016, z: 0}
+  - {x: -0.39734468, y: 0.068418056, z: 0}
+  - {x: -0.46755967, y: -0.020950878, z: 0}
+  - {x: -0.4270814, y: -0.14315255, z: 0}
+  - {x: -0.25344107, y: -0.1477569, z: 0}
 --- !u!1 &8468783053453061016
 GameObject:
   m_ObjectHideFlags: 0
