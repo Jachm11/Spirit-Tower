@@ -5,7 +5,7 @@ using UnityEngine;
 public class Interactivo : MonoBehaviour
 {
 
-    public Signal context;
+    public Signal signal;
     public bool playerInRange;
 
     // Start is called before the first frame update
@@ -24,7 +24,7 @@ public class Interactivo : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            context.Raise();
+            signal.Raise();
             playerInRange = true;
         }
     }
@@ -33,7 +33,7 @@ public class Interactivo : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
-            context.Raise();
+            signal.Raise();
             playerInRange = false;
         }
     }

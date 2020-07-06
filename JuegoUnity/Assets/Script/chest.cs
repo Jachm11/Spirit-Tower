@@ -45,7 +45,7 @@ public class chest : Interactivo
 
         isOpen = true;
 
-        context.Raise();
+        signal.Raise();
 
         anim.SetBool("opened", true);
 
@@ -55,7 +55,7 @@ public class chest : Interactivo
     {
         if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
         {
-            context.Raise();
+            signal.Raise();
             playerInRange = true;
         }
     }
@@ -64,7 +64,7 @@ public class chest : Interactivo
     {
         if (collision.CompareTag("Player") && !collision.isTrigger && !isOpen)
         {
-            context.Raise();
+            signal.Raise();
             playerInRange = false;
         }
     }
