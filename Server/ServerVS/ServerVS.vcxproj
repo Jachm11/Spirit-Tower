@@ -139,11 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Espectro.cpp" />
     <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="Search.cpp" />
     <ClCompile Include="ServerVS.cpp" />
     <ClCompile Include="TCPListener.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Espectro.h" />
     <ClInclude Include="Jugador.h" />
     <ClInclude Include="TCPListener.h" />
   </ItemGroup>

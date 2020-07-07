@@ -1,11 +1,4 @@
-﻿  Jugador.cpp
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Jugador.cpp(67,33): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-  ServerVS.cpp
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(12,20): warning C4305: 'argument': truncation from 'double' to 'float'
-  TCPListener.cpp
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\TCPListener.cpp(17,54): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\TCPListener.cpp(68,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\TCPListener.cpp(82,55): warning C4244: 'argument': conversion from 'SOCKET' to 'int', possible loss of data
+﻿  Espectro.cpp
+  Search.cpp
   Generating Code...
-  LINK : C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe not found or not built by the last incremental link; performing full link
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe

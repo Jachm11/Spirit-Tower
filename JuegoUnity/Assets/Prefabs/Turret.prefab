@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4484829661812180036}
   - component: {fileID: 4484829661812180039}
   - component: {fileID: 4484829661812180038}
+  - component: {fileID: 7831761141507703695}
   m_Layer: 9
   m_Name: Turret
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 834832903
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -4361638148360769042, guid: 609de6c19de89974abe4f58b9de5b1b0,
     type: 3}
@@ -126,3 +127,29 @@ MonoBehaviour:
   playerInRange: 0
   facing: {x: 0, y: -1}
   flecha: {fileID: 2000860850052904151, guid: 6d0d3a57f6530dd40a6644eda0083b09, type: 3}
+--- !u!61 &7831761141507703695
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4484829661812180057}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.008449554, y: 0.017959595}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.49155045, y: 0.49154854}
+    oldSize: {x: 1, y: 2.125}
+    newSize: {x: 1, y: 2.125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.125}
+  m_EdgeRadius: 0
