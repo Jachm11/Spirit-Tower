@@ -99,9 +99,9 @@ public class MovJugador : MonoBehaviour
     }
     public void knock(float knockTime, float damage)
     {
-        currentHealth.initialValue = float.Parse(client.instance.send("AS"));
+        currentHealth.RuntimeValue = float.Parse(client.instance.send("AS"));
         playerHealthSignal.Raise();
-        if (currentHealth.initialValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
+        if (currentHealth.RuntimeValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
         {
             StartCoroutine(knockCo(knockTime));
         }

@@ -380,6 +380,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   Vel: 10
+  currentHealth: {fileID: 11400000, guid: 22364a044c3aa27488411fd2494c39b2, type: 2}
+  playerHealthSignal: {fileID: 11400000, guid: 66c6ef9ab9266924498d3257fa79530c, type: 2}
 --- !u!61 &5686531040629807828
 BoxCollider2D:
   m_ObjectHideFlags: 0
