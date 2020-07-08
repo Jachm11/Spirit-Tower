@@ -5,10 +5,7 @@
 #include <queue>
 using namespace std;
 
-//Estructura para el algoritmo genetico
-struct Population {
-	std::vector<Espectro> Members = std::vector<Espectro>(3);
-};
+
 
 class Espectro
 {
@@ -47,4 +44,9 @@ public:
 	vector<tuple<int, int>> getAttackRoute(int grid[20][20], int srcRow, int srcCol, int destRow, int destCol);
 	void defaultRouteVec();
 	void printDefaultRoute();
+};
+
+//Estructura para el algoritmo genetico
+struct Population {
+	std::vector<Espectro> Members = std::vector<Espectro>(3);
 };

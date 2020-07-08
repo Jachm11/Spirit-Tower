@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heart : MonoBehaviour
+public class Heart : Powerup
 {
-
-    //public Signal heartSignal;
-    //cosas de harold
+    public FloatValue playerHealth;
+    public FloatValue heartContainers;
+    public float amountToIncrease;
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +24,15 @@ public class Heart : MonoBehaviour
     {
         if(collision.CompareTag("Player") && !collision.isTrigger)
         {
+
+            playerHealth.RuntimeValue += amountToIncrease;
+            client.instance.send("P+1");
+            if (playerHealth.initialValue > heartContainers.RuntimeValue) 
+            {
+                playerHealth.initialValue = heartContainers.RuntimeValue;
+            }   
+            powerupSignal.Raise();
             Destroy(this.gameObject);
-            //if not max health do 
-                //heartSignal.Raise();
-                client.instance.send("P+1");
-                // llama a harlod pa q haga lo suyo
-            //else
-                 //set max vida
         }
     }
 }

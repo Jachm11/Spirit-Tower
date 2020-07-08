@@ -35,22 +35,25 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (key == 2) {
         res = "Ualete!";
     }
-    else if (msg == "atack simp") {
+    else if (msg == "AS") {
         res = to_string(j.ataqueSimple());
         
     }
     else if (msg == "PI") {
-       //persona.funcionX(); Indicar que el personaje es invisible
+        j.setSafe(true);
         res = "El personaje ahora es invisible!";
     }
     else if (msg == "PV") {
-        //persona.funcionX(); Indicar que el personaje es visible
+        j.setSafe(false);
         res = "El personaje ahora es visible!";
     }
     else if (msg == "OPD") {
         res = "Un jarron ha sido destruido!";
     }
-
+    else if (msg == "muerte") {
+        j.setMuerte();
+        res = "El jugador ha muerto";
+    }
     else if (msg == "OCO") {
         res = "Un cofre ha sido abierto!";
     }

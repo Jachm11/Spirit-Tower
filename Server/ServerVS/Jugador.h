@@ -10,7 +10,9 @@ public:
     void setPos(string _pos);
     int aumentarCorazon();
     float* getPos();
-    bool getSafe(float _posX, float _posY);
+    void setSafe(bool estado);
+    bool isSafe();
+    void setMuerte();
     bool estaMuerto();
     string dividir(string info, int i);
     int ataqueSimple();

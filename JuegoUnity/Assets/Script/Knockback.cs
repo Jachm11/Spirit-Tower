@@ -6,6 +6,7 @@ public class Knockback : MonoBehaviour
 {
     public float empuje;
     public float knockTime;
+    public float damage;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,8 +29,11 @@ public class Knockback : MonoBehaviour
                 }
                 if (collision.gameObject.CompareTag("Player"))
                 {
-                    hit.GetComponent<MovJugador>().currentState = estadoJugador.stagger;
-                    collision.GetComponent<MovJugador>().knock(knockTime);
+                    if (collision.GetComponent<MovJugador>().currentState != estadoJugador.stagger)
+                    {
+                        hit.GetComponent<MovJugador>().currentState = estadoJugador.stagger;
+                        collision.GetComponent<MovJugador>().knock(knockTime, damage);
+                    }
                 }
             }
         }

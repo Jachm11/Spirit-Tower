@@ -7,7 +7,7 @@ Jugador::Jugador(float _posX, float _posY)
 {
     pos[0] = _posX;
     pos[1] = _posY;
-    corazones = 5;
+    corazones = 6;
     is_safe = false;
     vive = true;
     atacable = false;
@@ -17,41 +17,36 @@ void Jugador::setPos(string _pos) {
     pos[0] = stof(dividir(_pos, 0));
     pos[1] = stof(dividir(_pos, 1));
 }
-bool Jugador::getSafe(float _posX, float _posY) {
-    cout << _posY << endl;
-    if (_posX == 0 && _posY == 0) {
-        is_safe = true;
-        atacable = false;
-    }
-    else {
-        is_safe = false;
-        atacable = true;
-    }
+void Jugador::setSafe(bool estado) {
+    is_safe = estado;
+}
+bool Jugador::isSafe() {
     return is_safe;
 }
 int Jugador::aumentarCorazon() {
-    corazones++;
+    if (corazones > 0 && corazones < 6) {
+        corazones++;
+    }
     return corazones;
 }
 float* Jugador::getPos() {
     return &pos[0];
 }
+void Jugador::setMuerte() {
+    vive = false;
+}
 bool Jugador::estaMuerto() {
-    if (corazones == 0) {
-        vive = false;
-
-    }
     return vive;
 }
 int Jugador::ataqueSimple() {
-    if (!getSafe(pos[0], pos[1])) {
+    if (!isSafe()) {
         corazones--;
 
     }
     return corazones;
 }
 int Jugador::ataqueEspectro() {
-    if (!getSafe(pos[0], pos[1])) {
+    if (!isSafe()) {
         vive = false;
         return corazones = 0;
     }

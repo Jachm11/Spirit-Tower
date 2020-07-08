@@ -19,6 +19,9 @@ public class MovJugador : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector3 cambio;
     private Animator animador;
+    public FloatValue currentHealth;
+    public Signal playerHealthSignal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,9 +97,20 @@ public class MovJugador : MonoBehaviour
             transform.position + cambio * Vel * Time.deltaTime
         );
     }
-    public void knock(float knockTime)
+    public void knock(float knockTime, float damage)
     {
-        StartCoroutine(knockCo(knockTime));
+        currentHealth.RuntimeValue = float.Parse(client.instance.send("AS"));
+        playerHealthSignal.Raise();
+        if (currentHealth.RuntimeValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
+        {
+            StartCoroutine(knockCo(knockTime));
+        }
+        else
+        {
+            client.instance.send("muerte");
+            this.gameObject.SetActive(false);
+        }
+        
     }
     private IEnumerator knockCo(float KnockTime)
     {
