@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f2e9c600673d640b11dbf85f047db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: a551c8e86799ac445b5bc88f0f6f02a4, type: 2}
+  signal: {fileID: 11400000, guid: 66c6ef9ab9266924498d3257fa79530c, type: 2}
   playerInRange: 0
 --- !u!61 &396297341750085926
 BoxCollider2D:

@@ -12,6 +12,7 @@ public class Arrow : MonoBehaviour
     public float lifeTime;
     private float timer;
     public Rigidbody2D rigidBody;
+    public Signal hurt;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,7 @@ public class Arrow : MonoBehaviour
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             //hacer daño
+            hurt.Raise();
             client.instance.send("AS");
         }
         Destroy(this.gameObject);

@@ -139,3 +139,4 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   lifeTime: 10
   rigidBody: {fileID: 2000860850052904153}
+  hurt: {fileID: 11400000, guid: 66c6ef9ab9266924498d3257fa79530c, type: 2}

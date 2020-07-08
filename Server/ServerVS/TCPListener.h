@@ -14,35 +14,42 @@ typedef void (*MessageRecievedHandler)(TCPListener* listener, int socketId, std:
 ///
 /// @brief Clase que inicializa un servidor con Windows socket TCP.
 ///
-///
-///
 class TCPListener {
 
 public:
 
+ 
+    /// @brief Constructor de la clase
+    /// @param ipAddress IP al que escuchar
+    /// @param port Puerto al que conectarse
+    /// @param handler Manejador de mensajes
+    /// @return TCPListener instance
     TCPListener(std::string ipAddress, int port, MessageRecievedHandler handler);
 
     ~TCPListener();
 
-    //Send a message to the specifed client
+    /// @brief Send a message to the specifed client
+    /// @param clientSocket Numero de cliente
+    /// @param msg Mesaje a enviar
     void Send(int clientSocket, std::string msg); //Mayuscula para evitar conflicto con winsock
 
-    //Initialize winsock
+ 
+    /// @brief Initialize winsock
+    /// @return True si fue exitoso
     bool Init();
 
-    //The main processing loop
+    /// @brief The main processing loop
     void Run();
 
-    //Cleanup
+
+    /// @brief Cleanup winsock
     void cleanup();
 
-    //Recieve Loop
-    //Send back message
-    //Cleanup
 
 private:
 
-    //Create a socket
+    /// @brief Create a socket
+    /// @return  El socket creado
     SOCKET CreateSocket();
 
     //Wait for connection
