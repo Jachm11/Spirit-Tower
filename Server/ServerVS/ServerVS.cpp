@@ -35,7 +35,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (key == 2) {
         res = "Ualete!";
     }
-    else if (msg == "AS") {
+    else if (msg == "AC") {
         res = to_string(j.ataqueSimple());
         
     }
