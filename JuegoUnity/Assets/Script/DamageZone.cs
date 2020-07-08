@@ -22,7 +22,7 @@ public class DamageZone : Interactivo
         {
             //player dañar
             //
-            client.instance.send("atack simp");
+            client.instance.send("AS");
             cicles = 0;
         }
 
@@ -30,7 +30,7 @@ public class DamageZone : Interactivo
         {
             //player dañar
             //
-            client.instance.send("atack simp");
+            client.instance.send("AS");
             isIn = true;
             cicles = 0;
         }

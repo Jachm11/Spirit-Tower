@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 396297341750085920, guid: a7e85db693bc60b49b504352a7221c45,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 396297341750085923, guid: a7e85db693bc60b49b504352a7221c45,
         type: 3}
       propertyPath: m_Name
@@ -6220,6 +6225,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 396297341750085920, guid: a7e85db693bc60b49b504352a7221c45,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 396297341750085923, guid: a7e85db693bc60b49b504352a7221c45,
         type: 3}
       propertyPath: m_Name
@@ -6748,7 +6758,7 @@ PrefabInstance:
     - target: {fileID: 5686531040629807830, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.09
+      value: 11.51
       objectReference: {fileID: 0}
     - target: {fileID: 5686531040629807830, guid: 1c0fc3072c1106d45b08d5d6786af8ba,
         type: 3}
@@ -7961,7 +7971,7 @@ PrefabInstance:
     - target: {fileID: 8732762862447920463, guid: 2bd6ec2c97949a440b7a49a3fd0d8cc5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.89
+      value: 19.93
       objectReference: {fileID: 0}
     - target: {fileID: 8732762862447920463, guid: 2bd6ec2c97949a440b7a49a3fd0d8cc5,
         type: 3}
@@ -10914,6 +10924,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 396297341750085920, guid: a7e85db693bc60b49b504352a7221c45,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 396297341750085923, guid: a7e85db693bc60b49b504352a7221c45,
         type: 3}
       propertyPath: m_Name
@@ -11344,7 +11359,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769052458}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.537596, y: 12.640729, z: 0}
+  m_LocalPosition: {x: 14.537596, y: 11.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11447,6 +11462,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 396297341750085920, guid: a7e85db693bc60b49b504352a7221c45,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 396297341750085923, guid: a7e85db693bc60b49b504352a7221c45,
         type: 3}
       propertyPath: m_Name
@@ -11521,7 +11541,7 @@ GameObject:
   - component: {fileID: 1943599756}
   - component: {fileID: 1943599755}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

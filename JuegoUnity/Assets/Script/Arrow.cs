@@ -39,7 +39,7 @@ public class Arrow : MonoBehaviour
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             //hacer daño
-            client.instance.send("atack simp");
+            client.instance.send("AS");
         }
         Destroy(this.gameObject);
     }
