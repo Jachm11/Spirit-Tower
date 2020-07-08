@@ -14,6 +14,19 @@ Espectro::Espectro()
 	nextPos;
 	posIndex = 0;
 	defaultRouteVec();
+	
+	//Cosas que metio Jose :3
+
+	//fitness
+	detections = 0; 
+	hits = 0;
+	defeats = 0;
+	Fitness;
+
+	//stats
+	R_Speed;
+	P_Speed;
+	V_radio;
 }
 void Espectro::move()
 {

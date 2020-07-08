@@ -5,6 +5,11 @@
 #include <queue>
 using namespace std;
 
+//Estructura para el algoritmo genetico
+struct Population {
+	std::vector<Espectro> Members = std::vector<Espectro>(3);
+};
+
 class Espectro
 {
 public:
@@ -13,6 +18,17 @@ public:
 	int life;
 	bool attacking;
 	bool backtracking;
+
+	//fitness
+	int detections;
+	int hits;
+	int defeats;
+	int Fitness;
+
+	//stats
+	int R_Speed;
+	int P_Speed;
+	int V_radio;
 	
 	int posIndex;
 	tuple<int, int> playerPos;
