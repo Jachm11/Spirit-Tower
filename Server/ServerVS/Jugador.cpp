@@ -41,7 +41,7 @@ bool Jugador::estaMuerto() {
     return vive;
 }
 int Jugador::ataqueSimple() {
-    if (!isSafe()) {
+    if (!isSafe() && corazones > 0) {
         corazones--;
 
     }

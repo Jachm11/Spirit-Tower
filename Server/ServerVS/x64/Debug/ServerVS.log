@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  Juego.cpp
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(6,29): warning C4305: 'argument': truncation from 'double' to 'float'
   Piso.cpp
@@ -5,3 +6,6 @@ C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Se
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(15,20): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+=======
+﻿  ServerVS.vcxproj -> C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+>>>>>>> master

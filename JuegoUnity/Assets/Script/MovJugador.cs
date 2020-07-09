@@ -8,7 +8,9 @@ public enum estadoJugador
     camina,
     atacando,
     stagger,
-    idle
+    interactua,
+    idle,
+    protegiendo
 }
 
 public class MovJugador : MonoBehaviour
@@ -21,6 +23,10 @@ public class MovJugador : MonoBehaviour
     private Animator animador;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
+    private bool protect = false;
+    public Item moneda;
+    public SpriteRenderer spriteItemRecivido;
+    public Inventory playerInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +43,10 @@ public class MovJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentState == estadoJugador.interactua)
+        {
+            return;
+        }
         cambio = Vector3.zero;
         cambio.x = Input.GetAxisRaw("Horizontal");
         cambio.y = Input.GetAxisRaw("Vertical");
@@ -49,9 +59,13 @@ public class MovJugador : MonoBehaviour
         {
             ciclos++;
         }
-        if (Input.GetButtonDown("ataque") && currentState != estadoJugador.atacando && currentState != estadoJugador.stagger)
+        if (Input.GetButtonDown("ataque") && currentState != estadoJugador.atacando && currentState != estadoJugador.stagger && currentState != estadoJugador.protegiendo)
         {
             StartCoroutine(ataqueCo());
+        }
+        else if (Input.GetButtonDown("proteger") && currentState != estadoJugador.atacando && currentState != estadoJugador.stagger && currentState != estadoJugador.protegiendo)
+        {
+            StartCoroutine(ProtegerCo());
         }
         else if (currentState == estadoJugador.camina || currentState == estadoJugador.idle)
         {
@@ -73,6 +87,43 @@ public class MovJugador : MonoBehaviour
         yield return null;
         animador.SetBool("atacando", false);
         yield return new WaitForSeconds(.3f);
+        if (currentState != estadoJugador.interactua)
+        {
+            currentState = estadoJugador.camina;
+        }
+
+
+    }
+
+    public void RaiseItem()
+    {
+        if (playerInventory.itemActual != null)
+        {
+            if (currentState != estadoJugador.interactua)
+            {
+                animador.SetBool("recivir item", true);
+                currentState = estadoJugador.interactua;
+                spriteItemRecivido.sprite = moneda.itemSprite;
+            }
+            else
+            {
+                animador.SetBool("recivir item", false);
+                currentState = estadoJugador.idle;
+                spriteItemRecivido.sprite = null;
+                playerInventory.itemActual = null;
+            }
+        }
+    }
+
+    private IEnumerator ProtegerCo()
+    {
+        protect = true;
+        animador.SetBool("protegiendo", true);
+        currentState = estadoJugador.protegiendo;
+        yield return null;
+        animador.SetBool("protegiendo", false);
+        yield return new WaitForSeconds(.3f);
+        protect = false;
         currentState = estadoJugador.camina;
     }
     void animMov()
@@ -99,18 +150,25 @@ public class MovJugador : MonoBehaviour
     }
     public void knock(float knockTime, float damage)
     {
-        currentHealth.RuntimeValue = float.Parse(client.instance.send("AS"));
-        playerHealthSignal.Raise();
-        if (currentHealth.RuntimeValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
+        if (!protect)
         {
-            StartCoroutine(knockCo(knockTime));
+            currentHealth.RuntimeValue = float.Parse(client.instance.send("AS"));
+            playerHealthSignal.Raise();
+            if (currentHealth.RuntimeValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
+            {
+                StartCoroutine(knockCo(knockTime));
+            }
+            else
+            {
+                client.instance.send("muerte");
+                this.gameObject.SetActive(false);
+            }
         }
         else
         {
-            client.instance.send("muerte");
-            this.gameObject.SetActive(false);
+            StartCoroutine(knockCo(knockTime));
         }
-        
+
     }
     private IEnumerator knockCo(float KnockTime)
     {
