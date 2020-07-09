@@ -3,6 +3,8 @@
 #include <string>
 
 using namespace std;
+Jugador::Jugador() {};
+
 Jugador::Jugador(float _posX, float _posY)
 {
     pos[0] = _posX;

@@ -65,14 +65,16 @@ void TCPListener::Run() {
 
                         std::string wlc = "Bievenido al servidor!";
 
-                        send(client, wlc.c_str(), wlc.size() + 1, 0);
+                        //send(client, wlc.c_str(), wlc.size() + 1, 0);
                     }
                     else {
                         int bytesIn = recv(sock, buf, MAX_BUFFER_SIZE, 0);
                         if (bytesIn <= 0) {
                             std::cout << "Cliente " << sock << ", se ha desconectado al servidor!" << std::endl;
+                            MessageReceived(this, sock, "Desconectado");
                             closesocket(sock);
                             FD_CLR(sock,  &master);
+
                             
 
                         }

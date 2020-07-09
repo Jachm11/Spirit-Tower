@@ -33,6 +33,12 @@
     <ClCompile Include="Genetic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Juego.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Piso.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TCPListener.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Genetic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Juego.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Piso.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

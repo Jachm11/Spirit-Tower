@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Net;
 using System.Net.Sockets;
 using System.ComponentModel;
+using System.Threading;
 using System;
 using System.Text;
 
@@ -55,6 +56,7 @@ public class client : MonoBehaviour
         private NetworkStream stream;
         private string msg;
         private byte[] buffer;
+        private bool msgRecived;
 
         void onDestroy()
         {
@@ -88,7 +90,10 @@ public class client : MonoBehaviour
             }
             stream = socket.GetStream();
 
+
             stream.BeginRead(buffer, 0, MAX_BUFFER_SIZE, Message_Received, null);
+
+
         }
 
         private void Message_Received(IAsyncResult result)
@@ -97,7 +102,9 @@ public class client : MonoBehaviour
             {
                 int bytesIn = stream.EndRead(result);
                 msg = Encoding.ASCII.GetString(buffer, 0, bytesIn);
-                UnityEngine.Debug.Log(msg);
+                msgRecived = true;
+                buffer = new byte[MAX_BUFFER_SIZE];
+                stream.BeginRead(buffer, 0, MAX_BUFFER_SIZE, Message_Received, null);
             }
         }
 
@@ -105,9 +112,21 @@ public class client : MonoBehaviour
         public string sendMsg(string msg)
         {
             byte[] newMsg = Encoding.ASCII.GetBytes(msg);
+
             stream.Write(newMsg, 0, newMsg.Length);
-            stream.BeginRead(buffer, 0, MAX_BUFFER_SIZE, Message_Received, null);
+            msgRecived = false;
+            waitForServer();
+            UnityEngine.Debug.Log(this.msg);
             return this.msg;
+        }
+
+        private void waitForServer()
+        {
+            while (!msgRecived)
+            {
+                Thread.Sleep(1);
+            };
+            return;
         }
 
     }

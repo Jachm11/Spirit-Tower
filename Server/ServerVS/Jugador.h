@@ -17,6 +17,7 @@ public:
     string dividir(string info, int i);
     int ataqueSimple();
     int ataqueEspectro();
+    Jugador();
 
 private:
     float pos[2];

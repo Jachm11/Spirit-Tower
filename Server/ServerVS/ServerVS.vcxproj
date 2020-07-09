@@ -141,7 +141,9 @@
   <ItemGroup>
     <ClCompile Include="Espectro.cpp" />
     <ClCompile Include="Genetic.cpp" />
+    <ClCompile Include="Juego.cpp" />
     <ClCompile Include="Jugador.cpp" />
+    <ClCompile Include="Piso.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="ServerVS.cpp" />
     <ClCompile Include="TCPListener.cpp" />
@@ -149,7 +151,9 @@
   <ItemGroup>
     <ClInclude Include="Espectro.h" />
     <ClInclude Include="Genetic.h" />
+    <ClInclude Include="Juego.h" />
     <ClInclude Include="Jugador.h" />
+    <ClInclude Include="Piso.h" />
     <ClInclude Include="TCPListener.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
