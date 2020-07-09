@@ -1,11 +1,26 @@
-<<<<<<< HEAD
-﻿  Juego.cpp
+﻿  Espectro.cpp
+  Genetic.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(12,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(14,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(16,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(19,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(28,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(31,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(34,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(48,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(62,123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(62,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(62,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(83,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(91,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(99,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Juego.cpp
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(6,29): warning C4305: 'argument': truncation from 'double' to 'float'
   Piso.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(81,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Search.cpp
   ServerVS.cpp
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(15,20): warning C4305: 'argument': truncation from 'double' to 'float'
   Generating Code...
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(106): warning C4172: returning address of local variable or temporary: new_genes
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
-=======
-﻿  ServerVS.vcxproj -> C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
->>>>>>> master

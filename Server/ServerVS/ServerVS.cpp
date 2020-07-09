@@ -110,6 +110,9 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     //int key = atoi(msg.c_str());
 
     // Cada bloque de else if sera una peticion distinta para el servidor. Estas funciones para definir res van a estar ligas a clases.
+
+    //ahora cada llamada se hace juegoCliente->funcionQueQuiera();
+    //Si hay que agregar una nueva se agrega en la clase juego. :D
     if (msg == "1") {
         res = "Salvete amicus!";
     }

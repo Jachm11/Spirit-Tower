@@ -7,6 +7,7 @@
 #include "Espectro.h"
 
 
+
 ///
 /// @brief Esta clase se encarga de ejecutar los procesos necesarios para el algoritmo genetico en los espectros
 ///

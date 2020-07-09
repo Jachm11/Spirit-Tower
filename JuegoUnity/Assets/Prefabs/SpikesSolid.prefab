@@ -124,6 +124,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   signal: {fileID: 11400000, guid: 66c6ef9ab9266924498d3257fa79530c, type: 2}
   playerInRange: 0
+  playerHealth: {fileID: 11400000, guid: 22364a044c3aa27488411fd2494c39b2, type: 2}
+  heartContainers: {fileID: 11400000, guid: f941293f5310d764d9c8dea79a994c6d, type: 2}
+  amountToDecrease: 1
 --- !u!61 &396297341750085926
 BoxCollider2D:
   m_ObjectHideFlags: 0

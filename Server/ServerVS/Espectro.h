@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <tuple>
@@ -37,16 +38,15 @@ public:
 
 	Espectro();
 	void move();
-	void attack(int grid[20][20],tuple<int, int>);
+	void attack(int grid[25][25],tuple<int, int>);
 	void gotHurt();
 	void stop();
 	void paralize();
-	vector<tuple<int, int>> getAttackRoute(int grid[20][20], int srcRow, int srcCol, int destRow, int destCol);
+	vector<tuple<int, int>> getAttackRoute(int grid[25][25], int srcRow, int srcCol, int destRow, int destCol);
 	void defaultRouteVec();
 	void printDefaultRoute();
 };
 
-//Estructura para el algoritmo genetico
 struct Population {
 	std::vector<Espectro> Members = std::vector<Espectro>(3);
 };

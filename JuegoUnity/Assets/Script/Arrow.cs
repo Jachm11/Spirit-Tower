@@ -13,6 +13,9 @@ public class Arrow : MonoBehaviour
     private float timer;
     public Rigidbody2D rigidBody;
     public Signal hurt;
+    public FloatValue playerHealth;
+    public FloatValue heartContainers;
+    public float amountToDecrease;
 
     // Start is called before the first frame update
     void Start()
@@ -40,8 +43,13 @@ public class Arrow : MonoBehaviour
         if (collision.CompareTag("Player") && !collision.isTrigger)
         {
             //hacer daño
-            hurt.Raise();
+            playerHealth.RuntimeValue -= amountToDecrease;
             client.instance.send("AS");
+            if (playerHealth.initialValue > heartContainers.RuntimeValue)
+            {
+                playerHealth.initialValue = heartContainers.RuntimeValue;
+            }
+            hurt.Raise();
         }
         Destroy(this.gameObject);
     }

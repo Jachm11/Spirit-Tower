@@ -7,6 +7,9 @@ public class DamageZone : Interactivo
 {
     bool isIn;
     private int cicles = 0;
+    public FloatValue playerHealth;
+    public FloatValue heartContainers;
+    public float amountToDecrease;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +25,24 @@ public class DamageZone : Interactivo
         {
             //player dañar
             //
+            playerHealth.RuntimeValue -= amountToDecrease;
             client.instance.send("AS");
+            if (playerHealth.initialValue> heartContainers.RuntimeValue)
+            {
+                playerHealth.initialValue = heartContainers.RuntimeValue;
+            }
             cicles = 0;
         }
 
         else if (playerInRange && !isIn)
         {
             //player dañar
-            //
+            playerHealth.RuntimeValue -= amountToDecrease;
             client.instance.send("AS");
+            if (playerHealth.initialValue > heartContainers.RuntimeValue)
+            {
+                playerHealth.initialValue = heartContainers.RuntimeValue;
+            }
             isIn = true;
             cicles = 0;
         }

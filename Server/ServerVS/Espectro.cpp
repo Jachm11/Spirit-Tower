@@ -66,7 +66,7 @@ void Espectro::move()
 	cout << "---" << "("<<get<0>(currentPos) <<","<< get<1>(currentPos)<<")";
 
 }
-void Espectro::attack(int grid[20][20],tuple<int, int> playerPos)
+void Espectro::attack(int grid[25][25],tuple<int, int> playerPos)
 {
 	attacking = true;
 	backtracking = false;

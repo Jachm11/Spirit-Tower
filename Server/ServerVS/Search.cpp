@@ -7,8 +7,8 @@
 #include "Espectro.h" 
 using namespace std;
 
-#define ROW 20 
-#define COL 20 
+#define ROW 25 
+#define COL 25 
 vector<tuple<int,int>> camino;
 // Creating a shortcut for int, int pair type 
 typedef pair<int, int> Pair;

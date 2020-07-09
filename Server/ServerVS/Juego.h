@@ -13,6 +13,8 @@ public:
 
 	Jugador jugador;
 
+	std::vector<string> rutas;
+
 	int pisoActual;
 
 	int Matriz1[25][25];
@@ -45,7 +47,9 @@ public:
 
 	void enemyKilled(int ID);
 
-	string askEnemyRoute();
+	void askEnemyRoute(int ID);
+
+	void enemyStop(int ID);
 
 	string askEnemyStats();
 
@@ -56,6 +60,9 @@ private:
 	void setMatrix();
 
 	void setPuntajes();
+
+	void setRutas();
+
 
 };
 

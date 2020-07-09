@@ -18,11 +18,11 @@ public:
     int ataqueSimple();
     int ataqueEspectro();
     Jugador();
+    int corazones;
 
 private:
     float pos[2];
     bool vive;
     bool is_safe;
-    int corazones;
     bool atacable;
 };
