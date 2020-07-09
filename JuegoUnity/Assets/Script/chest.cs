@@ -9,7 +9,8 @@ public class chest : Interactivo
     public int pts;
     public bool isOpen;
     //public Signal raiseItem;
-    //public Text dialogText;
+    public GameObject dialogBox; 
+    public Text dialogText;
     private Animator anim;
 
 
@@ -31,12 +32,17 @@ public class chest : Interactivo
                 //Open 
                 OpenChest();
             }
+            else {
+                ChestAlreadyOpen();
+            }
         }
     }
 
     public void OpenChest()
     {
-        //dialogText.text = pts.ToString(); Es un atributo del jugador o de UI
+        dialogBox.SetActive(true);
+        dialogText.text = pts.ToString(); //Es un atributo del jugador o de UI
+
 
         // avisar a Harold que puntos fueron ganados
         client.instance.send("OCO"); //Object Chest opened
@@ -49,6 +55,12 @@ public class chest : Interactivo
 
         anim.SetBool("opened", true);
 
+    }
+
+    public void ChestAlreadyOpen() 
+    {
+        dialogBox.SetActive(false);
+        //raiseItem.Raise();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

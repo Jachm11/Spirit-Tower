@@ -8,6 +8,7 @@ public enum estadoJugador
     camina,
     atacando,
     stagger,
+    interactua,
     idle,
     protegiendo
 }
@@ -23,6 +24,9 @@ public class MovJugador : MonoBehaviour
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
     private bool protect = false;
+    public Item moneda;
+    public SpriteRenderer spriteItemRecivido;
+    public Inventory playerInventory;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +43,10 @@ public class MovJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (currentState == estadoJugador.interactua)
+        {
+            return;
+        }
         cambio = Vector3.zero;
         cambio.x = Input.GetAxisRaw("Horizontal");
         cambio.y = Input.GetAxisRaw("Vertical");
@@ -55,8 +63,8 @@ public class MovJugador : MonoBehaviour
         {
             StartCoroutine(ataqueCo());
         }
-        else if(Input.GetButtonDown("proteger") && currentState != estadoJugador.atacando && currentState != estadoJugador.stagger && currentState != estadoJugador.protegiendo)
-        { 
+        else if (Input.GetButtonDown("proteger") && currentState != estadoJugador.atacando && currentState != estadoJugador.stagger && currentState != estadoJugador.protegiendo)
+        {
             StartCoroutine(ProtegerCo());
         }
         else if (currentState == estadoJugador.camina || currentState == estadoJugador.idle)
@@ -79,8 +87,34 @@ public class MovJugador : MonoBehaviour
         yield return null;
         animador.SetBool("atacando", false);
         yield return new WaitForSeconds(.3f);
-        currentState = estadoJugador.camina;
+        if (currentState != estadoJugador.interactua)
+        {
+            currentState = estadoJugador.camina;
+        }
+
+
     }
+
+    public void RaiseItem()
+    {
+        if (playerInventory.itemActual != null)
+        {
+            if (currentState != estadoJugador.interactua)
+            {
+                animador.SetBool("recivir item", true);
+                currentState = estadoJugador.interactua;
+                spriteItemRecivido.sprite = moneda.itemSprite;
+            }
+            else
+            {
+                animador.SetBool("recivir item", false);
+                currentState = estadoJugador.idle;
+                spriteItemRecivido.sprite = null;
+                playerInventory.itemActual = null;
+            }
+        }
+    }
+
     private IEnumerator ProtegerCo()
     {
         protect = true;
@@ -134,7 +168,7 @@ public class MovJugador : MonoBehaviour
         {
             StartCoroutine(knockCo(knockTime));
         }
-        
+
     }
     private IEnumerator knockCo(float KnockTime)
     {
