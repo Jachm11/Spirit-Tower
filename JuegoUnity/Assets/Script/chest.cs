@@ -6,10 +6,12 @@ using UnityEngine.UI;
 
 public class chest : Interactivo
 {
+    public Item contents;
+    public Inventory playerInventory;
     public int pts;
     public bool isOpen;
-    //public Signal raiseItem;
-    public GameObject dialogBox; 
+    public Signal raiseItem;
+    public GameObject dialogBox;
     public Text dialogText;
     private Animator anim;
 
@@ -19,20 +21,21 @@ public class chest : Interactivo
     {
         anim = GetComponent<Animator>();
 
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)&& playerInRange)
+        if (Input.GetKeyDown(KeyCode.Space) && playerInRange)
         {
             if (!isOpen)
             {
                 //Open 
                 OpenChest();
             }
-            else {
+            else
+            {
                 ChestAlreadyOpen();
             }
         }
@@ -42,25 +45,24 @@ public class chest : Interactivo
     {
         dialogBox.SetActive(true);
         dialogText.text = pts.ToString(); //Es un atributo del jugador o de UI
-
-
+        playerInventory.itemActual = contents;
         // avisar a Harold que puntos fueron ganados
         client.instance.send("OCO"); //Object Chest opened
 
-        //raiseItem.Raise();
-
-        isOpen = true;
-
+        raiseItem.Raise();
         signal.Raise();
-
         anim.SetBool("opened", true);
 
+        isOpen = true;
     }
 
-    public void ChestAlreadyOpen() 
+    public void ChestAlreadyOpen()
     {
+
         dialogBox.SetActive(false);
-        //raiseItem.Raise();
+        raiseItem.Raise();
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
