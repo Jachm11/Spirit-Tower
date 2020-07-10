@@ -94,8 +94,6 @@ float* Piso::getGeneticStat(std::vector <Espectro> pastGen, int puntajePasado, i
 
 	std::cout << "El % de vida con las que termino el jugar el piso es: " << vidaPorc << std::endl;
 
-
-
 	return genetic.getGenes(pastGen, muertesPasadas, puntajePorc, vidaPorc);
 }
 
