@@ -65,14 +65,20 @@ Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasada
 
 void Piso::updatePuntaje(int puntos)
 {
+	puntajeJugador += puntos;
 }
 
-void Piso::updateMuertes()
+void Piso::jugadorMuere()
 {
+	muertes++;
+	puntajeJugador = 0;
+	//Talvez hay que llamar a otro metodo de espectro
 }
 
 void Piso::EspectroMurio(int ID)
 {
+	espectros.at(ID).defeats++;
+	//Talvez hay que llamar a otro metodo de espectro
 }
 
 float Piso::getRandomStat()

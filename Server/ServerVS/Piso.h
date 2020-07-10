@@ -21,7 +21,7 @@ public:
 
 	void updatePuntaje(int puntos);
 
-	void updateMuertes();
+	void jugadorMuere();
 
 	void EspectroMurio(int ID);
 

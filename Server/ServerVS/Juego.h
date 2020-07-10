@@ -57,6 +57,8 @@ private:
 
 	int puntaje;
 
+	int muertes;
+
 	void setMatrix();
 
 	void setPuntajes();

@@ -5,7 +5,6 @@
 #include <string>
 #include "TCPListener.h"
 #include "Juego.h"
-#include "Espectro.h"
 using namespace std;
 
 #define MAX_PLAYERS 4;
@@ -285,7 +284,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
 
     }
     else {
-        res = "pos";
+        res = "res";
         //j.setPos(msg);  //lsito
         //res = "19,15;19,14;19,13;19,12;19,11;19,10;19,9;19,8;19,7;20,6;20,5;21,4;21,3;19,15;19,14;19,13;19,12;19,11;19,10;19,9;19,8;19,7;20,6;20,5;21,4;21,3";
        

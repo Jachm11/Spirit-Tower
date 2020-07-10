@@ -5,7 +5,7 @@ Juego::Juego() {
 
 	jugador = Jugador (5.2, 5.2);
 
-	puntaje;
+	puntaje; // se actualiza solo hasta que se pase de nivel
 
 	puntajes;
 
@@ -18,6 +18,8 @@ Juego::Juego() {
 	setPuntajes();
 
 	setRutas();
+
+	muertes = 0;
 
 	
 }
@@ -40,6 +42,7 @@ void Juego::generatePiso(int piso) {
 			pisoAnterior->puntajeJugador,pisoAnterior->muertes,jugador,espectros ,*puntajes[pisoActual]);
 		pisos[piso - 1] = &new_piso;
 		pisoActual++;
+		puntaje += pisoAnterior->puntajeJugador;
 	}
 
 	else if (piso == 3)
@@ -88,7 +91,10 @@ int Juego:: playerHit() {
 
 void Juego:: playerDied() {
 	jugador.setMuerte();
-	pisos[pisoActual]->updateMuertes();
+	muertes++;
+	pisos[pisoActual]->jugadorMuere();
+
+
 }
 
 void Juego:: playerVisible() {
@@ -101,7 +107,6 @@ void Juego:: playerInvisible() {
 }
 
 void Juego:: chestOpened() {
-	puntaje += 10;
 	pisos[pisoActual]->updatePuntaje(10);
 }
 
@@ -116,16 +121,16 @@ void Juego:: askEnemyRoute(int ID) {
 
 
 	if (pisoActual == 0) {
-		//pisos[pisoActual]->espectros.at(ID-1).attack(Matriz1,make_tuple(24 - (int)pos[1], (int)pos[0]));
+		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz1,make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 1) {
-		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz2, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz2, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 2) {
-		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz3, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz3, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 3) {
-		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz4, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz4, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 }
 
