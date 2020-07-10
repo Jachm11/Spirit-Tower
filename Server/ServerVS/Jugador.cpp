@@ -16,8 +16,8 @@ Jugador::Jugador(float _posX, float _posY)
 
 }
 void Jugador::setPos(string _pos) {
-    pos[0] = stof(dividir(_pos, 0));
-    pos[1] = stof(dividir(_pos, 1));
+    pos[0] = stof(dividir(_pos, 1));
+    pos[1] = stof(dividir(_pos, 2));
 }
 void Jugador::setSafe(bool estado) {
     is_safe = estado;

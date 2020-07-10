@@ -33,9 +33,9 @@ public:
 
 	void setPlayerPos(string pos);
 
-	void playerHealed();
+	int playerHealed();
 
-	void playerHit();
+	int playerHit();
 
 	void playerDied();
 

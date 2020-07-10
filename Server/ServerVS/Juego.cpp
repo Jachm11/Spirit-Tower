@@ -77,14 +77,13 @@ void Juego:: setPlayerPos(string pos) {
 	jugador.setPos(pos);
 }
 
-void Juego:: playerHealed() {
-	int vida = jugador.aumentarCorazon();
-	//res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
+int Juego:: playerHealed() {
+	 return jugador.aumentarCorazon();
 
 }
 
-void Juego:: playerHit() {
-	jugador.ataqueSimple();
+int Juego:: playerHit() {
+	return jugador.ataqueSimple();
 }
 
 void Juego:: playerDied() {

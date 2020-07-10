@@ -2,3 +2,5 @@ C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Se
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.pdb
 C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
 C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.pdb
+C:\Users\Nati Gonzalez\Desktop\PROYECTO2DATOS2\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+C:\Users\Nati Gonzalez\Desktop\PROYECTO2DATOS2\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.pdb
