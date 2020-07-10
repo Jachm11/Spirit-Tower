@@ -153,29 +153,33 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         res = "Ualete!";
     }
     else if (msg == "AS") { //listo
-        res = to_string(j.ataqueSimple());
+        res = to_string(juegoCliente->playerHit());
         
     }
+    else if (msg.substr(0, 3) == "pos") {
+        juegoCliente->setPlayerPos(msg);
+        res = "posicion actualizada";
+    }
     else if (msg == "PI") { //lsito
-        j.setSafe(true);
+        juegoCliente->playerInvisible();
         res = "El personaje ahora es invisible!";
     }
     else if (msg == "PV") { //listo
-        j.setSafe(false);
+        juegoCliente->playerVisible();
         res = "El personaje ahora es visible!";
     }
     else if (msg == "OPD") {
         res = "Un jarron ha sido destruido!";
     }
     else if (msg == "muerte") { //listo
-        j.setMuerte();
+        juegoCliente->playerDied();
         res = "El jugador ha muerto";
     }
     else if (msg == "OCO") { //lsito
         res = "Un cofre ha sido abierto!";
     }
     else if (msg == "P+1") { // listo
-        int vida = j.aumentarCorazon();
+        int vida = juegoCliente->playerHealed();
         res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
     }
     else if (msg == "E1") {
@@ -218,7 +222,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     }
     else {
         res = "pos";
-        j.setPos(msg);  //lsito
+        //j.setPos(msg);  //lsito
         //res = "19,15;19,14;19,13;19,12;19,11;19,10;19,9;19,8;19,7;20,6;20,5;21,4;21,3;19,15;19,14;19,13;19,12;19,11;19,10;19,9;19,8;19,7;20,6;20,5;21,4;21,3";
        
     }

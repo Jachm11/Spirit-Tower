@@ -1,3 +1,8 @@
-﻿  ServerVS.cpp
-C:\Users\Nati Gonzalez\Desktop\PROYECTO2DATOS2\Spirit-Tower\Server\ServerVS\ServerVS.cpp(15,20): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  ServerVS.vcxproj -> C:\Users\Nati Gonzalez\Desktop\PROYECTO2DATOS2\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+﻿  Juego.cpp
+C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\Juego.cpp(6,29): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Jugador.cpp
+C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\Jugador.cpp(64,33): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
+  ServerVS.cpp
+C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\ServerVS.cpp(15,20): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+  Generando código...
+  ServerVS.vcxproj -> C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
