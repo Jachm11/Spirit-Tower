@@ -9,7 +9,7 @@ Jugador::Jugador(float _posX, float _posY)
 {
     pos[0] = _posX;
     pos[1] = _posY;
-    corazones = 6;
+    corazones = 5;
     is_safe = false;
     vive = true;
     atacable = false;
@@ -26,7 +26,7 @@ bool Jugador::isSafe() {
     return is_safe;
 }
 int Jugador::aumentarCorazon() {
-    if (corazones > 0 && corazones < 6) {
+    if (corazones > 0 && corazones < 5) {
         corazones++;
     }
     return corazones;
@@ -35,7 +35,7 @@ float* Jugador::getPos() {
     return &pos[0];
 }
 void Jugador::setMuerte() {
-    vive = false;
+    corazones = 5;
 }
 bool Jugador::estaMuerto() {
     return vive;

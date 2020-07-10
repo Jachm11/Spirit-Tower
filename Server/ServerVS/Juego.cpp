@@ -75,7 +75,6 @@ void Juego::generatePiso(int piso) {
 
 }
 
-
 void Juego:: setPlayerPos(string pos) {
 	jugador.setPos(pos);
 }
@@ -91,8 +90,8 @@ int Juego:: playerHit() {
 
 void Juego:: playerDied() {
 	jugador.setMuerte();
-	muertes++;
-	pisos[pisoActual]->jugadorMuere();
+	//muertes++;
+	//pisos[pisoActual]->jugadorMuere();
 
 
 }
