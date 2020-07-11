@@ -246,44 +246,41 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         int vida = juegoCliente->playerHealed();
         res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
     }
-    else if (msg == "E1") {
-        res = "Espectro derrotado!";
+    else if (msg[0] == 'E') {
+        int ID = (int)msg[1];
+        if (msg[2] == 'D')
+        {
+            //getDefaultResponse
+            res = juegoCliente->defaultResponse(ID);
+            
+        }
+        else if (msg[2] == 'S')
+        {
+            //getStatsResponse
+            res = juegoCliente->statsResponse(ID);
+        }
+        else if(msg[2] == 'A')
+        {
+            //getAttackResponse
+            res = juegoCliente->attackResponse(ID, msg.substr(3));
+        }
+        else if (msg[2] == 'B')
+        {
+            //getBacktrackResponse
+            res = juegoCliente->backtrackResponse(ID);
+        }
+        else
+        {
+            //addBacktrackPos
+            juegoCliente->backtrackPos(ID,msg.substr(2));
+            res = "Espectro " + to_string(ID) + " en movimiento";
+        }
     }
-    else if (msg == "E2") {
-        res = "Espectro derrotado!";
-    }
-    else if (msg == "E3") {
-        res = "Espectro derrotado!";
-    }
-
-
     else if (msg == "Desconectado") {
         cleanClient(ID);
         res = "Espacio liberado";
     }
-    else if (msg == "E1stats")
-    {
-
-        res = "enviar stats";
-    }
-    else if (msg == "E1move")
-    {
         
-        res = esp.move();
-    }
-    else if (msg == "E1stop")
-    {
-        esp.stop();
-        res = "no atacando";
-    }
-    else if (msg == "E1attack")
-    {
-        float* pos = j.getPos();
-
-        //esp.attack(piso1, make_tuple(24 - (int)pos[1], (int)pos[0]));
-        res = "atacando";
-
-    }
     else {
         res = "res";
         //j.setPos(msg);  //lsito

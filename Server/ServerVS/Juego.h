@@ -53,6 +53,18 @@ public:
 
 	string askEnemyStats();
 
+	//Funciones del enemigo
+	string defaultResponse(int ID);
+	string statsResponse(int ID);
+	string attackResponse(int ID, string pos);
+	string backtrackResponse(int ID);
+	void backtrackPos(int ID, string pos);
+
+	
+	
+	
+	
+
 private:
 
 	int puntaje;

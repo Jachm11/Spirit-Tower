@@ -40,7 +40,7 @@ public:
 
 
 	void setStats(float vel, int rango, float velAtaque);
-	void addBacktrackPos(string pos);
+	
 	vector<tuple<int, int>> getAttackRoute(int grid[25][25], int srcRow, int srcCol, int destRow, int destCol);
 
 	//tuple<int, int> playerPos;
@@ -50,6 +50,7 @@ public:
 	//void defaultRouteVec(string defRoute);
 	//string getDefaultRoute();
 	//string getAttackRoute();
+	void addBacktrackPos(string pos); 
 	string getAttackResponse();
 	string getDefaultResponse();
 	string getBacktrackResponse();

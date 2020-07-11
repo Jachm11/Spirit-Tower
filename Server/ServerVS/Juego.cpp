@@ -108,6 +108,34 @@ void Juego:: playerInvisible() {
 void Juego:: chestOpened() {
 	pisos[pisoActual]->updatePuntaje(10);
 }
+//Funciones del enemigo
+string Juego::defaultResponse(int ID)
+{
+	
+	return pisos[pisoActual]->espectros.at(ID).getDefaultResponse();
+}
+string Juego::statsResponse(int ID)
+{
+	
+	return pisos[pisoActual]->espectros.at(ID).getStatsResponse();
+}
+string Juego::attackResponse(int ID, string pos) 
+{
+	float* jp =jugador.getPos();
+	
+	pisos[pisoActual]->espectros.at(ID).attack(Matriz1, make_tuple((int)jp[0], (int)jp[1]), pos);
+	return pisos[pisoActual]->espectros.at(ID).getAttackResponse();
+}
+string Juego::backtrackResponse(int ID)
+{
+	
+	return pisos[pisoActual]->espectros.at(ID).getBacktrackResponse();
+}
+void Juego::backtrackPos(int ID, string pos)
+{
+	
+	pisos[pisoActual]->espectros.at(ID).addBacktrackPos(pos);
+}
 
 void Juego:: enemyKilled(int ID) {
 		pisos[pisoActual]->EspectroMurio(ID);
@@ -147,7 +175,37 @@ string Juego:: askEnemyStats() {
 
 void Juego::setMatrix() {
 
-	//Matriz1 = algo;
+	int Mtriz1[25][25] = 
+	{
+		//{00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//00
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//01
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//02
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//03
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//04
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//05
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//06
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//07
+		  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//08
+		  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//09
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//10
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//11
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//12
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//13
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//14
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//15
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//16
+		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//17
+		  { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },//18
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//19
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//20
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//21
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//22
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//23
+		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } //24
+
+	};
+	Matriz1[25][25] = Mtriz1[25][25];
 	//Matriz2 = algo;
 	//Matriz3 = algo;
 	//Matriz4 = algo;
@@ -166,9 +224,9 @@ void Juego::setPuntajes() {
 void Juego::setRutas()
 {
 	//Piso 1
-	rutas.push_back("algo");
-	rutas.push_back("algo");
-	rutas.push_back("algo");
+	rutas.push_back("2,4;22,4;22,5;2,5");
+	rutas.push_back("1,12;10,12;10,21;1,21");
+	rutas.push_back("24,21;15,21;15,12;24,12");
 	//Piso 2
 	rutas.push_back("algo");
 	rutas.push_back("algo");

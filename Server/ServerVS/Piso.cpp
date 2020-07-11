@@ -21,7 +21,7 @@ Piso::Piso(string E1, string E2, string E3, int puntajeMax) {
 		else if (i == 2) {
 			//newEspectro = Espectro(E3);
 		}
-		//newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+		newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
 		espectros.push_back(newEspectro);
 	}
 
