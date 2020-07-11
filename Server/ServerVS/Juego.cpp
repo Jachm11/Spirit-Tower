@@ -120,16 +120,16 @@ void Juego:: askEnemyRoute(int ID) {
 
 
 	if (pisoActual == 0) {
-		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz1,make_tuple(24 - (int)pos[1], (int)pos[0]));
+		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz1,make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 1) {
-		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz2, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz2, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 2) {
-		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz3, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz3, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 	else if (pisoActual == 3) {
-		pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz4, make_tuple(24 - (int)pos[1], (int)pos[0]));
+		//pisos[pisoActual]->espectros.at(ID - 1).attack(Matriz4, make_tuple(24 - (int)pos[1], (int)pos[0]));
 	}
 }
 

@@ -31,7 +31,7 @@ public:
 
 
 	string move();
-	void attack(int grid[25][25], tuple<int, int>);
+	void attack(int grid[25][25], tuple<int, int>, string pos);
 	void gotHurt();
 	void stop();
 	void paralize();
@@ -40,6 +40,7 @@ public:
 
 
 	void setStats(float vel, int rango, float velAtaque);
+	void addBacktrackPos(string pos);
 	vector<tuple<int, int>> getAttackRoute(int grid[25][25], int srcRow, int srcCol, int destRow, int destCol);
 
 	//tuple<int, int> playerPos;
@@ -49,7 +50,10 @@ public:
 	//void defaultRouteVec(string defRoute);
 	//string getDefaultRoute();
 	//string getAttackRoute();
-	//void setCurrentPos(string pos);
+	string getAttackResponse();
+	string getDefaultResponse();
+	string getBacktrackResponse();
+	string getStatsResponse();
 	
 
 private:
@@ -61,12 +65,19 @@ private:
 	bool backtracking;
 	bool paralized;
 	int posIndex;
+	
+	
 	tuple<int, int> currentPos;
 	vector<tuple<int, int>> defaultRoute;
 	queue<tuple<int, int>> attackRoute;
 	stack<tuple<int, int>> backtrackRoute;
 	vector<tuple<int, int>> attackRouteVec;
+	string attackResponse;
+	string defaultResponse;
+	string backtrackResponse;
+	string statsResponse;
 
+	void setCurrentPos(string pos);
 
 };
 

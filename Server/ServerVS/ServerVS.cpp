@@ -20,7 +20,7 @@ int cupos[] = { 0,0,0,0 };
 int clientes[] = { -1,-1,-1,-1 };
 bool full = false;
 
-Espectro esp("20,2;20,3;20,4;20,5;20,6;20,7;20,8;20,9;20,10;20,11;20,12;20,13;20,14;20,15;20,16;20,17;20,18;20,19;20,20;20,21;20,22");
+Espectro esp("2,4;22,4;22,5;2,5");
 
 
 int piso1[25][25] =
@@ -119,6 +119,7 @@ int piso3[25][25] =
 
 int main()
 {
+    
     TCPListener server("127.0.0.1", 54010, Listener_MessageReceived);
 
     if (server.Init()) {
@@ -279,7 +280,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     {
         float* pos = j.getPos();
 
-        esp.attack(piso1, make_tuple(24 - (int)pos[1], (int)pos[0]));
+        //esp.attack(piso1, make_tuple(24 - (int)pos[1], (int)pos[0]));
         res = "atacando";
 
     }

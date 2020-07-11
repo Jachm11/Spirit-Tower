@@ -9,6 +9,7 @@ Espectro::Espectro(string defRoute)
 	attacking = false;
 	backtracking = false;
 	posIndex = 0;
+	defaultResponse = defRoute;
 	//defaultRouteVec(defRoute);
 
 	
@@ -73,19 +74,75 @@ string Espectro::move()
 
 
 }
-void Espectro::attack(int grid[25][25], tuple<int, int> playerPos)
+void Espectro::attack(int grid[25][25], tuple<int, int> playerPos, string pos)
 {
-	//setCurrentPos(pos);
+	
+	setCurrentPos(pos);
 	attacking = true;
 	backtracking = false;
 	backtrackRoute.push(currentPos);
-	attackRouteVec = getAttackRoute(grid, get<0>(currentPos), get<1>(currentPos), get<0>(playerPos), get<1>(playerPos));
-	for (int i = 0; i < attackRouteVec.size(); i++)
+	attackRouteVec = getAttackRoute(grid, get<0>(currentPos), get<1>(currentPos), 24-get<1>(playerPos), get<0>(playerPos));
+	if (!attackRouteVec.empty()) 
 	{
-		attackRoute.push(attackRouteVec[i]);
+		for (int i = 0; i < attackRouteVec.size(); i++)
+		{
+			attackRoute.push(attackRouteVec[i]);
+
+		}
 	}
 
 }
+void Espectro::setCurrentPos(string pos) 
+{
+	int x = stoi(pos.substr(0,pos.find(',')));
+	int y = 24-stoi(pos.substr(pos.find(',') + 1));
+	currentPos = make_tuple(y,x);
+}
+void Espectro::addBacktrackPos(string pos)
+{
+	backtrackResponse = backtrackResponse + pos + ";";
+}
+void Espectro::setStats(float vel, int rango, float velAtaque)
+{
+	string stats;
+	speed = vel;
+	range = rango;
+	chaseSpeed = velAtaque;
+	stats = to_string((int)speed) + ";" + to_string((int)range) + ";" + to_string((int)chaseSpeed);
+	statsResponse = stats;
+}
+string Espectro::getAttackResponse()
+{
+	string route;
+	if (!attackRouteVec.empty())
+	{
+		route = to_string(get<1>(attackRouteVec[0])) + "," + to_string(24 - get<0>(attackRouteVec[0])) + ";";
+		for (int i = 1; i < attackRouteVec.size(); i++)
+		{
+
+			route = route + to_string(get<1>(attackRouteVec[i])) + "," + to_string(24 - get<0>(attackRouteVec[i])) + ";";
+
+		}
+		route.pop_back();
+		attackResponse = route;
+	}
+	else { route = "NO"; }
+	return route;
+}
+string Espectro::getDefaultResponse()
+{
+	return defaultResponse;
+}
+string Espectro::getBacktrackResponse()
+{
+	backtrackResponse.pop_back();
+	return backtrackResponse;
+}
+string Espectro::getStatsResponse()
+{
+	return statsResponse;
+}
+
 
 void Espectro::stop()
 {
@@ -107,26 +164,10 @@ void Espectro::paralize()
 {
 	paralized = true;
 }
-void Espectro::setStats(float vel, int rango, float velAtaque)
-{
-	string stats;
-	speed = vel;
-	range = rango;
-	chaseSpeed = velAtaque;
-	stats = to_string(speed) + ";" + to_string(range) + ";" + to_string(chaseSpeed);
-	//return stats;
-}
+
 
 	
-void Espectro::setStats(float vel, int rango, float velAtaque)
-{
-	string stats;
-	speed = vel;
-	range = rango;
-	chaseSpeed = velAtaque;
-	stats = to_string(speed) + ";" + to_string(range) + ";" + to_string(chaseSpeed);
-	//return stats;
-}
+
 
 
 //FUNCIONES DE OTRA LOGICA
@@ -145,12 +186,7 @@ void Espectro::setStats(float vel, int rango, float velAtaque)
 //	int y = stoi(pos.substr(pos.find(',') + 1));
 //	return make_tuple(x, y);
 //}
-//void Espectro::setCurrentPos(string pos) 
-//{
-//	int x = stoi(pos.substr(0,pos.find(',')));
-//	int y = stoi(pos.substr(pos.find(',') + 1));
-//	currentPos = make_tuple(x,y);
-//}
+
 //string Espectro::getDefaultRoute()
 //{
 //	string route = to_string(get<0>(defaultRoute[0]))+","+to_string(get<1>(defaultRoute[0])) + ";";
