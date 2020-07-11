@@ -1,6 +1,8 @@
 #include "Espectro.h"
 
+
 Espectro::Espectro() {}
+
 Espectro::Espectro(string defRoute)
 {
 	paralized = false;
@@ -8,6 +10,7 @@ Espectro::Espectro(string defRoute)
 	backtracking = false;
 	posIndex = 0;
 	//defaultRouteVec(defRoute);
+
 	
 	//Cosas que metio Jose :3
 
@@ -21,6 +24,7 @@ Espectro::Espectro(string defRoute)
 	R_Speed;
 	P_Speed;
 	V_radio;
+
 }
 string Espectro::move()
 {
@@ -38,7 +42,9 @@ string Espectro::move()
 		if (backtrackRoute.empty())
 		{
 			backtracking = false;
+
 			attacking = false;
+
 		}
 		if (!attacking)
 		{
@@ -61,7 +67,10 @@ string Espectro::move()
 		}
 	}
 	//cout << "---" << "(" << get<0>(currentPos) << "," << get<1>(currentPos) << ")";
+
 	return to_string(get<0>(currentPos)) + ',' + to_string(get<1>(currentPos));
+
+
 
 }
 void Espectro::attack(int grid[25][25], tuple<int, int> playerPos)
@@ -75,6 +84,7 @@ void Espectro::attack(int grid[25][25], tuple<int, int> playerPos)
 	{
 		attackRoute.push(attackRouteVec[i]);
 	}
+
 }
 
 void Espectro::stop()
@@ -90,6 +100,7 @@ void Espectro::gotHurt()
 
 void Espectro::paralizeStop()
 {
+
 	paralized = false;
 }
 void Espectro::paralize()
@@ -105,6 +116,18 @@ void Espectro::setStats(float vel, int rango, float velAtaque)
 	stats = to_string(speed) + ";" + to_string(range) + ";" + to_string(chaseSpeed);
 	//return stats;
 }
+
+	
+void Espectro::setStats(float vel, int rango, float velAtaque)
+{
+	string stats;
+	speed = vel;
+	range = rango;
+	chaseSpeed = velAtaque;
+	stats = to_string(speed) + ";" + to_string(range) + ";" + to_string(chaseSpeed);
+	//return stats;
+}
+
 
 //FUNCIONES DE OTRA LOGICA
 //void Espectro::defaultRouteVec(string defRoute)
@@ -156,4 +179,8 @@ void Espectro::setStats(float vel, int rango, float velAtaque)
 //	route.pop_back();
 //	attackString = route;
 //	return route;
+
 //}
+
+//}
+

@@ -249,7 +249,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i - 1, j, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -300,7 +300,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i + 1, j, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -350,7 +350,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i, j + 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -402,7 +402,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i, j - 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -454,7 +454,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i - 1, j + 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -506,7 +506,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i - 1, j - 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -556,7 +556,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i + 1, j + 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -608,7 +608,7 @@ void aStarSearch(int grid[][COL], Pair src, Pair dest)
 				hNew = calculateHValue(i + 1, j - 1, dest);
 				fNew = gNew + hNew;
 
-				// If it isn’t on the open list, add it to 
+				// If it isnï¿½t on the open list, add it to 
 				// the open list. Make the current square 
 				// the parent of this square. Record the 
 				// f, g, and h costs of the square cell 
@@ -674,6 +674,7 @@ void printCamino()
 // Driver program to test above function 
 
 //Probar en el main
+
  /*
 int grid[20][20] =
 	{
@@ -736,3 +737,40 @@ int grid[20][20] =
 	Enemigo::search(grid, 8, 0, 8, 1);
  */
 // { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+
+/*
+int piso1[25][25] =
+{
+	//{00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//00
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//01
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//02
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//03
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//04
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//05
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//06
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//07
+	  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//08
+	  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//09
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//10
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//11
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//12
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//13
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//14
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//15
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//16
+	  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//17
+	  { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },//18
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//19
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//20
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//21
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//22
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//23
+	  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } //24
+
+};
+*/
+	//Enemigo::search(grid, 8, 0, 8, 1);
+ 
+ // { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+

@@ -12,6 +12,7 @@ using namespace std;
 class Espectro
 {
 public:
+
 	//constructor
 	Espectro(string defRoute);
 	Espectro();
@@ -27,12 +28,17 @@ public:
 	int V_radio;
 
 	
+
+
 	string move();
 	void attack(int grid[25][25], tuple<int, int>);
 	void gotHurt();
 	void stop();
 	void paralize();
+
 	void paralizeStop();
+
+
 	void setStats(float vel, int rango, float velAtaque);
 	vector<tuple<int, int>> getAttackRoute(int grid[25][25], int srcRow, int srcCol, int destRow, int destCol);
 
@@ -45,6 +51,7 @@ public:
 	//string getAttackRoute();
 	//void setCurrentPos(string pos);
 	
+
 private:
 	float speed;
 	int range;
@@ -60,8 +67,10 @@ private:
 	stack<tuple<int, int>> backtrackRoute;
 	vector<tuple<int, int>> attackRouteVec;
 
+
 };
 
 struct Population {
 	std::vector<Espectro> Members = std::vector<Espectro>(3);
+
 };
