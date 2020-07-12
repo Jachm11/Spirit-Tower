@@ -48,16 +48,13 @@ public:
 
 private:
 
-    /// @brief Create a socket
-    /// @return  El socket creado
-    SOCKET CreateSocket();
-
-    //Wait for connection
-    //SOCKET waitForConnection(SOCKET listening);
-
     std::string m_ipAddress;
     int m_port;
     MessageRecievedHandler MessageReceived;
+
+    /// @brief Create a socket
+    /// @return  El socket creado
+    SOCKET CreateSocket();
 
 
 };

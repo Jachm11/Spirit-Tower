@@ -1,8 +1,7 @@
 #include "Genetic.h"
 
-
 Genetic::Genetic() {
-
+	
 	MutationRate;
 	Popul;
 };
@@ -10,14 +9,10 @@ Genetic::Genetic() {
 int Genetic::EnemyFitness(float detections, float hits, float defeats) {
 
 	float det_rate = (detections / totalDetections) * 40.0;
-	std::cout<<"Detection rate: " << det_rate << std::endl;
 	int hit_rate = (hits / totalHits) * 45.0;
-	std::cout << "Hit rate: " << hit_rate << std::endl;
 	int defeat_rate = 15 - (defeats / totalDefeats) * 15.0;
-	std::cout << "Defeat rate" << defeat_rate << std::endl;
 
 	int total = det_rate + hit_rate + defeat_rate;
-	std::cout << "Fitness: " << total << std::endl;
 
 	return total;
 
@@ -26,27 +21,18 @@ int Genetic::EnemyFitness(float detections, float hits, float defeats) {
 float Genetic::maxToMutate(int muertes, int puntaje, int vidas) {
 
 	float surv = (100 - (muertes * 10)) * 0.3;
-	std::cout << "Survival: " << surv << std::endl;
-
 	float rng = (rand() % 100 + 1) * 0.1;
-	std::cout << "Rng: " << rng << std::endl;
-
 	float total = surv + (puntaje * 0.3) + (vidas * 0.3) + rng;
-	std::cout << "Toltal: " << total << std::endl;
-
 	float MaxMutation = (total / 100) * 40;
 
-	std::cout << "Maxima mutacion: " << MaxMutation << std::endl;
-
+	std::cout << "Maxima mutacion en: " << MaxMutation <<"%" << std::endl;
 	return MaxMutation;
 
 }
 
 std::vector <float> Genetic::getGenes(std::vector<Espectro> Members, int muertes, int puntaje, int vida) {
 
-	srand(time(NULL));
-	
-	int MutationRate = 30;
+	int MutationRate = 10;
 
 	//create a population
 	Popul.Members = Members;
@@ -69,14 +55,13 @@ std::vector <float> Genetic::getGenes(std::vector<Espectro> Members, int muertes
 	//select x amount of highest fitness members to pair from, lets use 2 parents in this case
 	std::vector<Espectro> Parents{ Popul.Members.at(0), Popul.Members.at(1) };
 
-
 	//lets do some gene permutation and mating
 	std::vector<float> new_genes;
 	float new_R_Speed;
 	float new_P_Speed;
 	float new_V_radio;
 
-	// Probabilidad de que haya mutacion
+	//Fuerza de la mutacion
 	float mutation_strenght = maxToMutate(2, 50, 50);
 
 	//Selecciona a un padre con un % de mutacion
@@ -108,7 +93,6 @@ std::vector <float> Genetic::getGenes(std::vector<Espectro> Members, int muertes
 	}
 	cout << "Genetic Range: " << new_V_radio << endl;
 	new_genes.push_back(new_V_radio);
-
 
 	return new_genes;
 

@@ -7,6 +7,10 @@
 #include "Espectro.h"
 
 
+struct Population {
+	std::vector<Espectro> Members = std::vector<Espectro>(3);
+
+};
 
 ///
 /// @brief Esta clase se encarga de ejecutar los procesos necesarios para el algoritmo genetico en los espectros

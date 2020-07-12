@@ -121,12 +121,3 @@ SOCKET TCPListener::CreateSocket() {
     }
     return listening;
 }
-
-
-//Wait for connection
-//SOCKET TCPListener::waitForConnection(SOCKET listening) {
-
-   // SOCKET client = accept(listening, NULL, NULL);
-    //return client;
-
-//}

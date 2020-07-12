@@ -11,23 +11,24 @@ public:
 	int puntajeDePiso;
 	int puntajeJugador;
 	int muertes;
-	//Espectro espectros[3];
-	//Espectro Carl;
-	//Espectro David;
-	//Espectro Loraine;
 	std::vector <Espectro> espectros;
 	
-	Piso() {};
+	//Constructores
 
+	Piso();
 	Piso(string E1, string E2, string E3, int puntajeMax);
-
+	Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax);
 	Piso(bool boss);
 
-	Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax);
+	//Puntos
 
 	void updatePuntaje(int puntos);
 
+	//Jugador
+
 	void jugadorMuere();
+
+	//Espectros
 
 	void EspectroMurio(int ID);
 	void EspectroVio(int ID);
