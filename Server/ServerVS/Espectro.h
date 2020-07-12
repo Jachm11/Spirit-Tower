@@ -23,9 +23,12 @@ public:
 	int Fitness;
 
 	//stats
-	int R_Speed;
-	int P_Speed;
-	int V_radio;
+	float speed;
+	int range;
+	float chaseSpeed;
+	//int R_Speed;
+	//int P_Speed;
+	//int V_radio;
 
 	
 
@@ -57,10 +60,7 @@ public:
 	string getStatsResponse();
 	
 
-//private:
-	float speed;
-	int range;
-	float chaseSpeed;
+private:
 	int life;
 	bool attacking;
 	bool backtracking;

@@ -11,8 +11,11 @@ public:
 	int puntajeDePiso;
 	int puntajeJugador;
 	int muertes;
-	Espectro espectros[3];
-	//std::vector <Espectro*> espectros;
+	//Espectro espectros[3];
+	//Espectro Carl;
+	//Espectro David;
+	//Espectro Loraine;
+	std::vector <Espectro> espectros;
 	
 	Piso() {};
 
@@ -27,12 +30,14 @@ public:
 	void jugadorMuere();
 
 	void EspectroMurio(int ID);
+	void EspectroVio(int ID);
+	void EspectroMato(int ID);
 
 private:
 
 	float getRandomStat();
 
-	float* getGeneticStat(std::vector <Espectro> pastGen, int puntajePasado, int muertesPasadas, Jugador j);
+	vector<float> getGeneticStat(std::vector <Espectro> pastGen, int puntajePasado, int muertesPasadas, Jugador j);
 
 };
 

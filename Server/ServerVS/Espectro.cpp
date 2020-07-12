@@ -25,9 +25,9 @@ Espectro::Espectro(string defRoute)
 	Fitness;
 
 	//stats
-	R_Speed;
-	P_Speed;
-	V_radio = 11;
+	//R_Speed;
+	//P_Speed;
+	//V_radio = 11;
 
 	cout << "No por aqui" << endl;
 

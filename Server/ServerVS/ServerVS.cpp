@@ -214,7 +214,8 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         res = "Generando piso 1";
     }
     else if (msg == "2") {
-        res = "Ualete!";
+        juegoCliente->generatePiso(2);
+        res = "Generando piso 1";
     }
     else if (msg == "AS") { //listo
         res = to_string(juegoCliente->playerHit());
@@ -242,6 +243,11 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (msg == "OCO") { //lsito
         res = "Un cofre ha sido abierto!";
     }
+    else if (msg[0] == 'L') { //lsito
+        int pointCode = atoi(&(msg[1]));
+        int points = pointCode * 10;
+        res = "Se han obtendo "+to_string(points)+"puntos!";
+    }
     else if (msg == "P+1") { // listo
         int vida = juegoCliente->playerHealed();
         res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
@@ -250,6 +256,10 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         esp.attack(piso1, make_tuple(4, 4), "2,4");
         res = esp.getAttackResponse();
             
+    }
+    else if (msg == "safe") { //lsito
+        res = juegoCliente->playerState();
+
     }
     else if (msg[0] == 'E') {
 
@@ -268,14 +278,32 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         else if(msg[2] == 'A')
         {
             //getAttackResponse
-            //res = juegoCliente->attackResponse(ID, msg.substr(3));
-            juegoCliente->setPlayerPos("pos;4;4");
-            res = juegoCliente->attackResponse(ID, "2,4");
+            res = juegoCliente->attackResponse(ID, msg.substr(3));
+            //juegoCliente->setPlayerPos("pos;4;4");
+            //res = juegoCliente->attackResponse(ID, "2,4");
         }
         else if (msg[2] == 'B')
         {
             //getBacktrackResponse
             res = juegoCliente->backtrackResponse(ID);
+        }
+        else if (msg[2] == 'M')
+        {
+            //Enemy was killed
+            juegoCliente->enemyDied(ID);
+            res = "Enemigo derrotado!";
+        }
+        else if (msg[2] == 'V')
+        {
+            //Enemy spoted the player
+            juegoCliente->enemyDetected(ID);
+            res = "El jugador a sido detectado!";
+        }
+        else if (msg[2] == 'K')
+        {
+            //Enemy killed the player
+            juegoCliente->enemyKilled(ID);
+            res = "El jugador a sido detectado!";
         }
         else
         {

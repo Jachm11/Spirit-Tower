@@ -25,7 +25,7 @@ public:
 	/// @param puntaje int de 0 a 100 que representa el porcetaje del puntaje total adquirido del piso
 	/// @param vida int de 0 a 100 que representa el porcentaje de la vida restante del jugador
 	/// @return Retorna un puntero a una lista con los 3 datos para un nuevo espectro
-	float* getGenes(std::vector<Espectro> Members, int muertes, int puntaje, int vida);
+	std::vector<float> getGenes(std::vector<Espectro> Members, int muertes, int puntaje, int vida);
 
 
 private:
