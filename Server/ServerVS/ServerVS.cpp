@@ -12,7 +12,6 @@ using namespace std;
 
 void Listener_MessageReceived(TCPListener* listener, int client, string msg);
 Jugador j(5.2, 5.2);
-//std::vector<Juego*> MisClientes = std::vector<Juego*>(4);
 
 Juego *MisClientes[4];
 int capacity = 0;
@@ -146,7 +145,7 @@ int setNewClient(int client) {
     int space = checkForSpace();
     clientes[space] = client;
     capacity++;
-    Juego *juego = new Juego;
+    Juego *juego = new Juego();
     MisClientes [space] = juego;
     if (capacity == 4) { full = true; };
     cout << "New client set" << endl;
@@ -200,18 +199,19 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         }
     }
 
-    Juego *juegoCliente;
+    Juego* juegoCliente;
 
     juegoCliente = MisClientes[ID];
     
-    //int key = atoi(msg.c_str());
+    int key = atoi(msg.c_str());
 
     // Cada bloque de else if sera una peticion distinta para el servidor. Estas funciones para definir res van a estar ligas a clases.
 
     //ahora cada llamada se hace juegoCliente->funcionQueQuiera();
     //Si hay que agregar una nueva se agrega en la clase juego. :D
     if (msg == "1") {
-        res = "Salvete amicus!";
+        juegoCliente->generatePiso(1);
+        res = "Generando piso 1";
     }
     else if (msg == "2") {
         res = "Ualete!";
@@ -246,8 +246,14 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         int vida = juegoCliente->playerHealed();
         res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
     }
+    else if (msg == "ABC") { //lsito
+        esp.attack(piso1, make_tuple(4, 4), "2,4");
+        res = esp.getAttackResponse();
+            
+    }
     else if (msg[0] == 'E') {
-        int ID = (int)msg[1];
+
+        int ID = atoi(&(msg[1]));
         if (msg[2] == 'D')
         {
             //getDefaultResponse
@@ -262,7 +268,9 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         else if(msg[2] == 'A')
         {
             //getAttackResponse
-            res = juegoCliente->attackResponse(ID, msg.substr(3));
+            //res = juegoCliente->attackResponse(ID, msg.substr(3));
+            juegoCliente->setPlayerPos("pos;4;4");
+            res = juegoCliente->attackResponse(ID, "2,4");
         }
         else if (msg[2] == 'B')
         {

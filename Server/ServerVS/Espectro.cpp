@@ -1,7 +1,6 @@
 #include "Espectro.h"
 
 
-Espectro::Espectro() {}
 
 Espectro::Espectro(string defRoute)
 {
@@ -10,7 +9,11 @@ Espectro::Espectro(string defRoute)
 	backtracking = false;
 	posIndex = 0;
 	defaultResponse = defRoute;
+	cout << "Ruta 0 en espectro:" << defaultResponse << endl;
+	currentPos = make_tuple(0,0);
 	//defaultRouteVec(defRoute);
+	attackRouteVec;
+
 
 	
 	//Cosas que metio Jose :3
@@ -24,7 +27,9 @@ Espectro::Espectro(string defRoute)
 	//stats
 	R_Speed;
 	P_Speed;
-	V_radio;
+	V_radio = 11;
+
+	cout << "No por aqui" << endl;
 
 }
 string Espectro::move()
@@ -77,11 +82,15 @@ string Espectro::move()
 void Espectro::attack(int grid[25][25], tuple<int, int> playerPos, string pos)
 {
 	
+	cout << "ok0" << endl;
 	setCurrentPos(pos);
+	cout << "ok0.5" << endl;
 	attacking = true;
 	backtracking = false;
 	backtrackRoute.push(currentPos);
+	cout << "ok1" << endl;
 	attackRouteVec = getAttackRoute(grid, get<0>(currentPos), get<1>(currentPos), 24-get<1>(playerPos), get<0>(playerPos));
+	cout << "ok2" << endl;
 	if (!attackRouteVec.empty()) 
 	{
 		for (int i = 0; i < attackRouteVec.size(); i++)
@@ -94,9 +103,17 @@ void Espectro::attack(int grid[25][25], tuple<int, int> playerPos, string pos)
 }
 void Espectro::setCurrentPos(string pos) 
 {
+	cout << "hola" << endl;
 	int x = stoi(pos.substr(0,pos.find(',')));
+	cout << "holx" << endl;
 	int y = 24-stoi(pos.substr(pos.find(',') + 1));
+	cout << "holy" << endl;
+	cout << x << endl;
+	cout << y << endl;
+	cout << this->chaseSpeed << endl;
+
 	currentPos = make_tuple(y,x);
+	cout << "ded" << endl;
 }
 void Espectro::addBacktrackPos(string pos)
 {
@@ -132,6 +149,7 @@ string Espectro::getAttackResponse()
 string Espectro::getDefaultResponse()
 {
 	return defaultResponse;
+	//return "kkqlo";
 }
 string Espectro::getBacktrackResponse()
 {

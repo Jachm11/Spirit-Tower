@@ -1,3 +1,5 @@
-﻿  Jugador.cpp
-C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\Jugador.cpp(64,33): warning C4267: '=': conversión de 'size_t' a 'int'; posible pérdida de datos
-  ServerVS.vcxproj -> C:\Users\sebas\Desktop\git\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
+﻿  Espectro.cpp
+  ServerVS.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(14,20): warning C4305: 'argument': truncation from 'double' to 'float'
+  Generating Code...
+  ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe

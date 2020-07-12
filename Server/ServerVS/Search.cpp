@@ -667,8 +667,11 @@ void printCamino()
 }
  vector<tuple<int, int>> Espectro::getAttackRoute(int grid[ROW][COL], int srcRow, int srcCol, int destRow, int destCol)
  {
+	 cout << "okR1" << endl;
+	 camino.clear();
 	 search(grid, srcRow, srcCol, destRow, destCol);
-	 //printCamino();
+	 printCamino();
+	 cout << "okR2" << endl;
 	 return camino;
  }
 // Driver program to test above function 

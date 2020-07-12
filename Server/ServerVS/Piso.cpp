@@ -11,18 +11,27 @@ Piso::Piso(string E1, string E2, string E3, int puntajeMax) {
 
 	for (int i = 0; i < 3; i++) {
 
-		Espectro newEspectro;
 		if (i == 0) {
-			//newEspectro = Espectro(E1);
+			cout << "Ruta 0 en piso:" << E1 << endl;
+			Espectro newEspectro = Espectro (E1);
+			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			//espectros.push_back(newEspectro);
+			espectros[0] = newEspectro;
+
 		}
 		else if (i == 1) {
-			///newEspectro = Espectro(E2);
+			Espectro newEspectro = Espectro(E2);
+			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			//espectros.push_back(newEspectro);
+			espectros[1] = newEspectro;
 		}
 		else if (i == 2) {
-			//newEspectro = Espectro(E3);
+			Espectro newEspectro = Espectro(E3);
+			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			//espectros.push_back(newEspectro);
+			espectros[2] = newEspectro;
 		}
-		newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
-		espectros.push_back(newEspectro);
+		
 	}
 
 }
@@ -43,7 +52,7 @@ Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasada
 	espectros;
 	puntajeDePiso = puntajeMax;
 
-	Espectro newEspectro;
+	//Espectro newEspectro;
 
 	for (int i = 0; i < 3; i++) {
 
@@ -56,9 +65,9 @@ Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasada
 		else if (i == 2) {
 			//newEspectro = Espectro(E3);
 		}
-		float* stats = getGeneticStat(pastGen,puntajePasado,MuertesPasadas,j);
+		//float* stats = getGeneticStat(pastGen,puntajePasado,MuertesPasadas,j);  //IMPORTANTWE
 		//newEspectro.setStats( stats[0], stats[1], stats[2]);
-		espectros.push_back(newEspectro);
+		//espectros.push_back(newEspectro);
 	}
 
 }
@@ -77,7 +86,8 @@ void Piso::jugadorMuere()
 
 void Piso::EspectroMurio(int ID)
 {
-	espectros.at(ID).defeats++;
+	//espectros.at(ID).defeats++;
+	espectros[ID].defeats++;
 	//Talvez hay que llamar a otro metodo de espectro
 }
 

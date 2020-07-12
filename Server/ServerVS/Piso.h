@@ -11,8 +11,11 @@ public:
 	int puntajeDePiso;
 	int puntajeJugador;
 	int muertes;
-	std::vector <Espectro> espectros;
+	Espectro espectros[3];
+	//std::vector <Espectro*> espectros;
 	
+	Piso() {};
+
 	Piso(string E1, string E2, string E3, int puntajeMax);
 
 	Piso(bool boss);

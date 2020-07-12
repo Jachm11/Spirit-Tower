@@ -1,7 +1,10 @@
 #include "Juego.h"
+#include "Espectro.h"
+#include <algorithm>
 
 
 Juego::Juego() {
+
 
 	jugador = Jugador (5.2, 5.2);
 
@@ -11,11 +14,11 @@ Juego::Juego() {
 
 	rutas;
 
-	pisoActual = 0;
+	pisoActual = -1;
 
 	setMatrix();
 
-	setPuntajes();
+	setPuntajes(puntajes);
 
 	setRutas();
 
@@ -28,7 +31,8 @@ void Juego::generatePiso(int piso) {
 
 	if (piso == 1) {
 
-		Piso uno = Piso(rutas.at(0), rutas.at(1), rutas.at(2), *puntajes[0]);
+		cout<<"Ruta 0:" << rutas.at(0) << endl;
+		Piso uno = Piso(rutas.at(0), rutas.at(1), rutas.at(2), puntajes[0]);
 		pisos[0] = &uno;
 		pisoActual++;
 
@@ -36,34 +40,35 @@ void Juego::generatePiso(int piso) {
 	else if(piso == 2)
 	{
 
-		Piso *pisoAnterior = pisos[pisoActual-1];
-		std::vector <Espectro> espectros = pisoAnterior->espectros;
-		Piso new_piso = Piso(rutas.at(3), rutas.at(4), rutas.at(5),
-			pisoAnterior->puntajeJugador,pisoAnterior->muertes,jugador,espectros ,*puntajes[pisoActual]);
-		pisos[piso - 1] = &new_piso;
+		Piso pisoAnterior = *pisos[pisoActual-1];
+		//Piso pisoAnterior = pisos.at(pisoActual - 1);
+		//Espectro* espectros = pisoAnterior.espectros;
+		//Piso new_piso = Piso(rutas.at(3), rutas.at(4), rutas.at(5),
+			//pisoAnterior.puntajeJugador,pisoAnterior.muertes,jugador,espectros ,puntajes[pisoActual]);
+		//pisos[piso-1] = &new_piso;
 		pisoActual++;
-		puntaje += pisoAnterior->puntajeJugador;
+		puntaje += pisoAnterior.puntajeJugador;
 	}
 
 	else if (piso == 3)
 	{
 
-		Piso* pisoAnterior = pisos[pisoActual - 1];
-		std::vector <Espectro> espectros = pisoAnterior->espectros;
-		Piso new_piso = Piso(rutas.at(6), rutas.at(7), rutas.at(8),
-			pisoAnterior->puntajeJugador, pisoAnterior->muertes, jugador, espectros, *puntajes[pisoActual]); 
-		pisos[piso - 1] = &new_piso;
+		Piso pisoAnterior = pisos[pisoActual - 1];
+		//std::vector <Espectro> espectros = pisoAnterior.espectros;
+		//Piso new_piso = Piso(rutas.at(6), rutas.at(7), rutas.at(8),
+			//pisoAnterior.puntajeJugador, pisoAnterior.muertes, jugador, espectros, puntajes[pisoActual]); 
+		//pisos[piso - 1] = &new_piso;
 		pisoActual++;
 	}
 
 	else if (piso == 4)
 	{
 
-		Piso* pisoAnterior = pisos[pisoActual - 1];
-		std::vector <Espectro> espectros = pisoAnterior->espectros;
-		Piso new_piso = Piso(rutas.at(9), rutas.at(10), rutas.at(11),
-			pisoAnterior->puntajeJugador, pisoAnterior->muertes, jugador, espectros, *puntajes[pisoActual]); 
-		pisos[piso - 1] = &new_piso;
+		Piso pisoAnterior = pisos[pisoActual - 1];
+		//std::vector <Espectro> espectros = pisoAnterior.espectros;
+		//Piso new_piso = Piso(rutas.at(9), rutas.at(10), rutas.at(11),
+			//pisoAnterior.puntajeJugador, pisoAnterior.muertes, jugador, espectros, puntajes[pisoActual]); 
+		//pisos[piso - 1] = &new_piso;
 		pisoActual++;
 	}
 	else {
@@ -112,29 +117,50 @@ void Juego:: chestOpened() {
 string Juego::defaultResponse(int ID)
 {
 	
-	return pisos[pisoActual]->espectros.at(ID).getDefaultResponse();
+	//return pisos[pisoActual]->espectros.at(ID).getDefaultResponse();
+	cout << ID << endl;
+	cout << "Valor en constructor: " << pisos[pisoActual]->espectros[ID].V_radio << endl;
+	cout << "Valor cuando se crea el piso (setStat): " << pisos[pisoActual]->espectros[ID].chaseSpeed << endl;
+	cout <<"Default desde atributo: "<< pisos[pisoActual]->espectros[ID].defaultResponse << endl;
+	cout << "Default desde getDefault: " << pisos[pisoActual]->espectros[ID].getDefaultResponse() << endl;
+	return pisos[pisoActual]->espectros[ID].getDefaultResponse();
 }
 string Juego::statsResponse(int ID)
 {
 	
-	return pisos[pisoActual]->espectros.at(ID).getStatsResponse();
+	//return pisos[pisoActual]->espectros.at(ID).getStatsResponse();
+	return pisos[pisoActual]->espectros[ID].getStatsResponse();
 }
 string Juego::attackResponse(int ID, string pos) 
 {
 	float* jp =jugador.getPos();
-	
-	pisos[pisoActual]->espectros.at(ID).attack(Matriz1, make_tuple((int)jp[0], (int)jp[1]), pos);
-	return pisos[pisoActual]->espectros.at(ID).getAttackResponse();
+	cout << "Posicion ok" << endl;
+	//Hacer print de todas las variables
+	cout << pisoActual << endl;
+	cout << ID << endl;
+	cout << pos << endl;
+	cout << Matriz1 << endl;
+	cout << (int)jp[0] << endl;
+	cout << (int)jp[1] << endl;
+	//cout << pisos[pisoActual]->espectros[ID].V_radio << endl;
+	//HACER ESPECTROS UN ARRAY
+	//pisos[pisoActual]->espectros.at(ID).attack(Matriz1, make_tuple((int)jp[0], (int)jp[1]), pos);
+	pisos[pisoActual]->espectros[ID].attack(Matriz1, make_tuple((int)jp[0], (int)jp[1]), pos);
+	cout << "attack ok" << endl;
+	//return pisos[pisoActual]->espectros.at(ID).getAttackResponse();
+	return pisos[pisoActual]->espectros[ID].getAttackResponse();
 }
 string Juego::backtrackResponse(int ID)
 {
 	
-	return pisos[pisoActual]->espectros.at(ID).getBacktrackResponse();
+	//return pisos[pisoActual]->espectros.at(ID).getBacktrackResponse();
+	return pisos[pisoActual]->espectros[ID].getBacktrackResponse();
 }
 void Juego::backtrackPos(int ID, string pos)
 {
 	
-	pisos[pisoActual]->espectros.at(ID).addBacktrackPos(pos);
+	//pisos[pisoActual]->espectros.at(ID).addBacktrackPos(pos);
+	pisos[pisoActual]->espectros[ID].addBacktrackPos(pos);
 }
 
 void Juego:: enemyKilled(int ID) {
@@ -163,7 +189,8 @@ void Juego:: askEnemyRoute(int ID) {
 
 void Juego::enemyStop(int ID)
 {
-		pisos[pisoActual]->espectros.at(ID - 1).stop();
+		//pisos[pisoActual]->espectros.at(ID).stop();
+		pisos[pisoActual]->espectros[ID].stop();
 }
 
 string Juego:: askEnemyStats() {
@@ -175,46 +202,18 @@ string Juego:: askEnemyStats() {
 
 void Juego::setMatrix() {
 
-	int Mtriz1[25][25] = 
-	{
-		//{00|01|02|03|04|05|06|07|08|09|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//00
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//01
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//02
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//03
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//04
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//05
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//06
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//07
-		  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//08
-		  { 1, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 1 },//09
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//10
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//11
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//12
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//13
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//14
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//15
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//16
-		  { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },//17
-		  { 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1 },//18
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//19
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//20
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//21
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//22
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//23
-		  { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } //24
-
-	};
-	Matriz1[25][25] = Mtriz1[25][25];
+	//Matriz1 = 
+	
+	//Matriz1[25][25] = Mtriz1[25][25];
 	//Matriz2 = algo;
 	//Matriz3 = algo;
 	//Matriz4 = algo;
 	//Matriz5 = algo;
 
 }
-void Juego::setPuntajes() {
+void Juego::setPuntajes(int arr[5]) {
 
-	//puntajes[0] = algo;
+	arr[0] = 100;
 	//puntajes[1] = algo;
 	//puntajes[2] = algo;
 	//puntajes[3] = algo;

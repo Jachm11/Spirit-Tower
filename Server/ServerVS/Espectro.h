@@ -15,7 +15,7 @@ public:
 
 	//constructor
 	Espectro(string defRoute);
-	Espectro();
+	Espectro() { currentPos = make_tuple(0, 0); };
 	//fitness
 	int detections;
 	int hits;
@@ -43,9 +43,9 @@ public:
 	
 	vector<tuple<int, int>> getAttackRoute(int grid[25][25], int srcRow, int srcCol, int destRow, int destCol);
 
-	//tuple<int, int> playerPos;
-	//string nextPos;
-	//string attackString;
+	tuple<int, int> playerPos;
+	string nextPos;
+	string attackString;
 	//tuple<int, int> tupleFromString(string pos);
 	//void defaultRouteVec(string defRoute);
 	//string getDefaultRoute();
@@ -57,7 +57,7 @@ public:
 	string getStatsResponse();
 	
 
-private:
+//private:
 	float speed;
 	int range;
 	float chaseSpeed;
