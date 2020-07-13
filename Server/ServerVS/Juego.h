@@ -12,6 +12,7 @@ public:
 	void generatePiso(int piso);
 	void pointsEarned(int puntos);
 	void chestOpened();
+	void endGame();
 
 	//Funciones de jugador
 	void setPlayerPos(string pos);

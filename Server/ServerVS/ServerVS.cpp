@@ -228,13 +228,18 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         else
         {
             //addBacktrackPos
-            juegoCliente->backtrackPos(ID,msg.substr(2));
+            juegoCliente->backtrackPos(ID,msg.substr(3));
             res = "Espectro " + to_string(ID) + " en movimiento";
         }
     }
 
     //______
     //Otros
+    else if (msg == "final") {
+        juegoCliente->endGame();
+        res = "Gracias por jugar!";
+    }
+
     else if (msg == "Desconectado") {
         cleanClient(ID);
         res = "Espacio liberado";

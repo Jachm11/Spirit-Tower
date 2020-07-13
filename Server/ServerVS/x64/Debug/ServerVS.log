@@ -1,20 +1,9 @@
-﻿  Genetic.cpp
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(11,17): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(12,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(13,18): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(15,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(23,13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(24,12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(25,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(49,123): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(49,97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(49,65): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Genetic.cpp(89,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  Juego.cpp
+﻿  Juego.cpp
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(6,29): warning C4305: 'argument': truncation from 'double' to 'float'
-  Search.cpp
+  ServerVS.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(17,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Generating Code...
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(159): warning C4715: 'Juego::defaultResponse': not all control paths return a value
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(177): warning C4715: 'Juego::statsResponse': not all control paths return a value
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(221): warning C4715: 'Juego::backtrackResponse': not all control paths return a value
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(186): warning C4715: 'Juego::statsResponse': not all control paths return a value
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(168): warning C4715: 'Juego::defaultResponse': not all control paths return a value
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(230): warning C4715: 'Juego::backtrackResponse': not all control paths return a value
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe

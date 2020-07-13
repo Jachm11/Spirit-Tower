@@ -59,8 +59,8 @@ void Juego::generatePiso(int piso) {
 	}
 	else {
 
-		//Piso boss = Piso(true);
-		//pisos[4] = &boss;
+		piso5 = Piso(true);
+		puntaje += piso4.puntajeJugador;
 		pisoActual++;
 	}
 
@@ -86,6 +86,15 @@ void Juego::pointsEarned(int puntos) {
 void Juego::chestOpened()
 {
 	cofres++;
+}
+
+void Juego::endGame()
+{
+	puntaje += piso5.puntajeJugador;
+	std::cout << "Puntaje total obtenido: "<<puntaje << " de XXXX"<<endl;
+	std::cout << "Cofres encontrados: " <<cofres << " de 12" <<endl;
+	std::cout << "Muertes totales: "<<muertes <<endl;
+
 }
 
 //     ____________________
@@ -288,10 +297,9 @@ void Juego::setPuntajes(int arr[5]) {
 
 	arr[0] = 100;
 	arr[1] = 200;
-	//puntajes[1] = algo;
-	//puntajes[2] = algo;
-	//puntajes[3] = algo;
-	//puntajes[4] = algo;
+	arr[2] = 300;
+	arr[3] = 300;
+	arr[4] = 300;
 }
 
 void Juego::setRutas()
