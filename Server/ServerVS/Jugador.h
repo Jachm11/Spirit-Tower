@@ -2,7 +2,11 @@
 #include<iostream>
 
 using namespace std;
-
+/**
+ * @file Jugador.h
+ * @author Sebastian Moya
+ * @brief Clase plantilla para el jugador
+*/
 class Jugador
 {
 public:
