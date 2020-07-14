@@ -21,9 +21,13 @@ public:
 
 	/// @brief Cofres++
 	void chestOpened();
+<<<<<<< Updated upstream
 	
 	/// @brief Esta funcion se llama cuando el juego termina. Muestra el puntaje final, las muertes y los cofes abiertos en consola.
 	void endGame();
+=======
+	string endGame();
+>>>>>>> Stashed changes
 
 	//_____________________
 	//Funciones de jugador

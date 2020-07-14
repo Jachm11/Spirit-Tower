@@ -127,6 +127,10 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         juegoCliente->generatePiso(5);
         res = "Generando piso final!";
     }
+    else if (msg == "END") {
+        res = juegoCliente->endGame();
+        cout << "aqui" << endl;
+    }
 
     //_________________________
     // Llamadas de jugador

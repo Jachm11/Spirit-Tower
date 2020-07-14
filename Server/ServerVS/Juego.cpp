@@ -88,12 +88,17 @@ void Juego::chestOpened()
 	cofres++;
 }
 
-void Juego::endGame()
+string Juego::endGame()
 {
+	//puntaje = 54;
+	//cofres = 10;
+	//muertes = 89;
 	puntaje += piso5.puntajeJugador;
+	string estadisticas = "Puntaje obtenido: " + to_string(puntaje) + "\n Cofres abiertos: " + to_string(cofres) + " de 12 \n Muertes totales: " + to_string(muertes);
 	std::cout << "Puntaje total obtenido: "<<puntaje << " de XXXX"<<endl;
 	std::cout << "Cofres encontrados: " <<cofres << " de 12" <<endl;
 	std::cout << "Muertes totales: "<<muertes <<endl;
+	return estadisticas;
 
 }
 
