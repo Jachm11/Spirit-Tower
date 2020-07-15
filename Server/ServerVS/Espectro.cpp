@@ -61,7 +61,7 @@ string Espectro::getAttackResponse()
 		route.pop_back();
 		attackResponse = route;
 	}
-	else { route = "NO"; }
+	else { route = "0"; }
 	return route;
 }
 
