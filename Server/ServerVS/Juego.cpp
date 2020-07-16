@@ -40,12 +40,10 @@ void Juego::generatePiso(int piso) {
 
 	else if (piso == 3)
 	{
-
 		piso3 = Piso(rutas.at(6), rutas.at(7), rutas.at(8),
 			piso2.puntajeJugador, piso2.muertes, jugador, piso2.espectros, puntajes[2]);
 		pisoActual++;
 		puntaje += piso2.puntajeJugador;
-		pisoActual++;
 	}
 
 	else if (piso == 4)
@@ -55,7 +53,6 @@ void Juego::generatePiso(int piso) {
 			piso3.puntajeJugador, piso3.muertes, jugador, piso3.espectros, puntajes[3]);
 		pisoActual++;
 		puntaje += piso3.puntajeJugador;
-		pisoActual++;
 	}
 	else {
 

@@ -1,23 +1,31 @@
-﻿  Piso.cpp
+﻿  Juego.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(6,29): warning C4305: 'argument': truncation from 'double' to 'float'
+  Piso.cpp
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(18,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(24,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(29,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(57,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(25,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(30,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(58,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(63,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(64,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(69,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(70,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
           with
           [
               _Ty=float
           ]
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(105,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(111,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(117,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(106,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(112,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(118,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  ServerVS.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\ServerVS.cpp(17,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(170): warning C4715: 'Juego::defaultResponse': not all control paths return a value
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(188): warning C4715: 'Juego::statsResponse': not all control paths return a value
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Juego.cpp(232): warning C4715: 'Juego::backtrackResponse': not all control paths return a value
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
