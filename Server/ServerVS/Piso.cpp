@@ -15,18 +15,18 @@ Piso::Piso(string E1, string E2, string E3, int puntajeMax) {
 
 		if (i == 0) {
 			Espectro newEspectro = Espectro (E1);
-			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			newEspectro.setStats(getRandomStat(0), getRandomStat(1), getRandomStat(2));
 			espectros.push_back(newEspectro);
 
 		}
 		else if (i == 1) {
 			Espectro newEspectro = Espectro(E2);
-			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			newEspectro.setStats(getRandomStat(0), getRandomStat(1), getRandomStat(2));
 			espectros.push_back(newEspectro);
 		}
 		else if (i == 2) {
 			Espectro newEspectro = Espectro(E3);
-			newEspectro.setStats(getRandomStat(), getRandomStat(), getRandomStat());
+			newEspectro.setStats(getRandomStat(0), getRandomStat(1), getRandomStat(2));
 			espectros.push_back(newEspectro);
 		}
 		
@@ -98,12 +98,26 @@ void Piso::EspectroMato(int ID)
 	espectros[ID].hits++;
 }
 
-float Piso::getRandomStat()
+float Piso::getRandomStat(int i)
 {
-
-	float RStat = 1.5 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (2.2 - 1.5)));
-	std::cout << "Stat aleatorio de 1.5 a 2.2 es: " << RStat << std::endl;
-	return RStat;
+	if (i == 0) {
+		//velocidad
+		float RStat = 2.3 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (3.3 - 2.5)));
+		std::cout << "Stat aleatorio de velocidad de 3.3 a 2.5 es: " << RStat << std::endl;
+		return RStat;
+	}
+	else if (i == 2) {
+		//persecucion
+		float RStat = 1.5 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (2.2 - 1.5)));
+		std::cout << "Stat aleatorio de persecusion  1.5 a 2.2 es: " << RStat << std::endl;
+		return RStat;
+	}
+	else {
+		//radio
+		float RStat = 2.9 + static_cast <float> (rand()) / (static_cast <float> (RAND_MAX / (3.8 - 2.9)));
+		std::cout << "Stat aleatorio de radio 3.8 a 2.9 es: " << RStat << std::endl;
+		return RStat;
+	}
 }
 
 std::vector<float> Piso::getGeneticStat(std::vector <Espectro> pastGen, int puntajePasado, int muertesPasadas, Jugador j)

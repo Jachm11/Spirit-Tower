@@ -71,7 +71,7 @@ private:
 
 	/// @brief Genera un stat aleatorio para los espectros del primer piso
 	/// @return stat aleatorio para un espectro
-	float getRandomStat();
+	float getRandomStat(int i);
 
 	/// @brief Llama a la funcion que ejecuta un ciclo del algoritmo genetico
 	/// @param pastGen Generacion de espectros pasada

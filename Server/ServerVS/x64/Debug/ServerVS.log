@@ -1,2 +1,23 @@
-﻿  Espectro.cpp
+﻿  Piso.cpp
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(18,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(24,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(29,56): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(57,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(63,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(69,42): warning C4244: 'argument': conversion from '_Ty' to 'int', possible loss of data
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(105,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(111,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(117,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe
