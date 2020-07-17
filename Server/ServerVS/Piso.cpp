@@ -35,7 +35,7 @@ Piso::Piso(string E1, string E2, string E3, int puntajeMax) {
 
 }
 
-Piso::Piso(bool boss)
+Piso::Piso(int cofres)
 {
 
 	puntajeJugador = 0;
@@ -43,7 +43,7 @@ Piso::Piso(bool boss)
 
 }
 
-Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax)
+Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax, int cofres)
 {
 	puntajeJugador = 0;
 	muertes = 0;

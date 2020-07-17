@@ -33,7 +33,7 @@ void Juego::generatePiso(int piso) {
 	else if(piso == 2)
 	{
 		piso2 = Piso(rutas.at(3), rutas.at(4), rutas.at(5),
-			piso1.puntajeJugador,piso1.muertes,jugador,piso1.espectros ,puntajes[1]);
+			piso1.puntajeJugador,piso1.muertes,jugador,piso1.espectros ,puntajes[1], cofres);
 		pisoActual++;
 		puntaje += piso1.puntajeJugador;
 	}
@@ -41,7 +41,7 @@ void Juego::generatePiso(int piso) {
 	else if (piso == 3)
 	{
 		piso3 = Piso(rutas.at(6), rutas.at(7), rutas.at(8),
-			piso2.puntajeJugador, piso2.muertes, jugador, piso2.espectros, puntajes[2]);
+			piso2.puntajeJugador, piso2.muertes, jugador, piso2.espectros, puntajes[2], cofres);
 		pisoActual++;
 		puntaje += piso2.puntajeJugador;
 	}
@@ -50,13 +50,13 @@ void Juego::generatePiso(int piso) {
 	{
 
 		piso4 = Piso(rutas.at(9), rutas.at(10), rutas.at(11),
-			piso3.puntajeJugador, piso3.muertes, jugador, piso3.espectros, puntajes[3]);
+			piso3.puntajeJugador, piso3.muertes, jugador, piso3.espectros, puntajes[3], cofres);
 		pisoActual++;
 		puntaje += piso3.puntajeJugador;
 	}
 	else {
 
-		piso5 = Piso(true);
+		piso5 = Piso(cofres);
 		puntaje += piso4.puntajeJugador;
 		pisoActual++;
 	}
@@ -91,9 +91,9 @@ string Juego::endGame()
 	//cofres = 10;
 	//muertes = 89;
 	puntaje += piso5.puntajeJugador;
-	string estadisticas = "Puntaje obtenido: " + to_string(puntaje) + "\n Cofres abiertos: " + to_string(cofres) + " de 12 \n Muertes totales: " + to_string(muertes);
-	std::cout << "Puntaje total obtenido: "<<puntaje << " de XXXX"<<endl;
-	std::cout << "Cofres encontrados: " <<cofres << " de 12" <<endl;
+	string estadisticas = "Puntaje obtenido: " + to_string(puntaje) + "\n Cofres abiertos: " + to_string(cofres) + " de 10 \n Muertes totales: " + to_string(muertes);
+	std::cout << "Puntaje total obtenido: "<<puntaje << " de 1120"<<endl;
+	std::cout << "Cofres encontrados: " <<cofres << " de 10" <<endl;
 	std::cout << "Muertes totales: "<<muertes <<endl;
 	return estadisticas;
 
@@ -120,17 +120,23 @@ void Juego:: playerDied() {
 
 	if (pisoActual == 0) {
 		piso1.jugadorMuere();
+		cofres = 0;
 	}
 	else if (pisoActual == 1) {
 		piso2.jugadorMuere();
+		cofres = piso1.cofresPlayer;
 	}
 	else if (pisoActual == 2) {
 		piso3.jugadorMuere();
+		cofres = piso2.cofresPlayer;
 	}
 	else if (pisoActual == 3) {
 		piso4.jugadorMuere();
+		cofres = piso3.cofresPlayer;
 	}
-	
+	else if (pisoActual == 4) {
+		cofres = piso4.cofresPlayer;
+	}
 }
 
 void Juego:: playerVisible() {
@@ -297,11 +303,11 @@ void Juego::enemyKilled(int ID) {
 //___/Set constants
 void Juego::setPuntajes(int arr[5]) {
 
-	arr[0] = 100;
+	arr[0] = 200;
 	arr[1] = 200;
-	arr[2] = 300;
-	arr[3] = 300;
-	arr[4] = 300;
+	arr[2] = 240;
+	arr[3] = 250;
+	arr[4] = 230;
 }
 
 void Juego::setRutas()

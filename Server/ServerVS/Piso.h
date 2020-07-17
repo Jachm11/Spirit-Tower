@@ -11,6 +11,7 @@ public:
 	int puntajeDePiso;
 	int puntajeJugador;
 	int muertes;
+	int cofresPlayer;
 	std::vector <Espectro> espectros;
 	
 	//Constructores
@@ -35,12 +36,12 @@ public:
 	/// @param pastGen Espectros del piso anterior
 	/// @param puntajeMax Puntaje maximo del nivel
 	/// @return Instacia de piso 2, 3, o 4 
-	Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax);
+	Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasadas, Jugador j, std::vector <Espectro> pastGen, int puntajeMax, int cofres);
 
 	/// @brief Constructor para piso final
 	/// @param boss Valor vacio
 	/// @return Instancia Piso 5
-	Piso(bool boss);
+	Piso(int cofres);
 
 	//Puntos
 	
