@@ -1,6 +1,7 @@
 # Spirit-Tower
 
 ## Detalles del Programa 
+* El juego fue diseñado para el sistema operativo Windows
 * El servidor fue diseñado y ejecutado con el editor de Visual Studio 
 * La interfaz del juego fue diseñada con el motor de juegos Unity, especificamente con la versión 2019.14.1f1
 
