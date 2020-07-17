@@ -34,6 +34,7 @@ public class HeartManager : MonoBehaviour
             if (i <= tempHealth-1)
             {
                 hearts[i].sprite = fullHeart;
+
             } else {
                 hearts[i].sprite = emptyHeart;
             }

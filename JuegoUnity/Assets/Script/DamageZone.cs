@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class DamageZone : Interactivo
@@ -10,6 +9,7 @@ public class DamageZone : Interactivo
     public FloatValue playerHealth;
     public FloatValue heartContainers;
     public float amountToDecrease;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +24,9 @@ public class DamageZone : Interactivo
         if (isIn && cicles == 250)
         {
             //player dañar
-            //
             playerHealth.RuntimeValue -= amountToDecrease;
             client.instance.send("AS");
-            if (playerHealth.initialValue> heartContainers.RuntimeValue)
+            if (playerHealth.initialValue > heartContainers.RuntimeValue)
             {
                 playerHealth.initialValue = heartContainers.RuntimeValue;
             }

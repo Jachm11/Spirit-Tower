@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - breakable
+  - enemy
+  - boss
+  - Raton
+  - Music
+  - ojo
+  - espec
   layers:
   - Default
   - TransparentFX
@@ -16,8 +22,8 @@ TagManager:
   - 
   - Proyectil
   - Enemy
-  - 
-  - 
+  - Minimapa
+  - Player
   - 
   - 
   - 
@@ -39,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Minimapa
+    uniqueID: 1652884305
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

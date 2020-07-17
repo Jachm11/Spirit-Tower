@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public enum estadoJugador
 {
@@ -23,10 +25,21 @@ public class MovJugador : MonoBehaviour
     private Animator animador;
     public FloatValue currentHealth;
     public Signal playerHealthSignal;
-    private bool protect = false;
+    public Signal playerPtsSignal;
+    public Signal playerDied;
+    public bool protect = false;
     public Item moneda;
     public SpriteRenderer spriteItemRecivido;
     public Inventory playerInventory;
+    public AudioSource swing;
+    public Signal block;
+    public Signal hit;
+
+
+    private void Awake()
+    {
+        //DontDestroyOnLoad(transform.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +56,8 @@ public class MovJugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        comprobarVida();
         if (currentState == estadoJugador.interactua)
         {
             return;
@@ -50,7 +65,7 @@ public class MovJugador : MonoBehaviour
         cambio = Vector3.zero;
         cambio.x = Input.GetAxisRaw("Horizontal");
         cambio.y = Input.GetAxisRaw("Vertical");
-        if (ciclos == 250)
+        if (ciclos == 60)
         {
             client.instance.send(get_Pos());
             ciclos = 0;
@@ -71,14 +86,30 @@ public class MovJugador : MonoBehaviour
         {
             animMov();
         }
-
+        playerHealthSignal.Raise();
+        playerPtsSignal.Raise();
 
     }
     private string get_Pos()
     {
-        string pos = string.Format("{0:N2}", rigidbody.position.x);
+        string pos = "pos;"+ string.Format("{0:N2}", rigidbody.position.x);
         pos = pos + ";" + string.Format("{0:N2}", rigidbody.position.y);
         return pos;
+    }
+    public void comprobarVida()
+    {
+        if(currentHealth.RuntimeValue <= 0)
+        {
+            respawn();
+        }
+    }
+    private void respawn()
+    {
+        playerDied.Raise();
+        client.instance.send("muerte");
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+        currentHealth.RuntimeValue = 5;
     }
     private IEnumerator ataqueCo()
     {
@@ -86,6 +117,7 @@ public class MovJugador : MonoBehaviour
         currentState = estadoJugador.atacando;
         yield return null;
         animador.SetBool("atacando", false);
+        swing.Play();
         yield return new WaitForSeconds(.3f);
         if (currentState != estadoJugador.interactua)
         {
@@ -152,21 +184,20 @@ public class MovJugador : MonoBehaviour
     {
         if (!protect)
         {
-            currentHealth.RuntimeValue = float.Parse(client.instance.send("AS"));
+            currentHealth.RuntimeValue -= damage;
+            client.instance.send("AS");
             playerHealthSignal.Raise();
+            hit.Raise();
             if (currentHealth.RuntimeValue > 0) //al hacer modificación al floatValue cambiar el initialValue por runtime
             {
                 StartCoroutine(knockCo(knockTime));
             }
-            else
-            {
-                client.instance.send("muerte");
-                this.gameObject.SetActive(false);
-            }
         }
         else
         {
+            block.Raise();
             StartCoroutine(knockCo(knockTime));
+
         }
 
     }
@@ -177,6 +208,7 @@ public class MovJugador : MonoBehaviour
             yield return new WaitForSeconds(KnockTime);
             rigidbody.velocity = Vector2.zero;
             currentState = estadoJugador.idle;
+            rigidbody.velocity = Vector2.zero;
         }
     }
 }

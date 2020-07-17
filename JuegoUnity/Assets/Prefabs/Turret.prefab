@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 834832903
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: -4361638148360769042, guid: 609de6c19de89974abe4f58b9de5b1b0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a99fc81b56b6a04fa8febb4119d76c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  signal: {fileID: 11400000, guid: a551c8e86799ac445b5bc88f0f6f02a4, type: 2}
+  signal: {fileID: 11400000, guid: 586c13b1f26f83243b5fc6470550e481, type: 2}
   playerInRange: 0
   facing: {x: 0, y: -1}
   flecha: {fileID: 2000860850052904151, guid: 6d0d3a57f6530dd40a6644eda0083b09, type: 3}
@@ -140,7 +140,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.008449554, y: 0.017959595}
+  m_Offset: {x: 0.014219761, y: 0.07428074}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.49155045, y: 0.49154854}
@@ -151,5 +151,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.125}
+  m_Size: {x: 0.9884596, y: 2.0123577}
   m_EdgeRadius: 0

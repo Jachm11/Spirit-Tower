@@ -13,14 +13,17 @@ public class Arrow : MonoBehaviour
     private float timer;
     public Rigidbody2D rigidBody;
     public Signal hurt;
+    public Signal block;
     public FloatValue playerHealth;
     public FloatValue heartContainers;
     public float amountToDecrease;
+    public AudioSource arrowCast;
 
     // Start is called before the first frame update
     void Start()
     {
         timer = lifeTime;
+        arrowCast.Play();
     }
 
     // Update is called once per frame
@@ -40,16 +43,21 @@ public class Arrow : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger)
+        if (collision.CompareTag("Player") && collision.isTrigger)
         {
-            //hacer daño
-            playerHealth.RuntimeValue -= amountToDecrease;
-            client.instance.send("AS");
-            if (playerHealth.initialValue > heartContainers.RuntimeValue)
+            if (!collision.GetComponent<MovJugador>().protect)
             {
-                playerHealth.initialValue = heartContainers.RuntimeValue;
+                playerHealth.RuntimeValue -= amountToDecrease;
+                client.instance.send("AS");
+                hurt.Raise();
+                if (playerHealth.initialValue > heartContainers.RuntimeValue)
+                {
+                    playerHealth.initialValue = heartContainers.RuntimeValue;
+                }
             }
-            hurt.Raise();
+            //hacer daño
+            block.Raise();
+            
         }
         Destroy(this.gameObject);
     }

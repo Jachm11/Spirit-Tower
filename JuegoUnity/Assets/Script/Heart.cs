@@ -7,6 +7,7 @@ public class Heart : Powerup
     public FloatValue playerHealth;
     public FloatValue heartContainers;
     public float amountToIncrease;
+    public AudioSource heartSound;
 
     // Start is called before the first frame update
     void Start()

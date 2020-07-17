@@ -11,8 +11,10 @@ public class chest : Interactivo
     public int pts;
     public bool isOpen;
     public Signal raiseItem;
+    public Signal coinSignal;
     public GameObject dialogBox;
     public Text dialogText;
+    public AudioSource coinSound;
     private Animator anim;
 
 
@@ -20,6 +22,8 @@ public class chest : Interactivo
     void Start()
     {
         anim = GetComponent<Animator>();
+        //playerInventory.puntos = 0;
+        coinSignal.Raise();
 
 
     }
@@ -31,7 +35,6 @@ public class chest : Interactivo
         {
             if (!isOpen)
             {
-                //Open 
                 OpenChest();
             }
             else
@@ -44,11 +47,13 @@ public class chest : Interactivo
     public void OpenChest()
     {
         dialogBox.SetActive(true);
-        dialogText.text = pts.ToString(); //Es un atributo del jugador o de UI
+        coinSound.Play();
+        dialogText.text = (pts*10).ToString(); //Es un atributo del jugador o de UI
         playerInventory.itemActual = contents;
-        // avisar a Harold que puntos fueron ganados
         client.instance.send("OCO"); //Object Chest opened
-
+        client.instance.send("L"+pts);
+        playerInventory.puntos += pts *10;
+        coinSignal.Raise();
         raiseItem.Raise();
         signal.Raise();
         anim.SetBool("opened", true);

@@ -7,11 +7,13 @@ public class SceneTransition : MonoBehaviour
 {
 
     public string sceneToLoad;
+    public string sceneInServer;
 
    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            client.instance.send(sceneInServer);
             SceneManager.LoadScene(sceneToLoad);
         }
     }

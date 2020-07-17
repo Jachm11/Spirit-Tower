@@ -7,6 +7,7 @@ public class pot : MonoBehaviour
 
     private Animator anim;
 
+    public Signal potBreak;
     public LootTable myLoot;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class pot : MonoBehaviour
 
     public void Smash()
     {
+        potBreak.Raise();
         anim.SetBool("smash", true);
         StartCoroutine(breakCo());
         client.instance.send("OPD"); // Object Pot Destroyed

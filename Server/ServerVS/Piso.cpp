@@ -37,7 +37,7 @@ Piso::Piso(string E1, string E2, string E3, int puntajeMax) {
 
 Piso::Piso(int cofres)
 {
-
+	cofresPlayer = cofres;
 	puntajeJugador = 0;
 	muertes = 0;
 
@@ -49,25 +49,26 @@ Piso::Piso(string E1, string E2, string E3, int puntajePasado, int MuertesPasada
 	muertes = 0;
 	espectros;
 	puntajeDePiso = puntajeMax;
+	cofresPlayer = cofres;
 
 	for (int i = 0; i < 3; i++) {
 
 		if (i == 0) {
 			Espectro newEspectro = Espectro(E1);
 			vector<float> stats = getGeneticStat(pastGen, puntajePasado, MuertesPasadas, j);
-			newEspectro.setStats(stats[0], stats[1], stats[2]);
+			newEspectro.setStats(stats[0], stats[2], stats[1]);
 			espectros.push_back(newEspectro);
 		}
 		else if (i == 1) {
 			Espectro newEspectro = Espectro(E2);
 			vector<float> stats = getGeneticStat(pastGen, puntajePasado, MuertesPasadas, j);
-			newEspectro.setStats(stats[0], stats[1], stats[2]);
+			newEspectro.setStats(stats[0], stats[2], stats[1]);
 			espectros.push_back(newEspectro);
 		}
 		else if (i == 2) {
 			Espectro newEspectro = Espectro(E3);
 			vector<float> stats = getGeneticStat(pastGen, puntajePasado, MuertesPasadas, j);
-			newEspectro.setStats(stats[0], stats[1], stats[2]);
+			newEspectro.setStats(stats[0], stats[2], stats[1]);
 			espectros.push_back(newEspectro);
 		}
 	}

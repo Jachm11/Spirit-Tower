@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     public static UI instance;
 
     public GameObject startMenu;
+    public BoolValue init;
     public Button send;
     public Button connect;
 
@@ -25,19 +26,5 @@ public class UI : MonoBehaviour
             Destroy(this);
         }
     }
-
-    public void ConnectToServer()
-    {
-
-        client.instance.ConnectToServer();
-        
-    }
-
-    public void sendMessage()
-    {
-        string res = client.instance.send("algo");
-        UnityEngine.Debug.Log(res);
-    }
-
 
 }

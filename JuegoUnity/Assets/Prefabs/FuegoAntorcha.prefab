@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5800468184975396434}
   - component: {fileID: 4571937460925614461}
   m_Layer: 0
-  m_Name: Fuego
+  m_Name: FuegoAntorcha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -993683511
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2336223751096622429, guid: 7e97dc6ed20033f4299acc7f28e01c66,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

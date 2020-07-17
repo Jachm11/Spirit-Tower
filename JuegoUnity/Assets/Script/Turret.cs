@@ -21,8 +21,7 @@ public class Turret : Interactivo
     {
         if (isIn && cicles == 250)
         {
-            //player dañar
-            //
+        
             GameObject current = Instantiate(flecha.gameObject, transform.position, Quaternion.identity);
             current.GetComponent<Arrow>().launch(facing);
             cicles = 0;
@@ -30,8 +29,7 @@ public class Turret : Interactivo
 
         else if (playerInRange && !isIn)
         {
-            //player dañar
-            //
+
             GameObject current = Instantiate(flecha.gameObject, transform.position, Quaternion.identity);
             current.GetComponent<Arrow>().launch(facing);
             isIn = true;
