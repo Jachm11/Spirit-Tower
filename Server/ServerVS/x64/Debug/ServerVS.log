@@ -20,4 +20,5 @@ C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Se
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(107,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(113,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(119,15): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\Piso.cpp(136,64): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   ServerVS.vcxproj -> C:\Users\Jose\Documents\TEC\2020\Semestre I\Datos II\Proyecto II\Spirit-Tower\Server\ServerVS\x64\Debug\ServerVS.exe

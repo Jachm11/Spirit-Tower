@@ -125,9 +125,9 @@ float Piso::getRandomStat(int i)
 std::vector<float> Piso::getGeneticStat(std::vector <Espectro> pastGen, int puntajePasado, int muertesPasadas, Jugador j)
 {
 
-	int vidaPorc = ((j.corazones) / 5) * 100;
+	float vidaPorc = (((float)j.corazones) / 5) * 100;
 
-	int puntajePorc = (puntajePasado / puntajeDePiso) * 100; 
+	float puntajePorc = ((float)puntajePasado / puntajeDePiso) * 100; 
 
 	Genetic genetic = Genetic();
 
