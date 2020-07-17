@@ -72,7 +72,7 @@ string Espectro::getDefaultResponse()
 
 string Espectro::getBacktrackResponse()
 {
-	backtrackResponse.pop_back();
+	
 	return backtrackResponse;
 }
 

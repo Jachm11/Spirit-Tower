@@ -80,7 +80,7 @@ void TCPListener::Run() {
                         }
                         else {
                             if (MessageReceived != NULL) {
-                                std::cout << "Cliente " << sock << ", dice: " << std::string(buf, 0, bytesIn) << std::endl;
+                                //std::cout << "Cliente " << sock << ", dice: " << std::string(buf, 0, bytesIn) << std::endl;
                                 MessageReceived(this, sock, std::string(buf, 0, bytesIn));
                             }
 
