@@ -88,6 +88,7 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
         if (ID == -1) {
             res = "El servidor esta lleno, intentelo mas tarde";
             listener->Send(client, res);
+            cout << "Respondiendo: " << res << endl;
             return;
         }
     }
@@ -109,23 +110,28 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     if (msg == "1") {
         juegoCliente->generatePiso(1);
         res = "Generando piso 1";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "2") {
         juegoCliente->generatePiso(2);
         res = "Generando piso 2";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "3") {
         juegoCliente->generatePiso(3);
         res = "Generando piso 3";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "4") {
         juegoCliente->generatePiso(4);
         res = "Generando piso 4";
+        cout << "Respondiendo: " << res << endl;
     }
 
     else if (msg == "5") {
         juegoCliente->generatePiso(5);
         res = "Generando piso final!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "END") {
         res = juegoCliente->endGame();
@@ -145,18 +151,22 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (msg == "PI") {
         juegoCliente->playerInvisible();
         res = "El personaje ahora es invisible!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "PV") { 
         juegoCliente->playerVisible();
         res = "El personaje ahora es visible!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "muerte") {
         juegoCliente->playerDied();
         res = "El jugador ha muerto";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "P+1") {
         int vida = juegoCliente->playerHealed();
         res = "El jugador ha ganado un corazon! Ahora tiene " + to_string(vida) + " corazones!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "safe") {
         res = juegoCliente->playerState();
@@ -167,20 +177,24 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     //LLamadas de objetos
     else if (msg == "OPD") {
         res = "Un jarron ha sido destruido!";
+        cout << "Respondiendo: " << res << endl;
     }
     
     else if (msg == "OCO") {
         juegoCliente->chestOpened();
         res = "Un cofre ha sido abierto!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg[0] == 'L') {
         int pointCode = atoi(&(msg[1]));
         int points = pointCode * 10;
         juegoCliente->pointsEarned(points);
         res = "Se han obtendo "+to_string(points)+"puntos!";
+        cout << "Respondiendo: " << res << endl;
     }
     else if (msg == "MOB") {
         res = "Un enemigo simple ha sido derrotado!";
+        cout << "Respondiendo: " << res << endl;
     }
 
     //________________________
@@ -216,24 +230,28 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
             //Enemy was killed
             juegoCliente->enemyDied(ID);
             res = "Enemigo derrotado!";
+            cout << "Respondiendo: " << res << endl;
         }
         else if (msg[2] == 'V')
         {
             //Enemy spoted the player
             juegoCliente->enemyDetected(ID);
             res = "El jugador a sido detectado!";
+            cout << "Respondiendo: " << res << endl;
         }
         else if (msg[2] == 'K')
         {
             //Enemy killed the player
             juegoCliente->enemyKilled(ID);
             res = "El jugador a sido asesinado por un espectro!";
+            cout << "Respondiendo: " << res << endl;
         }
         else
         {
             //addBacktrackPos
             juegoCliente->backtrackPos(ID,msg.substr(3));
             res = "Espectro " + to_string(ID) + " en movimiento";
+            cout << "Respondiendo: " << res << endl;
         }
     }
 
@@ -242,17 +260,19 @@ void Listener_MessageReceived(TCPListener* listener, int client, string msg)
     else if (msg == "final") {
         juegoCliente->endGame();
         res = "Gracias por jugar!";
+        cout << "Respondiendo: " << res << endl;
     }
 
     else if (msg == "Desconectado") {
         cleanClient(ID);
         res = "Espacio liberado";
+        cout << "Respondiendo: " << res << endl;
     }
         
     else {
         res = "res";
     }
 
-    cout << "Respondiendo: " << res << endl;
+    
     listener->Send(client, res);
 }
