@@ -3,6 +3,13 @@
 #include "Jugador.h"
 #include "Genetic.h"
 
+/**
+ * @file Piso.h
+ * @author Jose A. Chavarria
+ * @brief Clase plantilla para los niveles
+*/
+
+/// @brief Clase que maneja los datos de cada piso del juego
 class Piso
 {
 

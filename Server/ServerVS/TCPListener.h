@@ -7,6 +7,12 @@
 
 #define MAX_BUFFER_SIZE (49152)
 
+/**
+ * @file TCPListener.h
+ * @author Jose A. Chavarria/ Based of: Sloan Kelly code
+ * @brief Clase plantilla para los niveles
+*/
+
 class TCPListener;
 
 typedef void (*MessageRecievedHandler)(TCPListener* listener, int socketId, std::string msg);

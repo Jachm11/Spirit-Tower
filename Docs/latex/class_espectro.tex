@@ -1,0 +1,300 @@
+\hypertarget{class_espectro}{}\doxysection{Espectro Class Reference}
+\label{class_espectro}\index{Espectro@{Espectro}}
+
+
+Clase que controla a los espectros del juego.  
+
+
+
+
+{\ttfamily \#include $<$Espectro.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_espectro_a074e1ecc209b51a53e1f86c1717fc935}{Espectro}} (string def\+Route)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_espectro_afc61ee0593101a8e1b6436847d8d9505}{Espectro}} ()
+\item 
+void \mbox{\hyperlink{class_espectro_ae45c60a153e4cc49bdc6b0a5cd8772ca}{attack}} (int grid\mbox{[}25\mbox{]}\mbox{[}25\mbox{]}, tuple$<$ int, int $>$ tupla, string pos)
+\begin{DoxyCompactList}\small\item\em Guarda la ruta que debe seguir el objeto, utiliza el algoritmo A$\ast$. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_espectro_aed9269b75fe178bd74c0bb2639d3cb0f}{set\+Stats}} (float vel, int rango, float vel\+Ataque)
+\begin{DoxyCompactList}\small\item\em Guarda las estadísiticas de los espectros generadas por un algoritmo genético. \end{DoxyCompactList}\item 
+vector$<$ tuple$<$ int, int $>$ $>$ \mbox{\hyperlink{class_espectro_ae8005adeafad5ace121c4b59b23b4b6f}{get\+Attack\+Route}} (int grid\mbox{[}25\mbox{]}\mbox{[}25\mbox{]}, int src\+Row, int src\+Col, int dest\+Row, int dest\+Col)
+\begin{DoxyCompactList}\small\item\em Función que llama a diferentes métodos para obtener la ruta desde el origen al destino especificado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_espectro_ac8ef4b8c280ebd9f9de6de9ed5520e57}{add\+Backtrack\+Pos}} (string pos)
+\begin{DoxyCompactList}\small\item\em Función que añade una nueva posición a la ruta del backtracking conforme se mueve el espectro. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a357ee8f8adaa2979f9a02f2979984a24}{get\+Attack\+Response}} ()
+\begin{DoxyCompactList}\small\item\em Función que llama el servidor cuando solicitan la ruta de ataque. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a525cff6f7748c5ee782d7e02255c62fd}{get\+Default\+Response}} ()
+\begin{DoxyCompactList}\small\item\em Función que llama el servidor cuando solicitan la ruta default que sigue el espectro. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a643c9ae7ad021959301efc660e93eb63}{get\+Backtrack\+Response}} ()
+\begin{DoxyCompactList}\small\item\em Función que llama el servidor cuando solicitan la ruta de backtracking. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a8c2414d421b1c547e99fef2f5ab2c4c2}{get\+Stats\+Response}} ()
+\begin{DoxyCompactList}\small\item\em Función que llama el servidor cuando solicitan los stats del espectro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_espectro_a2f35c429c62d2e6584f3921686407776}{detections}}
+\item 
+int \mbox{\hyperlink{class_espectro_a115f5b7234bc88d6c9fc8c5090d2a7b6}{hits}}
+\item 
+int \mbox{\hyperlink{class_espectro_a761bdecf770cde0260f218726d0d1c01}{defeats}}
+\item 
+int \mbox{\hyperlink{class_espectro_a2b3378870d74de75748e610553215e54}{Fitness}}
+\item 
+float \mbox{\hyperlink{class_espectro_aae8461c842675b4bf1483140e0829d1d}{speed}}
+\item 
+int \mbox{\hyperlink{class_espectro_a5ef89d15a1da6ad43c54e04a0e7b83b6}{range}}
+\item 
+float \mbox{\hyperlink{class_espectro_a7c5c0a115a7cc2ab3686f7c5d0100cb1}{chase\+Speed}}
+\item 
+tuple$<$ int, int $>$ \mbox{\hyperlink{class_espectro_a7fc0c79c6aa849aac106641bd85a092e}{player\+Pos}}
+\begin{DoxyCompactList}\small\item\em Posicion del jugador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a57aca6f7cdfef322a450d79983012f77}{next\+Pos}}
+\begin{DoxyCompactList}\small\item\em Posición siguiente a avanzar. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_espectro_a94af7f08ab65dc3837555c1e3b8733cf}{attack\+String}}
+\begin{DoxyCompactList}\small\item\em Guarda la ruta de ataque. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que controla a los espectros del juego. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_espectro_a074e1ecc209b51a53e1f86c1717fc935}\label{class_espectro_a074e1ecc209b51a53e1f86c1717fc935}} 
+\index{Espectro@{Espectro}!Espectro@{Espectro}}
+\index{Espectro@{Espectro}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{Espectro()}{Espectro()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Espectro\+::\+Espectro (\begin{DoxyParamCaption}\item[{string}]{def\+Route }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Un} & string con la ruta defult que va a seguir el espectro creado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_espectro_afc61ee0593101a8e1b6436847d8d9505}\label{class_espectro_afc61ee0593101a8e1b6436847d8d9505}} 
+\index{Espectro@{Espectro}!Espectro@{Espectro}}
+\index{Espectro@{Espectro}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{Espectro()}{Espectro()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Espectro\+::\+Espectro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_espectro_ac8ef4b8c280ebd9f9de6de9ed5520e57}\label{class_espectro_ac8ef4b8c280ebd9f9de6de9ed5520e57}} 
+\index{Espectro@{Espectro}!addBacktrackPos@{addBacktrackPos}}
+\index{addBacktrackPos@{addBacktrackPos}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{addBacktrackPos()}{addBacktrackPos()}}
+{\footnotesize\ttfamily void Espectro\+::add\+Backtrack\+Pos (\begin{DoxyParamCaption}\item[{string}]{pos }\end{DoxyParamCaption})}
+
+
+
+Función que añade una nueva posición a la ruta del backtracking conforme se mueve el espectro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Posición a agregar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_espectro_ae45c60a153e4cc49bdc6b0a5cd8772ca}\label{class_espectro_ae45c60a153e4cc49bdc6b0a5cd8772ca}} 
+\index{Espectro@{Espectro}!attack@{attack}}
+\index{attack@{attack}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily void Espectro\+::attack (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}25\mbox{]}\mbox{[}25\mbox{]},  }\item[{tuple$<$ int, int $>$}]{tupla,  }\item[{string}]{pos }\end{DoxyParamCaption})}
+
+
+
+Guarda la ruta que debe seguir el objeto, utiliza el algoritmo A$\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Una matriz del tamaño del juego con un 0 en la posición donde hay obstáculos y un 1 donde no hay \\
+\hline
+{\em tupla} & Una tupla con 2 números enteros que representan la posición x,y del jugador \\
+\hline
+{\em pos} & Un string con la posición del jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_espectro_a357ee8f8adaa2979f9a02f2979984a24}\label{class_espectro_a357ee8f8adaa2979f9a02f2979984a24}} 
+\index{Espectro@{Espectro}!getAttackResponse@{getAttackResponse}}
+\index{getAttackResponse@{getAttackResponse}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{getAttackResponse()}{getAttackResponse()}}
+{\footnotesize\ttfamily string Espectro\+::get\+Attack\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que llama el servidor cuando solicitan la ruta de ataque. 
+
+\begin{DoxyReturn}{Returns}
+Ruta de ataque con el formato necesario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_espectro_ae8005adeafad5ace121c4b59b23b4b6f}\label{class_espectro_ae8005adeafad5ace121c4b59b23b4b6f}} 
+\index{Espectro@{Espectro}!getAttackRoute@{getAttackRoute}}
+\index{getAttackRoute@{getAttackRoute}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{getAttackRoute()}{getAttackRoute()}}
+{\footnotesize\ttfamily vector$<$ tuple$<$ int, int $>$ $>$ Espectro\+::get\+Attack\+Route (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}25\mbox{]}\mbox{[}25\mbox{]},  }\item[{int}]{src\+Row,  }\item[{int}]{src\+Col,  }\item[{int}]{dest\+Row,  }\item[{int}]{dest\+Col }\end{DoxyParamCaption})}
+
+
+
+Función que llama a diferentes métodos para obtener la ruta desde el origen al destino especificado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid} & Matriz que representa al nivel \\
+\hline
+{\em src\+Row} & Número de fila del origen \\
+\hline
+{\em src\+Col} & Número de columna del origen \\
+\hline
+{\em dest\+Row} & Número de fila del destino \\
+\hline
+{\em dest\+Col} & Número de columna del destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector de tuplas con la ruta que debe seguir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_espectro_a643c9ae7ad021959301efc660e93eb63}\label{class_espectro_a643c9ae7ad021959301efc660e93eb63}} 
+\index{Espectro@{Espectro}!getBacktrackResponse@{getBacktrackResponse}}
+\index{getBacktrackResponse@{getBacktrackResponse}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{getBacktrackResponse()}{getBacktrackResponse()}}
+{\footnotesize\ttfamily string Espectro\+::get\+Backtrack\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que llama el servidor cuando solicitan la ruta de backtracking. 
+
+\begin{DoxyReturn}{Returns}
+Ruta de backtracking con el formato necesario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_espectro_a525cff6f7748c5ee782d7e02255c62fd}\label{class_espectro_a525cff6f7748c5ee782d7e02255c62fd}} 
+\index{Espectro@{Espectro}!getDefaultResponse@{getDefaultResponse}}
+\index{getDefaultResponse@{getDefaultResponse}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{getDefaultResponse()}{getDefaultResponse()}}
+{\footnotesize\ttfamily string Espectro\+::get\+Default\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que llama el servidor cuando solicitan la ruta default que sigue el espectro. 
+
+\begin{DoxyReturn}{Returns}
+Ruta default con el formato necesario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_espectro_a8c2414d421b1c547e99fef2f5ab2c4c2}\label{class_espectro_a8c2414d421b1c547e99fef2f5ab2c4c2}} 
+\index{Espectro@{Espectro}!getStatsResponse@{getStatsResponse}}
+\index{getStatsResponse@{getStatsResponse}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{getStatsResponse()}{getStatsResponse()}}
+{\footnotesize\ttfamily string Espectro\+::get\+Stats\+Response (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que llama el servidor cuando solicitan los stats del espectro. 
+
+\begin{DoxyReturn}{Returns}
+Stats con el formato necesario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_espectro_aed9269b75fe178bd74c0bb2639d3cb0f}\label{class_espectro_aed9269b75fe178bd74c0bb2639d3cb0f}} 
+\index{Espectro@{Espectro}!setStats@{setStats}}
+\index{setStats@{setStats}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{setStats()}{setStats()}}
+{\footnotesize\ttfamily void Espectro\+::set\+Stats (\begin{DoxyParamCaption}\item[{float}]{vel,  }\item[{int}]{rango,  }\item[{float}]{vel\+Ataque }\end{DoxyParamCaption})}
+
+
+
+Guarda las estadísiticas de los espectros generadas por un algoritmo genético. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vel} & Velocidad normal del espectro \\
+\hline
+{\em rango} & Rango de visión del espectro \\
+\hline
+{\em vel\+Ataque} & Velocidad de ataque del espectro \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_espectro_a94af7f08ab65dc3837555c1e3b8733cf}\label{class_espectro_a94af7f08ab65dc3837555c1e3b8733cf}} 
+\index{Espectro@{Espectro}!attackString@{attackString}}
+\index{attackString@{attackString}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{attackString}{attackString}}
+{\footnotesize\ttfamily string Espectro\+::attack\+String}
+
+
+
+Guarda la ruta de ataque. 
+
+\mbox{\Hypertarget{class_espectro_a7c5c0a115a7cc2ab3686f7c5d0100cb1}\label{class_espectro_a7c5c0a115a7cc2ab3686f7c5d0100cb1}} 
+\index{Espectro@{Espectro}!chaseSpeed@{chaseSpeed}}
+\index{chaseSpeed@{chaseSpeed}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{chaseSpeed}{chaseSpeed}}
+{\footnotesize\ttfamily float Espectro\+::chase\+Speed}
+
+\mbox{\Hypertarget{class_espectro_a761bdecf770cde0260f218726d0d1c01}\label{class_espectro_a761bdecf770cde0260f218726d0d1c01}} 
+\index{Espectro@{Espectro}!defeats@{defeats}}
+\index{defeats@{defeats}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{defeats}{defeats}}
+{\footnotesize\ttfamily int Espectro\+::defeats}
+
+\mbox{\Hypertarget{class_espectro_a2f35c429c62d2e6584f3921686407776}\label{class_espectro_a2f35c429c62d2e6584f3921686407776}} 
+\index{Espectro@{Espectro}!detections@{detections}}
+\index{detections@{detections}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{detections}{detections}}
+{\footnotesize\ttfamily int Espectro\+::detections}
+
+\mbox{\Hypertarget{class_espectro_a2b3378870d74de75748e610553215e54}\label{class_espectro_a2b3378870d74de75748e610553215e54}} 
+\index{Espectro@{Espectro}!Fitness@{Fitness}}
+\index{Fitness@{Fitness}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{Fitness}{Fitness}}
+{\footnotesize\ttfamily int Espectro\+::\+Fitness}
+
+\mbox{\Hypertarget{class_espectro_a115f5b7234bc88d6c9fc8c5090d2a7b6}\label{class_espectro_a115f5b7234bc88d6c9fc8c5090d2a7b6}} 
+\index{Espectro@{Espectro}!hits@{hits}}
+\index{hits@{hits}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{hits}{hits}}
+{\footnotesize\ttfamily int Espectro\+::hits}
+
+\mbox{\Hypertarget{class_espectro_a57aca6f7cdfef322a450d79983012f77}\label{class_espectro_a57aca6f7cdfef322a450d79983012f77}} 
+\index{Espectro@{Espectro}!nextPos@{nextPos}}
+\index{nextPos@{nextPos}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{nextPos}{nextPos}}
+{\footnotesize\ttfamily string Espectro\+::next\+Pos}
+
+
+
+Posición siguiente a avanzar. 
+
+\mbox{\Hypertarget{class_espectro_a7fc0c79c6aa849aac106641bd85a092e}\label{class_espectro_a7fc0c79c6aa849aac106641bd85a092e}} 
+\index{Espectro@{Espectro}!playerPos@{playerPos}}
+\index{playerPos@{playerPos}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{playerPos}{playerPos}}
+{\footnotesize\ttfamily tuple$<$int, int$>$ Espectro\+::player\+Pos}
+
+
+
+Posicion del jugador. 
+
+\mbox{\Hypertarget{class_espectro_a5ef89d15a1da6ad43c54e04a0e7b83b6}\label{class_espectro_a5ef89d15a1da6ad43c54e04a0e7b83b6}} 
+\index{Espectro@{Espectro}!range@{range}}
+\index{range@{range}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{range}{range}}
+{\footnotesize\ttfamily int Espectro\+::range}
+
+\mbox{\Hypertarget{class_espectro_aae8461c842675b4bf1483140e0829d1d}\label{class_espectro_aae8461c842675b4bf1483140e0829d1d}} 
+\index{Espectro@{Espectro}!speed@{speed}}
+\index{speed@{speed}!Espectro@{Espectro}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily float Espectro\+::speed}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_espectro_8h}{Espectro.\+h}}\item 
+\mbox{\hyperlink{_espectro_8cpp}{Espectro.\+cpp}}\item 
+\mbox{\hyperlink{_search_8cpp}{Search.\+cpp}}\end{DoxyCompactItemize}

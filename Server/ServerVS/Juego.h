@@ -1,6 +1,12 @@
 #pragma once
 #include "piso.h"
 
+/**
+ * @file Juego.h
+ * @author Jose A. Chavarria
+ * @brief Clase plantilla para una partida de un cliente
+*/
+
 /// @brief Esta clase se asigna a cada cliente que entra al servidor, esta es un facade que se encarga de manejar todas las funciones necesarias de una partida, asi como almacenar sus datos
 class Juego
 {

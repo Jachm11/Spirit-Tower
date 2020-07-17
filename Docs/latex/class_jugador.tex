@@ -1,0 +1,221 @@
+\hypertarget{class_jugador}{}\doxysection{Jugador Class Reference}
+\label{class_jugador}\index{Jugador@{Jugador}}
+
+
+Clase que controla los datos del jugador.  
+
+
+
+
+{\ttfamily \#include $<$Jugador.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jugador_ae052eac49966517b6cbc54843b22687a}{Jugador}} (float \+\_\+posX, float \+\_\+posY)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_ae052eac49966517b6cbc54843b22687a}{Jugador\+::\+Jugador}} constructor del jugador, inicializa todos los datos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a555176b43c2b97fc7abeb27e12fca338}{set\+Pos}} (string \+\_\+pos)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a555176b43c2b97fc7abeb27e12fca338}{Jugador\+::set\+Pos}} metodo encargado de establecer la poscion actual del jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_abf584d7c1c2ffdfe6d03ded71a255314}{aumentar\+Corazon}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_abf584d7c1c2ffdfe6d03ded71a255314}{Jugador\+::aumentar\+Corazon}} metodo que incrementa el corazon en una vida. Si es igual a 5 no aumenta. \end{DoxyCompactList}\item 
+float $\ast$ \mbox{\hyperlink{class_jugador_af23c62b18782fbabbd849436ea72bec4}{get\+Pos}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_af23c62b18782fbabbd849436ea72bec4}{Jugador\+::get\+Pos}} obtiene un puntero con el array de las posiciones del jugador en \char`\"{}x\char`\"{} y \char`\"{}y\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a3893338df39306ffa61819c79e9da591}{set\+Safe}} (bool estado)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a3893338df39306ffa61819c79e9da591}{Jugador\+::set\+Safe}} metodo que establece si el jugador se encuentra en zona segura. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jugador_a2820de38c234c7ea9729c2c7f0a3147b}{is\+Safe}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a2820de38c234c7ea9729c2c7f0a3147b}{Jugador\+::is\+Safe}} metodo que devuelve el estado de seguridad del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a15503a6b0d0a93afdf274822239f8d25}{set\+Muerte}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a15503a6b0d0a93afdf274822239f8d25}{Jugador\+::set\+Muerte}} Metodo que reestablece las vidas del jugador al morir. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jugador_a5c9aa996da4fee5a6ecfadbee8f26824}{esta\+Muerto}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a5c9aa996da4fee5a6ecfadbee8f26824}{Jugador\+::esta\+Muerto}} retorna si el jugador murio. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_jugador_a0e2041c2a61c9b6091dbeb9225080f83}{dividir}} (string info, int i)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a0e2041c2a61c9b6091dbeb9225080f83}{Jugador\+::dividir}} metodo que toma un string y lo separa por cada punto y coma encontrado. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_a4a0487bbcf30927277c8bcfe7c982da8}{ataque\+Simple}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_jugador_a4a0487bbcf30927277c8bcfe7c982da8}{Jugador\+::ataque\+Simple}} metodo que reduce un corazon por ataque. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jugador_a232c46f75691af6210096e5972535d71}{Jugador}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_jugador_ae783bc00aa36454647664d83361c6bf0}{corazones}}
+\item 
+bool \mbox{\hyperlink{class_jugador_a3c34fe53162f7355d83a08c0661111b7}{is\+\_\+safe}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que controla los datos del jugador. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_jugador_ae052eac49966517b6cbc54843b22687a}\label{class_jugador_ae052eac49966517b6cbc54843b22687a}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{float}]{\+\_\+posX,  }\item[{float}]{\+\_\+posY }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_ae052eac49966517b6cbc54843b22687a}{Jugador\+::\+Jugador}} constructor del jugador, inicializa todos los datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+posX} & dato de tipo float, corresponde a la posicion inicial en x del jugador \\
+\hline
+{\em \+\_\+posY} & datos de tipo float, corresponde a la psocion incial en y del jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jugador_a232c46f75691af6210096e5972535d71}\label{class_jugador_a232c46f75691af6210096e5972535d71}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{Jugador()}{Jugador()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_jugador_a4a0487bbcf30927277c8bcfe7c982da8}\label{class_jugador_a4a0487bbcf30927277c8bcfe7c982da8}} 
+\index{Jugador@{Jugador}!ataqueSimple@{ataqueSimple}}
+\index{ataqueSimple@{ataqueSimple}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{ataqueSimple()}{ataqueSimple()}}
+{\footnotesize\ttfamily int Jugador\+::ataque\+Simple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a4a0487bbcf30927277c8bcfe7c982da8}{Jugador\+::ataque\+Simple}} metodo que reduce un corazon por ataque. 
+
+\begin{DoxyReturn}{Returns}
+corazones restantes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_abf584d7c1c2ffdfe6d03ded71a255314}\label{class_jugador_abf584d7c1c2ffdfe6d03ded71a255314}} 
+\index{Jugador@{Jugador}!aumentarCorazon@{aumentarCorazon}}
+\index{aumentarCorazon@{aumentarCorazon}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{aumentarCorazon()}{aumentarCorazon()}}
+{\footnotesize\ttfamily int Jugador\+::aumentar\+Corazon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_abf584d7c1c2ffdfe6d03ded71a255314}{Jugador\+::aumentar\+Corazon}} metodo que incrementa el corazon en una vida. Si es igual a 5 no aumenta. 
+
+\begin{DoxyReturn}{Returns}
+corazones totales 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_a0e2041c2a61c9b6091dbeb9225080f83}\label{class_jugador_a0e2041c2a61c9b6091dbeb9225080f83}} 
+\index{Jugador@{Jugador}!dividir@{dividir}}
+\index{dividir@{dividir}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{dividir()}{dividir()}}
+{\footnotesize\ttfamily string Jugador\+::dividir (\begin{DoxyParamCaption}\item[{string}]{info,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a0e2041c2a61c9b6091dbeb9225080f83}{Jugador\+::dividir}} metodo que toma un string y lo separa por cada punto y coma encontrado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em info} & string que se desea dividir \\
+\hline
+{\em i} & int que indica el numero de la palabra dividida que se desea que se retorne \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string con la palabra deseada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_a5c9aa996da4fee5a6ecfadbee8f26824}\label{class_jugador_a5c9aa996da4fee5a6ecfadbee8f26824}} 
+\index{Jugador@{Jugador}!estaMuerto@{estaMuerto}}
+\index{estaMuerto@{estaMuerto}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{estaMuerto()}{estaMuerto()}}
+{\footnotesize\ttfamily bool Jugador\+::esta\+Muerto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a5c9aa996da4fee5a6ecfadbee8f26824}{Jugador\+::esta\+Muerto}} retorna si el jugador murio. 
+
+\begin{DoxyReturn}{Returns}
+bool de vida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_af23c62b18782fbabbd849436ea72bec4}\label{class_jugador_af23c62b18782fbabbd849436ea72bec4}} 
+\index{Jugador@{Jugador}!getPos@{getPos}}
+\index{getPos@{getPos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily float $\ast$ Jugador\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_af23c62b18782fbabbd849436ea72bec4}{Jugador\+::get\+Pos}} obtiene un puntero con el array de las posiciones del jugador en \char`\"{}x\char`\"{} y \char`\"{}y\char`\"{}. 
+
+\begin{DoxyReturn}{Returns}
+puntero array float con las posciones del jugador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_a2820de38c234c7ea9729c2c7f0a3147b}\label{class_jugador_a2820de38c234c7ea9729c2c7f0a3147b}} 
+\index{Jugador@{Jugador}!isSafe@{isSafe}}
+\index{isSafe@{isSafe}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{isSafe()}{isSafe()}}
+{\footnotesize\ttfamily bool Jugador\+::is\+Safe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a2820de38c234c7ea9729c2c7f0a3147b}{Jugador\+::is\+Safe}} metodo que devuelve el estado de seguridad del jugador. 
+
+\begin{DoxyReturn}{Returns}
+bool de seguridad 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jugador_a15503a6b0d0a93afdf274822239f8d25}\label{class_jugador_a15503a6b0d0a93afdf274822239f8d25}} 
+\index{Jugador@{Jugador}!setMuerte@{setMuerte}}
+\index{setMuerte@{setMuerte}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{setMuerte()}{setMuerte()}}
+{\footnotesize\ttfamily void Jugador\+::set\+Muerte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a15503a6b0d0a93afdf274822239f8d25}{Jugador\+::set\+Muerte}} Metodo que reestablece las vidas del jugador al morir. 
+
+\mbox{\Hypertarget{class_jugador_a555176b43c2b97fc7abeb27e12fca338}\label{class_jugador_a555176b43c2b97fc7abeb27e12fca338}} 
+\index{Jugador@{Jugador}!setPos@{setPos}}
+\index{setPos@{setPos}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily void Jugador\+::set\+Pos (\begin{DoxyParamCaption}\item[{string}]{\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a555176b43c2b97fc7abeb27e12fca338}{Jugador\+::set\+Pos}} metodo encargado de establecer la poscion actual del jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+pos} & string que contiene las posciones nuevas del jugador en el siguiente formato (pos;x;y) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_jugador_a3893338df39306ffa61819c79e9da591}\label{class_jugador_a3893338df39306ffa61819c79e9da591}} 
+\index{Jugador@{Jugador}!setSafe@{setSafe}}
+\index{setSafe@{setSafe}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{setSafe()}{setSafe()}}
+{\footnotesize\ttfamily void Jugador\+::set\+Safe (\begin{DoxyParamCaption}\item[{bool}]{estado }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_jugador_a3893338df39306ffa61819c79e9da591}{Jugador\+::set\+Safe}} metodo que establece si el jugador se encuentra en zona segura. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em estado} & dato de tipo booleano \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_jugador_ae783bc00aa36454647664d83361c6bf0}\label{class_jugador_ae783bc00aa36454647664d83361c6bf0}} 
+\index{Jugador@{Jugador}!corazones@{corazones}}
+\index{corazones@{corazones}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{corazones}{corazones}}
+{\footnotesize\ttfamily int Jugador\+::corazones}
+
+\mbox{\Hypertarget{class_jugador_a3c34fe53162f7355d83a08c0661111b7}\label{class_jugador_a3c34fe53162f7355d83a08c0661111b7}} 
+\index{Jugador@{Jugador}!is\_safe@{is\_safe}}
+\index{is\_safe@{is\_safe}!Jugador@{Jugador}}
+\doxysubsubsection{\texorpdfstring{is\_safe}{is\_safe}}
+{\footnotesize\ttfamily bool Jugador\+::is\+\_\+safe}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_jugador_8h}{Jugador.\+h}}\item 
+\mbox{\hyperlink{_jugador_8cpp}{Jugador.\+cpp}}\end{DoxyCompactItemize}

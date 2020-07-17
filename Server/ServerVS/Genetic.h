@@ -6,7 +6,13 @@
 #include <algorithm>
 #include "Espectro.h"
 
+/**
+ * @file Genetic.h
+ * @author Jose A. Chavarria. Based of: Instagibz code
+ * @brief Clase para ejecutar el algoritmo genetico
+*/
 
+/// @brief Estructura ligada al algoritmo genetico
 struct Population {
 	std::vector<Espectro> Members = std::vector<Espectro>(3);
 

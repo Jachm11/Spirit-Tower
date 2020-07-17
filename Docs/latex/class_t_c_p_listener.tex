@@ -1,0 +1,119 @@
+\hypertarget{class_t_c_p_listener}{}\doxysection{T\+C\+P\+Listener Class Reference}
+\label{class_t_c_p_listener}\index{TCPListener@{TCPListener}}
+
+
+Clase que inicializa un servidor con Windows socket T\+CP.  
+
+
+
+
+{\ttfamily \#include $<$T\+C\+P\+Listener.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_t_c_p_listener_a3860b337a68cdf186f4655807ea46090}{T\+C\+P\+Listener}} (std\+::string ip\+Address, int port, \mbox{\hyperlink{_t_c_p_listener_8h_a5563ba97e80a68b3d38eff4dd4883a7f}{Message\+Recieved\+Handler}} handler)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_t_c_p_listener_af7e560c0c6c0ea486113dc6eabc4226d}{$\sim$\+T\+C\+P\+Listener}} ()
+\item 
+void \mbox{\hyperlink{class_t_c_p_listener_a3d7678ad0d43f9419733f673d5b3b534}{Send}} (int client\+Socket, std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Send a message to the specifed client. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_t_c_p_listener_aab801821b3d85261758d3413e7bcc6a9}{Init}} ()
+\begin{DoxyCompactList}\small\item\em Initialize winsock. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_c_p_listener_a6b603f6a4ffc4d5f34f06985e09b13e9}{Run}} ()
+\begin{DoxyCompactList}\small\item\em The main processing loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_t_c_p_listener_a2c16e75dec2cf93cb00c3f76b1819f8a}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleanup winsock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que inicializa un servidor con Windows socket T\+CP. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_c_p_listener_a3860b337a68cdf186f4655807ea46090}\label{class_t_c_p_listener_a3860b337a68cdf186f4655807ea46090}} 
+\index{TCPListener@{TCPListener}!TCPListener@{TCPListener}}
+\index{TCPListener@{TCPListener}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{TCPListener()}{TCPListener()}}
+{\footnotesize\ttfamily T\+C\+P\+Listener\+::\+T\+C\+P\+Listener (\begin{DoxyParamCaption}\item[{std\+::string}]{ip\+Address,  }\item[{int}]{port,  }\item[{\mbox{\hyperlink{_t_c_p_listener_8h_a5563ba97e80a68b3d38eff4dd4883a7f}{Message\+Recieved\+Handler}}}]{handler }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip\+Address} & IP al que escuchar \\
+\hline
+{\em port} & Puerto al que conectarse \\
+\hline
+{\em handler} & Manejador de mensajes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}} instance 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_c_p_listener_af7e560c0c6c0ea486113dc6eabc4226d}\label{class_t_c_p_listener_af7e560c0c6c0ea486113dc6eabc4226d}} 
+\index{TCPListener@{TCPListener}!````~TCPListener@{$\sim$TCPListener}}
+\index{````~TCPListener@{$\sim$TCPListener}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{$\sim$TCPListener()}{~TCPListener()}}
+{\footnotesize\ttfamily T\+C\+P\+Listener\+::$\sim$\+T\+C\+P\+Listener (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_c_p_listener_a2c16e75dec2cf93cb00c3f76b1819f8a}\label{class_t_c_p_listener_a2c16e75dec2cf93cb00c3f76b1819f8a}} 
+\index{TCPListener@{TCPListener}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void T\+C\+P\+Listener\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleanup winsock. 
+
+\mbox{\Hypertarget{class_t_c_p_listener_aab801821b3d85261758d3413e7bcc6a9}\label{class_t_c_p_listener_aab801821b3d85261758d3413e7bcc6a9}} 
+\index{TCPListener@{TCPListener}!Init@{Init}}
+\index{Init@{Init}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool T\+C\+P\+Listener\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize winsock. 
+
+\begin{DoxyReturn}{Returns}
+True si fue exitoso 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_c_p_listener_a6b603f6a4ffc4d5f34f06985e09b13e9}\label{class_t_c_p_listener_a6b603f6a4ffc4d5f34f06985e09b13e9}} 
+\index{TCPListener@{TCPListener}!Run@{Run}}
+\index{Run@{Run}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void T\+C\+P\+Listener\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main processing loop. 
+
+\mbox{\Hypertarget{class_t_c_p_listener_a3d7678ad0d43f9419733f673d5b3b534}\label{class_t_c_p_listener_a3d7678ad0d43f9419733f673d5b3b534}} 
+\index{TCPListener@{TCPListener}!Send@{Send}}
+\index{Send@{Send}!TCPListener@{TCPListener}}
+\doxysubsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily void T\+C\+P\+Listener\+::\+Send (\begin{DoxyParamCaption}\item[{int}]{client\+Socket,  }\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Send a message to the specifed client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em client\+Socket} & Numero de cliente \\
+\hline
+{\em msg} & Mesaje a enviar \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_t_c_p_listener_8h}{T\+C\+P\+Listener.\+h}}\item 
+\mbox{\hyperlink{_t_c_p_listener_8cpp}{T\+C\+P\+Listener.\+cpp}}\end{DoxyCompactItemize}

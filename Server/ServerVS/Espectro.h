@@ -7,6 +7,12 @@
 #include <queue>
 using namespace std;
 
+/**
+ * @file Espectro.h
+ * @author Natalia Gonzalez
+ * @brief Clase plantilla para los niveles
+*/
+
 /// @brief Clase que controla a los espectros del juego
 class Espectro
 {

@@ -1,0 +1,63 @@
+\hypertarget{class_genetic}{}\doxysection{Genetic Class Reference}
+\label{class_genetic}\index{Genetic@{Genetic}}
+
+
+Esta clase se encarga de ejecutar los procesos necesarios para el algoritmo genetico en los espectros.  
+
+
+
+
+{\ttfamily \#include $<$Genetic.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_genetic_a08e0c242dcaa16a93f00a9397a2896f1}{Genetic}} ()
+\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{class_genetic_a72af99f22dc96f581aff64ced91eb2ca}{get\+Genes}} (std\+::vector$<$ \mbox{\hyperlink{class_espectro}{Espectro}} $>$ Members, int muertes, int puntaje, int vida)
+\begin{DoxyCompactList}\small\item\em Esta funcion ejecuta un ciclo del algoritmo genetico y retorna valores para la siguente generacion de espectros. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Esta clase se encarga de ejecutar los procesos necesarios para el algoritmo genetico en los espectros. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_genetic_a08e0c242dcaa16a93f00a9397a2896f1}\label{class_genetic_a08e0c242dcaa16a93f00a9397a2896f1}} 
+\index{Genetic@{Genetic}!Genetic@{Genetic}}
+\index{Genetic@{Genetic}!Genetic@{Genetic}}
+\doxysubsubsection{\texorpdfstring{Genetic()}{Genetic()}}
+{\footnotesize\ttfamily Genetic\+::\+Genetic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_genetic_a72af99f22dc96f581aff64ced91eb2ca}\label{class_genetic_a72af99f22dc96f581aff64ced91eb2ca}} 
+\index{Genetic@{Genetic}!getGenes@{getGenes}}
+\index{getGenes@{getGenes}!Genetic@{Genetic}}
+\doxysubsubsection{\texorpdfstring{getGenes()}{getGenes()}}
+{\footnotesize\ttfamily std\+::vector$<$ float $>$ Genetic\+::get\+Genes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_espectro}{Espectro}} $>$}]{Members,  }\item[{int}]{muertes,  }\item[{int}]{puntaje,  }\item[{int}]{vida }\end{DoxyParamCaption})}
+
+
+
+Esta funcion ejecuta un ciclo del algoritmo genetico y retorna valores para la siguente generacion de espectros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Members} & Un vector de tipo espectros con la generacion de espectros de un piso \\
+\hline
+{\em muertes} & Cantidad de veces que murio el jugador en el piso \\
+\hline
+{\em puntaje} & int de 0 a 100 que representa el porcetaje del puntaje total adquirido del piso \\
+\hline
+{\em vida} & int de 0 a 100 que representa el porcentaje de la vida restante del jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna un puntero a una lista con los 3 datos para un nuevo espectro 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_genetic_8h}{Genetic.\+h}}\item 
+\mbox{\hyperlink{_genetic_8cpp}{Genetic.\+cpp}}\end{DoxyCompactItemize}

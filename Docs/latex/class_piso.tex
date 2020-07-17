@@ -1,0 +1,244 @@
+\hypertarget{class_piso}{}\doxysection{Piso Class Reference}
+\label{class_piso}\index{Piso@{Piso}}
+
+
+Clase que maneja los datos de cada piso del juego.  
+
+
+
+
+{\ttfamily \#include $<$Piso.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_piso_a15a7fa04a9297422ca33322e71606be6}{Piso}} ()
+\item 
+\mbox{\hyperlink{class_piso_adc1b29445dc5898c42b9bf5acb04ce71}{Piso}} (string E1, string E2, string E3, int puntaje\+Max)
+\begin{DoxyCompactList}\small\item\em Contructor del piso 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piso_a3445e29f941841a0f75308016bd05cb7}{Piso}} (string E1, string E2, string E3, int puntaje\+Pasado, int Muertes\+Pasadas, \mbox{\hyperlink{class_jugador}{Jugador}} j, std\+::vector$<$ \mbox{\hyperlink{class_espectro}{Espectro}} $>$ past\+Gen, int puntaje\+Max, int cofres)
+\begin{DoxyCompactList}\small\item\em Contructor del pisos 2, 3, 4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_piso_a3a913820ee4d207c2a7ffdb5d97658c2}{Piso}} (int cofres)
+\begin{DoxyCompactList}\small\item\em Constructor para piso final. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piso_accbdc458492c57c8997853991ad94b40}{update\+Puntaje}} (int puntos)
+\begin{DoxyCompactList}\small\item\em Actualiza los puntos de ganados piso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piso_a4208ce68e93b46685071116c271facfd}{jugador\+Muere}} ()
+\begin{DoxyCompactList}\small\item\em Actualiza las muertes del jugador este piso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piso_a6b17dbad631412c7cf03170adb277728}{Espectro\+Murio}} (int ID)
+\begin{DoxyCompactList}\small\item\em Actualiza las muertes del espectro del piso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piso_a4f65eeaca6efa4cb0484676943ddf379}{Espectro\+Vio}} (int ID)
+\begin{DoxyCompactList}\small\item\em Actualiza las deteciones del espectro del piso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_piso_a84666cc0a9145588fdf432951d790108}{Espectro\+Mato}} (int ID)
+\begin{DoxyCompactList}\small\item\em Actualiza los asesinatos del espectro del piso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_piso_ae4ed76600e4e52c414c88defc4fe35b5}{puntaje\+De\+Piso}}
+\item 
+int \mbox{\hyperlink{class_piso_a2a1f4cc91e53f94c3a7245736974e8b4}{puntaje\+Jugador}}
+\item 
+int \mbox{\hyperlink{class_piso_a045e98f0cc3146cf2391cba3264f74ec}{muertes}}
+\item 
+int \mbox{\hyperlink{class_piso_a588e8b88ade05cc19a79c4c50b9b6018}{cofres\+Player}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_espectro}{Espectro}} $>$ \mbox{\hyperlink{class_piso_aec23eed70b01d289b4673c23242fc31f}{espectros}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que maneja los datos de cada piso del juego. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_piso_a15a7fa04a9297422ca33322e71606be6}\label{class_piso_a15a7fa04a9297422ca33322e71606be6}} 
+\index{Piso@{Piso}!Piso@{Piso}}
+\index{Piso@{Piso}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{Piso()}{Piso()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Piso\+::\+Piso (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_piso_adc1b29445dc5898c42b9bf5acb04ce71}\label{class_piso_adc1b29445dc5898c42b9bf5acb04ce71}} 
+\index{Piso@{Piso}!Piso@{Piso}}
+\index{Piso@{Piso}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{Piso()}{Piso()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Piso\+::\+Piso (\begin{DoxyParamCaption}\item[{string}]{E1,  }\item[{string}]{E2,  }\item[{string}]{E3,  }\item[{int}]{puntaje\+Max }\end{DoxyParamCaption})}
+
+
+
+Contructor del piso 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E1} & Ruta default del espectro 0 \\
+\hline
+{\em E2} & Ruta default del espectro 1 \\
+\hline
+{\em E3} & Ruta default del espectro 2 \\
+\hline
+{\em puntaje\+Max} & Puntaje maximo del nivel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instancia de piso 1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piso_a3445e29f941841a0f75308016bd05cb7}\label{class_piso_a3445e29f941841a0f75308016bd05cb7}} 
+\index{Piso@{Piso}!Piso@{Piso}}
+\index{Piso@{Piso}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{Piso()}{Piso()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Piso\+::\+Piso (\begin{DoxyParamCaption}\item[{string}]{E1,  }\item[{string}]{E2,  }\item[{string}]{E3,  }\item[{int}]{puntaje\+Pasado,  }\item[{int}]{Muertes\+Pasadas,  }\item[{\mbox{\hyperlink{class_jugador}{Jugador}}}]{j,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_espectro}{Espectro}} $>$}]{past\+Gen,  }\item[{int}]{puntaje\+Max,  }\item[{int}]{cofres }\end{DoxyParamCaption})}
+
+
+
+Contructor del pisos 2, 3, 4. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em E1} & Ruta default del espectro 0 \\
+\hline
+{\em E2} & Ruta default del espectro 1 \\
+\hline
+{\em E3} & Ruta default del espectro 2 \\
+\hline
+{\em puntaje\+Pasado} & Puntaje que gano el jugador en el piso anterior \\
+\hline
+{\em Muertes\+Pasadas} & Puntaje que gano el jugador en el piso anterior \\
+\hline
+{\em j} & puntero al jugador en juego \\
+\hline
+{\em past\+Gen} & Espectros del piso anterior \\
+\hline
+{\em puntaje\+Max} & Puntaje maximo del nivel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instacia de piso 2, 3, o 4 ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_piso_a3a913820ee4d207c2a7ffdb5d97658c2}\label{class_piso_a3a913820ee4d207c2a7ffdb5d97658c2}} 
+\index{Piso@{Piso}!Piso@{Piso}}
+\index{Piso@{Piso}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{Piso()}{Piso()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Piso\+::\+Piso (\begin{DoxyParamCaption}\item[{int}]{cofres }\end{DoxyParamCaption})}
+
+
+
+Constructor para piso final. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em boss} & Valor vacio \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Instancia \mbox{\hyperlink{class_piso}{Piso}} 5 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_piso_a84666cc0a9145588fdf432951d790108}\label{class_piso_a84666cc0a9145588fdf432951d790108}} 
+\index{Piso@{Piso}!EspectroMato@{EspectroMato}}
+\index{EspectroMato@{EspectroMato}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{EspectroMato()}{EspectroMato()}}
+{\footnotesize\ttfamily void Piso\+::\+Espectro\+Mato (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Actualiza los asesinatos del espectro del piso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Id del espectro del piso \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_piso_a6b17dbad631412c7cf03170adb277728}\label{class_piso_a6b17dbad631412c7cf03170adb277728}} 
+\index{Piso@{Piso}!EspectroMurio@{EspectroMurio}}
+\index{EspectroMurio@{EspectroMurio}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{EspectroMurio()}{EspectroMurio()}}
+{\footnotesize\ttfamily void Piso\+::\+Espectro\+Murio (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Actualiza las muertes del espectro del piso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Id del espectro del piso \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_piso_a4f65eeaca6efa4cb0484676943ddf379}\label{class_piso_a4f65eeaca6efa4cb0484676943ddf379}} 
+\index{Piso@{Piso}!EspectroVio@{EspectroVio}}
+\index{EspectroVio@{EspectroVio}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{EspectroVio()}{EspectroVio()}}
+{\footnotesize\ttfamily void Piso\+::\+Espectro\+Vio (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+
+
+Actualiza las deteciones del espectro del piso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & Id del espectro del piso \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_piso_a4208ce68e93b46685071116c271facfd}\label{class_piso_a4208ce68e93b46685071116c271facfd}} 
+\index{Piso@{Piso}!jugadorMuere@{jugadorMuere}}
+\index{jugadorMuere@{jugadorMuere}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{jugadorMuere()}{jugadorMuere()}}
+{\footnotesize\ttfamily void Piso\+::jugador\+Muere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualiza las muertes del jugador este piso. 
+
+\mbox{\Hypertarget{class_piso_accbdc458492c57c8997853991ad94b40}\label{class_piso_accbdc458492c57c8997853991ad94b40}} 
+\index{Piso@{Piso}!updatePuntaje@{updatePuntaje}}
+\index{updatePuntaje@{updatePuntaje}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{updatePuntaje()}{updatePuntaje()}}
+{\footnotesize\ttfamily void Piso\+::update\+Puntaje (\begin{DoxyParamCaption}\item[{int}]{puntos }\end{DoxyParamCaption})}
+
+
+
+Actualiza los puntos de ganados piso. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puntos} & cantidad de puntos ganados \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_piso_a588e8b88ade05cc19a79c4c50b9b6018}\label{class_piso_a588e8b88ade05cc19a79c4c50b9b6018}} 
+\index{Piso@{Piso}!cofresPlayer@{cofresPlayer}}
+\index{cofresPlayer@{cofresPlayer}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{cofresPlayer}{cofresPlayer}}
+{\footnotesize\ttfamily int Piso\+::cofres\+Player}
+
+\mbox{\Hypertarget{class_piso_aec23eed70b01d289b4673c23242fc31f}\label{class_piso_aec23eed70b01d289b4673c23242fc31f}} 
+\index{Piso@{Piso}!espectros@{espectros}}
+\index{espectros@{espectros}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{espectros}{espectros}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_espectro}{Espectro}}$>$ Piso\+::espectros}
+
+\mbox{\Hypertarget{class_piso_a045e98f0cc3146cf2391cba3264f74ec}\label{class_piso_a045e98f0cc3146cf2391cba3264f74ec}} 
+\index{Piso@{Piso}!muertes@{muertes}}
+\index{muertes@{muertes}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{muertes}{muertes}}
+{\footnotesize\ttfamily int Piso\+::muertes}
+
+\mbox{\Hypertarget{class_piso_ae4ed76600e4e52c414c88defc4fe35b5}\label{class_piso_ae4ed76600e4e52c414c88defc4fe35b5}} 
+\index{Piso@{Piso}!puntajeDePiso@{puntajeDePiso}}
+\index{puntajeDePiso@{puntajeDePiso}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{puntajeDePiso}{puntajeDePiso}}
+{\footnotesize\ttfamily int Piso\+::puntaje\+De\+Piso}
+
+\mbox{\Hypertarget{class_piso_a2a1f4cc91e53f94c3a7245736974e8b4}\label{class_piso_a2a1f4cc91e53f94c3a7245736974e8b4}} 
+\index{Piso@{Piso}!puntajeJugador@{puntajeJugador}}
+\index{puntajeJugador@{puntajeJugador}!Piso@{Piso}}
+\doxysubsubsection{\texorpdfstring{puntajeJugador}{puntajeJugador}}
+{\footnotesize\ttfamily int Piso\+::puntaje\+Jugador}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_piso_8h}{Piso.\+h}}\item 
+\mbox{\hyperlink{_piso_8cpp}{Piso.\+cpp}}\end{DoxyCompactItemize}

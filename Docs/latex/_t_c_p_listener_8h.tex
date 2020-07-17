@@ -1,0 +1,51 @@
+\hypertarget{_t_c_p_listener_8h}{}\doxysection{T\+C\+P\+Listener.\+h File Reference}
+\label{_t_c_p_listener_8h}\index{TCPListener.h@{TCPListener.h}}
+
+
+Clase plantilla para los niveles.  
+
+
+{\ttfamily \#include $<$ws2tcpip.\+h$>$}\newline
+{\ttfamily \#include $<$winsock2.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}}
+\begin{DoxyCompactList}\small\item\em Clase que inicializa un servidor con Windows socket T\+CP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_t_c_p_listener_8h_ad4d796b98c583d49e83adabd74a63bf6}{M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~(49152)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{_t_c_p_listener_8h_a5563ba97e80a68b3d38eff4dd4883a7f}{Message\+Recieved\+Handler}}) (\mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}} $\ast$listener, int socket\+Id, std\+::string msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase plantilla para los niveles. 
+
+\begin{DoxyAuthor}{Author}
+Jose A. Chavarria/ Based of\+: Sloan Kelly code 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_t_c_p_listener_8h_ad4d796b98c583d49e83adabd74a63bf6}\label{_t_c_p_listener_8h_ad4d796b98c583d49e83adabd74a63bf6}} 
+\index{TCPListener.h@{TCPListener.h}!MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}}
+\index{MAX\_BUFFER\_SIZE@{MAX\_BUFFER\_SIZE}!TCPListener.h@{TCPListener.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_BUFFER\_SIZE}{MAX\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~(49152)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_t_c_p_listener_8h_a5563ba97e80a68b3d38eff4dd4883a7f}\label{_t_c_p_listener_8h_a5563ba97e80a68b3d38eff4dd4883a7f}} 
+\index{TCPListener.h@{TCPListener.h}!MessageRecievedHandler@{MessageRecievedHandler}}
+\index{MessageRecievedHandler@{MessageRecievedHandler}!TCPListener.h@{TCPListener.h}}
+\doxysubsubsection{\texorpdfstring{MessageRecievedHandler}{MessageRecievedHandler}}
+{\footnotesize\ttfamily typedef void($\ast$ Message\+Recieved\+Handler) (\mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}} $\ast$listener, int socket\+Id, std\+::string msg)}
+

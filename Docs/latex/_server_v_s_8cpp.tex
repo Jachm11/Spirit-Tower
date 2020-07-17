@@ -1,0 +1,106 @@
+\hypertarget{_server_v_s_8cpp}{}\doxysection{Server\+V\+S.\+cpp File Reference}
+\label{_server_v_s_8cpp}\index{ServerVS.cpp@{ServerVS.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}T\+C\+P\+Listener.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Juego.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_server_v_s_8cpp_a63755db2f85ff6bd790362e1ca591b8e}{Listener\+\_\+\+Message\+Received}} (\mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}} $\ast$listener, int client, string msg)
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_a5cc4c140cc7bfe4c2e023057cb876eb8}{check\+For\+Space}} ()
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_a9a0878ccb1b5348c96b5463784b74d5f}{set\+New\+Client}} (int client)
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_aa01a6a424025e3892d7ea6d1659dcb7c}{id\+Recon}} (int client)
+\item 
+void \mbox{\hyperlink{_server_v_s_8cpp_a68ac2f13521238797146f9afe2e18a28}{clean\+Client}} (int ID)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_juego}{Juego}} $\ast$ \mbox{\hyperlink{_server_v_s_8cpp_aba4ac6f89da0aaa9ae5d05d1e45e83c4}{Mis\+Clientes}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}} = 0
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_a6aec777f4f4c6df2ff854ad1b41a424e}{cupos}} \mbox{[}$\,$\mbox{]} = \{ 0,0,0,0 \}
+\item 
+int \mbox{\hyperlink{_server_v_s_8cpp_a1586ec489f683d6c90e64f55a11f96f3}{clientes}} \mbox{[}$\,$\mbox{]} = \{ -\/1,-\/1,-\/1,-\/1 \}
+\item 
+bool \mbox{\hyperlink{_server_v_s_8cpp_a19f31d9744c12503a9cbdaa1fd3a9848}{full}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_server_v_s_8cpp_a5cc4c140cc7bfe4c2e023057cb876eb8}\label{_server_v_s_8cpp_a5cc4c140cc7bfe4c2e023057cb876eb8}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!checkForSpace@{checkForSpace}}
+\index{checkForSpace@{checkForSpace}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{checkForSpace()}{checkForSpace()}}
+{\footnotesize\ttfamily int check\+For\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a68ac2f13521238797146f9afe2e18a28}\label{_server_v_s_8cpp_a68ac2f13521238797146f9afe2e18a28}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!cleanClient@{cleanClient}}
+\index{cleanClient@{cleanClient}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{cleanClient()}{cleanClient()}}
+{\footnotesize\ttfamily void clean\+Client (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_aa01a6a424025e3892d7ea6d1659dcb7c}\label{_server_v_s_8cpp_aa01a6a424025e3892d7ea6d1659dcb7c}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!idRecon@{idRecon}}
+\index{idRecon@{idRecon}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{idRecon()}{idRecon()}}
+{\footnotesize\ttfamily int id\+Recon (\begin{DoxyParamCaption}\item[{int}]{client }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a63755db2f85ff6bd790362e1ca591b8e}\label{_server_v_s_8cpp_a63755db2f85ff6bd790362e1ca591b8e}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!Listener\_MessageReceived@{Listener\_MessageReceived}}
+\index{Listener\_MessageReceived@{Listener\_MessageReceived}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{Listener\_MessageReceived()}{Listener\_MessageReceived()}}
+{\footnotesize\ttfamily void Listener\+\_\+\+Message\+Received (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_t_c_p_listener}{T\+C\+P\+Listener}} $\ast$}]{listener,  }\item[{int}]{client,  }\item[{string}]{msg }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_server_v_s_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!main@{main}}
+\index{main@{main}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a9a0878ccb1b5348c96b5463784b74d5f}\label{_server_v_s_8cpp_a9a0878ccb1b5348c96b5463784b74d5f}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!setNewClient@{setNewClient}}
+\index{setNewClient@{setNewClient}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{setNewClient()}{setNewClient()}}
+{\footnotesize\ttfamily int set\+New\+Client (\begin{DoxyParamCaption}\item[{int}]{client }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_server_v_s_8cpp_adbe66a087ac3fd4a5b0566f64ca2d12b}\label{_server_v_s_8cpp_adbe66a087ac3fd4a5b0566f64ca2d12b}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!capacity@{capacity}}
+\index{capacity@{capacity}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{capacity}{capacity}}
+{\footnotesize\ttfamily int capacity = 0}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a1586ec489f683d6c90e64f55a11f96f3}\label{_server_v_s_8cpp_a1586ec489f683d6c90e64f55a11f96f3}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!clientes@{clientes}}
+\index{clientes@{clientes}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{clientes}{clientes}}
+{\footnotesize\ttfamily int clientes\mbox{[}$\,$\mbox{]} = \{ -\/1,-\/1,-\/1,-\/1 \}}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a6aec777f4f4c6df2ff854ad1b41a424e}\label{_server_v_s_8cpp_a6aec777f4f4c6df2ff854ad1b41a424e}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!cupos@{cupos}}
+\index{cupos@{cupos}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{cupos}{cupos}}
+{\footnotesize\ttfamily int cupos\mbox{[}$\,$\mbox{]} = \{ 0,0,0,0 \}}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_a19f31d9744c12503a9cbdaa1fd3a9848}\label{_server_v_s_8cpp_a19f31d9744c12503a9cbdaa1fd3a9848}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!full@{full}}
+\index{full@{full}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily bool full = false}
+
+\mbox{\Hypertarget{_server_v_s_8cpp_aba4ac6f89da0aaa9ae5d05d1e45e83c4}\label{_server_v_s_8cpp_aba4ac6f89da0aaa9ae5d05d1e45e83c4}} 
+\index{ServerVS.cpp@{ServerVS.cpp}!MisClientes@{MisClientes}}
+\index{MisClientes@{MisClientes}!ServerVS.cpp@{ServerVS.cpp}}
+\doxysubsubsection{\texorpdfstring{MisClientes}{MisClientes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_juego}{Juego}}$\ast$ Mis\+Clientes\mbox{[}4\mbox{]}}
+

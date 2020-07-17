@@ -7,6 +7,8 @@ using namespace std;
  * @author Sebastian Moya
  * @brief Clase plantilla para el jugador
 */
+
+/// @brief Clase que controla los datos del jugador
 class Jugador
 {
 public:

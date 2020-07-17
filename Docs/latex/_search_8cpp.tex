@@ -1,0 +1,141 @@
+\hypertarget{_search_8cpp}{}\doxysection{Search.\+cpp File Reference}
+\label{_search_8cpp}\index{Search.cpp@{Search.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Espectro.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcell}{cell}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_search_8cpp_ac6f18a9e1d00b4637522b1b469a92021}{R\+OW}}~25
+\item 
+\#define \mbox{\hyperlink{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}{C\+OL}}~25
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef pair$<$ int, int $>$ \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}
+\item 
+typedef pair$<$ double, pair$<$ int, int $>$ $>$ \mbox{\hyperlink{_search_8cpp_acd35b2a640879d1c745635f25b3b8324}{p\+Pair}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_search_8cpp_a9460224fd56b7e3274eb5b92e372fd86}{is\+Valid}} (int row, int col)
+\item 
+bool \mbox{\hyperlink{_search_8cpp_a6f8b6d620aa7cb1cbad66c8ef7e27fba}{is\+Un\+Blocked}} (int grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}{C\+OL}}\mbox{]}, int row, int col)
+\item 
+bool \mbox{\hyperlink{_search_8cpp_a84530425fdfa11c251857afcc16a9886}{is\+Destination}} (int row, int col, \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}} dest)
+\item 
+double \mbox{\hyperlink{_search_8cpp_a34659a67ebffe983af15b81b24dd16d1}{calculate\+H\+Value}} (int row, int col, \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}} dest)
+\item 
+void \mbox{\hyperlink{_search_8cpp_ad885054fc18c9d9dc8af65cb84ba59ec}{trace\+Path}} (\mbox{\hyperlink{structcell}{cell}} cell\+Details\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}{C\+OL}}\mbox{]}, \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}} dest)
+\item 
+void \mbox{\hyperlink{_search_8cpp_a3acb2b774377f480c778744a418a8eff}{a\+Star\+Search}} (int grid\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}{C\+OL}}\mbox{]}, \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}} src, \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}} dest)
+\item 
+void \mbox{\hyperlink{_search_8cpp_a946e3c4753aa5c670f2bb5d0cb1847a0}{print\+Camino}} ()
+\item 
+void \mbox{\hyperlink{_search_8cpp_ae01ff22ec7faf1ad196585bdef7c9f51}{search}} (int grid\mbox{[}\mbox{\hyperlink{_search_8cpp_ac6f18a9e1d00b4637522b1b469a92021}{R\+OW}}\mbox{]}\mbox{[}\mbox{\hyperlink{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}{C\+OL}}\mbox{]}, int src\+Row, int src\+Col, int dest\+Row, int dest\+Col)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ tuple$<$ int, int $>$ $>$ \mbox{\hyperlink{_search_8cpp_a0bed6adb9ffb67487679235196d72cb6}{camino}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}\label{_search_8cpp_ab00f2b8e8bad4307cf0775a5520cf663}} 
+\index{Search.cpp@{Search.cpp}!COL@{COL}}
+\index{COL@{COL}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{COL}{COL}}
+{\footnotesize\ttfamily \#define C\+OL~25}
+
+\mbox{\Hypertarget{_search_8cpp_ac6f18a9e1d00b4637522b1b469a92021}\label{_search_8cpp_ac6f18a9e1d00b4637522b1b469a92021}} 
+\index{Search.cpp@{Search.cpp}!ROW@{ROW}}
+\index{ROW@{ROW}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{ROW}{ROW}}
+{\footnotesize\ttfamily \#define R\+OW~25}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}\label{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}} 
+\index{Search.cpp@{Search.cpp}!Pair@{Pair}}
+\index{Pair@{Pair}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{Pair}{Pair}}
+{\footnotesize\ttfamily typedef pair$<$int, int$>$ \mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}
+
+\mbox{\Hypertarget{_search_8cpp_acd35b2a640879d1c745635f25b3b8324}\label{_search_8cpp_acd35b2a640879d1c745635f25b3b8324}} 
+\index{Search.cpp@{Search.cpp}!pPair@{pPair}}
+\index{pPair@{pPair}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{pPair}{pPair}}
+{\footnotesize\ttfamily typedef pair$<$double, pair$<$int, int$>$ $>$ \mbox{\hyperlink{_search_8cpp_acd35b2a640879d1c745635f25b3b8324}{p\+Pair}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_search_8cpp_a3acb2b774377f480c778744a418a8eff}\label{_search_8cpp_a3acb2b774377f480c778744a418a8eff}} 
+\index{Search.cpp@{Search.cpp}!aStarSearch@{aStarSearch}}
+\index{aStarSearch@{aStarSearch}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{aStarSearch()}{aStarSearch()}}
+{\footnotesize\ttfamily void a\+Star\+Search (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}$\,$\mbox{]}\mbox{[}\+C\+O\+L\mbox{]},  }\item[{\mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}]{src,  }\item[{\mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_a34659a67ebffe983af15b81b24dd16d1}\label{_search_8cpp_a34659a67ebffe983af15b81b24dd16d1}} 
+\index{Search.cpp@{Search.cpp}!calculateHValue@{calculateHValue}}
+\index{calculateHValue@{calculateHValue}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{calculateHValue()}{calculateHValue()}}
+{\footnotesize\ttfamily double calculate\+H\+Value (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_a84530425fdfa11c251857afcc16a9886}\label{_search_8cpp_a84530425fdfa11c251857afcc16a9886}} 
+\index{Search.cpp@{Search.cpp}!isDestination@{isDestination}}
+\index{isDestination@{isDestination}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{isDestination()}{isDestination()}}
+{\footnotesize\ttfamily bool is\+Destination (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}]{dest }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_a6f8b6d620aa7cb1cbad66c8ef7e27fba}\label{_search_8cpp_a6f8b6d620aa7cb1cbad66c8ef7e27fba}} 
+\index{Search.cpp@{Search.cpp}!isUnBlocked@{isUnBlocked}}
+\index{isUnBlocked@{isUnBlocked}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{isUnBlocked()}{isUnBlocked()}}
+{\footnotesize\ttfamily bool is\+Un\+Blocked (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}$\,$\mbox{]}\mbox{[}\+C\+O\+L\mbox{]},  }\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_a9460224fd56b7e3274eb5b92e372fd86}\label{_search_8cpp_a9460224fd56b7e3274eb5b92e372fd86}} 
+\index{Search.cpp@{Search.cpp}!isValid@{isValid}}
+\index{isValid@{isValid}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool is\+Valid (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_a946e3c4753aa5c670f2bb5d0cb1847a0}\label{_search_8cpp_a946e3c4753aa5c670f2bb5d0cb1847a0}} 
+\index{Search.cpp@{Search.cpp}!printCamino@{printCamino}}
+\index{printCamino@{printCamino}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{printCamino()}{printCamino()}}
+{\footnotesize\ttfamily void print\+Camino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_ae01ff22ec7faf1ad196585bdef7c9f51}\label{_search_8cpp_ae01ff22ec7faf1ad196585bdef7c9f51}} 
+\index{Search.cpp@{Search.cpp}!search@{search}}
+\index{search@{search}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily void search (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}\+R\+O\+W\mbox{]}\mbox{[}\+C\+O\+L\mbox{]},  }\item[{int}]{src\+Row,  }\item[{int}]{src\+Col,  }\item[{int}]{dest\+Row,  }\item[{int}]{dest\+Col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_search_8cpp_ad885054fc18c9d9dc8af65cb84ba59ec}\label{_search_8cpp_ad885054fc18c9d9dc8af65cb84ba59ec}} 
+\index{Search.cpp@{Search.cpp}!tracePath@{tracePath}}
+\index{tracePath@{tracePath}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{tracePath()}{tracePath()}}
+{\footnotesize\ttfamily void trace\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcell}{cell}}}]{cell\+Details\mbox{[}$\,$\mbox{]}\mbox{[}\+C\+O\+L\mbox{]},  }\item[{\mbox{\hyperlink{_search_8cpp_a70e524f3052719186ec62fc3ab4e68f5}{Pair}}}]{dest }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_search_8cpp_a0bed6adb9ffb67487679235196d72cb6}\label{_search_8cpp_a0bed6adb9ffb67487679235196d72cb6}} 
+\index{Search.cpp@{Search.cpp}!camino@{camino}}
+\index{camino@{camino}!Search.cpp@{Search.cpp}}
+\doxysubsubsection{\texorpdfstring{camino}{camino}}
+{\footnotesize\ttfamily vector$<$tuple$<$int,int$>$ $>$ camino}
+
