@@ -319,8 +319,8 @@ void Juego::setRutas()
 	rutas.push_back("13,8;18,8");
 	rutas.push_back("16,19;16,16;18,16;18,19");
 	//Piso 4
-	rutas.push_back("algo");
-	rutas.push_back("algo");
-	rutas.push_back("algo");
+	rutas.push_back("2,3;2,2;9,2;2,2");
+	rutas.push_back("20,12;23,12;23,4;23,12");
+	rutas.push_back("11,10;13,10;13,8;11,8");
 }
 
