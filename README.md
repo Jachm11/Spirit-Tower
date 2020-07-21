@@ -6,9 +6,26 @@
 * La interfaz del juego fue diseñada con el motor de juegos Unity, especificamente con la versión 2019.14.1f1
 * Los componentes necesarios con los que debe contar Visual Studio son los siguientes: c# y Visual Basic, caracteristicas principales de c++, IntelliCode, Actualizacion de C++ redistributable, herramientas de Cmake en c++ para windows, compiladores Roslyn para c# y Visual Basic, Herramientas de compilación MSVC v142-VS2019 c++ para x64/x86(v14.26), MsBuild.addresSanitizer c++, herramientas de generación de perfiles de c++, entorno de tiempo de ejecucion de C para windows Universal y ultimas herramientas de compilacion ATL de c++ para v142
 
+## Instrucciones de Clonación del Repositorio
+
+* En la sección de código se debe selecionar el boton code, para poder clonar el repositorio, se puede hacer de dos formas: descaragndo el archivo comprimido y descomprimirlo o clonandolo con una herramienta externa, en este caso GitKraken.
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/clone.png)
+
+### Clonar con GitKraken
+* Si no se cuenta con GitKraken y desea clonar el repositorio por este medio puede instalarlo aqui: [Instalar GitKraken](https://support.gitkraken.com/how-to-install/)
+* Se copia el Link de clonación de github, y se dirige a GitKraken a la sección de clonación 
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/clone%20git.png)
+
+* Se accede a la opción de clonar, se pega el link y listo!!!
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/clone%202.png)
+
 ## Instrucciones de Instalación del ambiente.
 
 Para toda la ejecución de este juego se debe clonar todo el repositorio, ya sea mediante un zip o una herramienta externa como gitKraken.
+* **IMPORTANTE:** Visual Studio se instala inmediatamente con la instalción de Unity, pero más adelante se especifica como se puede instalar por aparte.
 
 ### Unity 
 Si se desea modificar el juego se deben de seguir los siguientes pasos:
