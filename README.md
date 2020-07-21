@@ -40,6 +40,12 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/Version%20Unity.png)
 
+* En el proceso de instalacion de la version de unity el instalador ofrece la posibilidad de instlar Visual Studio realizando el siguiente procedimiento
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/VS%20con%20Unity.png)
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/VS%20con%20Unity%202.png)
+
 
 * Una vez seguidos todos estos pasos se debe agregar el proyecto a Unity Hub. Esto en la sección proyects, add y se selecciona la carpeta JuegoUnity de la carpeta SpiritTower que clonó del respositorio. 
 
