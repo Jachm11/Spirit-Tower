@@ -22,6 +22,8 @@
 
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/clone%202.png)
 
+# Pasos para trabajar como Desarrollador del Juego 
+Si se desea modificar el juego y añadir funcionalidades debe de seguir los siguientes pasos...
 ## Instrucciones de Instalación del ambiente.
 
 Para toda la ejecución de este juego se debe clonar todo el repositorio, ya sea mediante un zip o una herramienta externa como gitKraken.
@@ -62,7 +64,20 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 
 * Una vez instalado se debe comprobar en que cuente todos los componentes  mencionados en los detalles del programa. Esto se puede hacer mediante el installer de Visual Studio, en la versión solicitada de dirige a al opción modificar y luego a la sección de componentes.
 
+# Pasos para solo ejecutar el juego
+En caso de no querer modificar el juego y solo ejecutarlo se deben de seguir los siguientes pasos.
+## Instrucciones de Instalación del ambiente.
+### Visual Studio
+* Debe de instalar Visual Studio v.16.6.3 
+
+[Download VS](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
+
+* Una vez instalado se debe comprobar en que cuente todos los componentes  mencionados en los detalles del programa. Esto se puede hacer mediante el installer de Visual Studio, en la versión solicitada de dirige a al opción modificar y luego a la sección de componentes.
+
+
 ## Instrucciones de ejecución del Juego
+
+* **IMPORTANTE:** Este paso es necesario ya sea si se trabaja como desarrollador o simplemente como jugador.
 
 * Una vez realizada la instalción del ambiente de Visual Studio  se debe dirigir a la carpeta Spirit-Tower -> Server -> ServerVS -> se abre el archivo "ServerVS.vcxproj" 
 
