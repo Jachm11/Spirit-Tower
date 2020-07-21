@@ -6,10 +6,53 @@
 * La interfaz del juego fue diseñada con el motor de juegos Unity, especificamente con la versión 2019.14.1f1
 * Los componentes necesarios con los que debe contar Visual Studio son los siguientes: c# y Visual Basic, caracteristicas principales de c++, IntelliCode, Actualizacion de C++ redistributable, herramientas de Cmake en c++ para windows, compiladores Roslyn para c# y Visual Basic, Herramientas de compilación MSVC v142-VS2019 c++ para x64/x86(v14.26), MsBuild.addresSanitizer c++, herramientas de generación de perfiles de c++, entorno de tiempo de ejecucion de C para windows Universal y ultimas herramientas de compilacion ATL de c++ para v142
 
+## Instrucciones de Instalación del ambiente.
+
+Para toda la ejecución de este juego se debe clonar todo el repositorio, ya sea mediante un zip o una herramienta externa como gitKraken.
+
+### Unity 
+Si se desea modificar el juego se deben de seguir los siguientes pasos:
+* Instalar Unity Hub en el siguiente Link 
+[Unity Hub ](https://unity3d.com/es/get-unity/download)
+* Una vez en Unity Hub se debe de activar la licencia de Unity, para más ayuda puede seguir la siguiente infromación:
+[Activar Licencia Unity](https://docs.unity3d.com/es/530/Manual/OnlineActivationGuide.html)
+
+* Una vez en Unity Hub, se debe de dirigir a la seccion de install, seleccionar add y se selecciona la versión mas reciente, en este caso 2019.4.1f1. Esto se detalla más con la siguientes imágenes.
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/secci%C3%B3n%20Install%20Unity.png)
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Version%20Unity.png)
+
+
+* Una vez seguidos todos estos pasos se debe agregar el proyecto a Unity Hub. Esto en la sección proyects, add y se selecciona la carpeta JuegoUnity de la carpeta SpiritTower que clonó del respositorio. 
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Abrir%20U%20(2).png)
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Abrir%20U%20(1).png)
+
+* Finalmente ya puede abrir y modificar el proyecto.
+
+### Visual Studio
+* Debe de instalar Visual Studio v.16.6.3 
+
+[Download VS](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
+
+* Una vez instalado se debe comprobar en que cuente todos los componentes  mencionados en los detalles del programa. Esto se puede hacer mediante el installer de Visual Studio, en la versión solicitada de dirige a al opción modificar y luego a la sección de componentes.
+
+## Instrucciones de ejecución del Juego
+
+* Una vez realizada la instalción del ambiente de Visual Studio  se debe dirigir a la carpeta Spirit-Tower -> Server -> ServerVS -> se abre el archivo "ServerVS.vcxproj" 
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/abrir%20Visual.png)
+
+* Con el proyecto en Visual Studio Abierto se busca el archivo ServerVS.cpp y se ejecuta (Esto antes de correr el juego).
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Ejecutar%20el%20Server.png)
+
+* IMPORTANTE: para ejecutar el juego se debe de entrar a la carpeta JuegoUnity -> build -> spiritTowerGame.exe
+
 ## Instrucciones del juego
-* IMPORTANTE: en el proyecto del Servidor se debe de abrir el proyecto en Visual Studio y ejecutar el archivo "ServerVS.cpp".
-Esto para evitar errores.
-* IMPORTANTE: para ejecutar el juego se debe de entrar a la carpeta Juego -> build -> spiritTowerGame.exe
+
 * Movimiento del jugador: para poder desplazarse con el jugador se utlizan las flechas del teclado (↑,↓,→,←).
 * Ataque: para el ataque se debe usar la barra espaciadora.
 * Escudo: para habilitar el escudo se presiona la tecla de shift izquierda. Este se deshabilita automáticamente.
