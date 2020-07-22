@@ -56,7 +56,7 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/VS%20con%20Unity%202.png)
 
 
-* Finalmente ya puede abrir y modificar el proyecto.
+* Finalmente ya puede abrir, dando click dos veces sobre el nombre del mismo en la pantalla de "projects" en Unity Hub. Una vez abierto ya puede continuar y modificar el proyecto a su parecer.
 
 ### Visual Studio
 * Debe de instalar Visual Studio v.16.6.3. Puede utilizar el siguiente enlace:
