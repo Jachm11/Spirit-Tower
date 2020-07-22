@@ -33,6 +33,9 @@ Para toda la ejecución de este juego se debe clonar todo el repositorio, ya sea
 Si se desea modificar el juego se deben de seguir los siguientes pasos:
 * Instalar Unity Hub en el siguiente Link 
 [Unity Hub ](https://unity3d.com/es/get-unity/download)
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Unity%20hub.png)
+
 * Una vez en Unity Hub se debe de activar la licencia de Unity, para más ayuda puede seguir la siguiente infromación:
 [Activar Licencia Unity](https://docs.unity3d.com/es/530/Manual/OnlineActivationGuide.html)
 
@@ -64,6 +67,10 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 [Download VS](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
 
 * Una vez instalado se debe comprobar en que cuente todos los componentes  mencionados en los detalles del programa. Esto se puede hacer mediante el installer de Visual Studio, en la versión solicitada se dirige a al opción modificar y luego a la sección de componentes. Allí podra instalar los componentes restantes.
+
+* Para realizar modificaciones en la parte del servidor dirijase a la carpeta donde haya clonado el juego e ingrese a "Spirit-Tower" -> "Server" -> "ServerVS" , donde ser muestran los archivos correspondientes al servidor, su codigo main se encuentra con el nombre de ServerVS.cpp en el cual se pueden realizar pruebas de la ejecucion del servidor
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/VS%20server.png)
 
 # Pasos para solo ejecutar el juego
 En caso de no querer modificar el juego y solo ejecutarlo se deben de seguir los siguientes pasos.
