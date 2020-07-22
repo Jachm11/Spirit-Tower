@@ -36,14 +36,14 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 * Una vez en Unity Hub se debe de activar la licencia de Unity, para más ayuda puede seguir la siguiente infromación:
 [Activar Licencia Unity](https://docs.unity3d.com/es/530/Manual/OnlineActivationGuide.html)
 
-* Una vez en Unity Hub se debe agregar el proyecto a Unity Hub. Esto en la sección proyects, add y se selecciona la carpeta JuegoUnity de la carpeta SpiritTower que clonó del respositorio. 
+* Una vez en Unity Hub se debe agregar el proyecto a Unity Hub. Esto en la sección projects, add y se selecciona la carpeta JuegoUnity de la carpeta SpiritTower que clonó del respositorio. 
 
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/Abrir%20U%20(2).png)
 
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/Abrir%20U%20(1).png)
 
 
-* Posteriormente, se debe poscionar en el icono de adertencia que aparece sobre el proyecto para proceder con la instalación de la version de Unity necesaria, los pasos se muestran a continuación:
+* Posteriormente, se debe poscionar en el icono de advertencia que aparece sobre el proyecto para proceder con la instalación de la version de Unity necesaria, los pasos se muestran a continuación:
 
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/Version%20Unity.png)
 
