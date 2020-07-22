@@ -45,9 +45,9 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 
 * Posteriormente, se debe poscionar en el icono de adertencia que aparece sobre el proyecto para proceder con la instalación de la version de Unity necesaria, los pasos se muestran a continuación:
 
-![](https://github.com/Jachm11/Spirit-Tower/blob/master/secci%C3%B3n%20Install%20Unity.png)
-
 ![](https://github.com/Jachm11/Spirit-Tower/blob/master/Version%20Unity.png)
+
+![](https://github.com/Jachm11/Spirit-Tower/blob/master/Version%20Unity%202.png)
 
 * En el proceso de instalacion de la version de unity el instalador ofrece la posibilidad de instlar Visual Studio realizando el siguiente procedimiento
 
