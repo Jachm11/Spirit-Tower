@@ -70,7 +70,7 @@ Si se desea modificar el juego se deben de seguir los siguientes pasos:
 
 * Para realizar modificaciones en la parte del servidor dirijase a la carpeta donde haya clonado el juego e ingrese a "Spirit-Tower" -> "Server" -> "ServerVS" , donde ser muestran los archivos correspondientes al servidor, su codigo main se encuentra con el nombre de ServerVS.cpp en el cual se pueden realizar pruebas de la ejecucion del servidor
 
-![](https://github.com/Jachm11/Spirit-Tower/blob/master/VS%20server.png)
+![]()
 
 # Pasos para solo ejecutar el juego
 En caso de no querer modificar el juego y solo ejecutarlo se deben de seguir los siguientes pasos.
